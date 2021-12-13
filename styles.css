@@ -221,9 +221,9 @@ box-shadow: 13px 13px 8px 0px rgba(151, 146, 153,0.6); */
   -webkit-transform: rotate3d(0,0,0,0deg);
   -moz-transform: rotate3d(0,0,0,0deg);
   transform: rotate3d(0,0,0,0deg);
-  transform: translateX(-50px);
-  -webkit-transform: translateX(-50px);
-  -moz-transform: translateX(-50px);
+  transform: translateX(-90px);
+  -webkit-transform: translateX(-90px);
+  -moz-transform: translateX(-90px);
 }
 
 .container1 .book > div,
