@@ -374,3 +374,7 @@ box-shadow: 13px 13px 8px 0px rgba(151, 146, 153,0.6); */
 /* .left-side h2 span:last-child{
   font-family: acumin-pro, sans-serif;
 }  */
+
+.flag-exp{
+  cursor: pointer;
+}
