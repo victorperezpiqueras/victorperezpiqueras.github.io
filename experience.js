@@ -48,18 +48,4 @@ function loadExperience(experiencesArray, topYears) {
     $("#" + counterId).text(ex.name);
     counter++;
   }
-  /*   for (let x = 0; x < topYears; x++) {
-    var position = $("#progressBar").offset();
-    var width = $("#progressBar").width();
-    var height = $("#progressBar").height();
-    console.log(position, width, height);
-    $("#progressBar").append(
-      "<i id=flag" +
-        x +
-        ' class="bi bi-flag-fill flag-exp" style="color: rgb(177, 0, 0);"' +
-        'data-toggle="tooltip" data-placement="bottom" title="2 years experience"></i>'
-    );
-    var position = $("#flag" + x).offset();
-    console.log(position);
-  } */
 }
