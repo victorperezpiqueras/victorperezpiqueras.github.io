@@ -4,7 +4,7 @@ import { ExperienceData } from "../../models/PortfolioData";
 import "./AboutMe.css";
 
 import { BsFillFlagFill } from "react-icons/bs";
-import Experience from "../../components/Experience/Experience";
+import ExperienceBar from "../../components/ExperienceBar/ExperienceBar";
 
 type AboutMeProps = {
   aboutData: { aboutTexts: string[]; experience: ExperienceData[] };
@@ -15,10 +15,16 @@ function AboutMe(props: AboutMeProps) {
   console.log(experienceSorted);
   let experiences = [
     {
-      startDate: new Date(),
-      endDate: new Date("2021-01-01"),
-      title: "test",
+      title: "Intern",
+      startDate: new Date("3/1/2020"),
+      endDate: new Date("9/1/2020"),
     },
+    {
+      title: "R&D",
+      startDate: new Date("2/15/2021"),
+      endDate: new Date("10/31/2021"),
+    },
+    { title: "Dev", startDate: new Date("11/1/2021"), endDate: new Date() },
   ];
 
   return (
@@ -35,7 +41,7 @@ function AboutMe(props: AboutMeProps) {
 
       <div className="flex flex-col basis-1/2 space-y-6">
         <div className="bg-white rounded text-black p-10">
-          <Experience experiences={experiences} />
+          <ExperienceBar experiences={experiences} />
           {/* <div className="h-10 relative w-full bg-gray-200 rounded-full">
             <div
               className="w-4/12 drop-shadow absolute mt-2 z-10 hover:cursor-pointer"
