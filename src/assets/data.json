@@ -4,10 +4,155 @@
     "title": "Software Engineer & Researcher"
   },
   "aboutMe": {
-    "aboutText": "💻 I'm a professional, competent and passionate Software Engineer. I'm experienced in web development, frontend design and UI, which I find very rewarding. I also have knowledge in backend, ReST APIs and database design, which allows me to easily adapt to most job positions, being able to work as a full-stack developer.\n⚡ I tend to be very (VERY) fast developing features in technologies I'm confortable with. But learning a new stack is not a problem for me, but rather another strength. My eager to learn has pushed me from frontend into architecture design and cloud services.\n👨🏻‍🏫 I enjoy teamworking and pursuing sinergies to get the best of me and the team. I'm always willing to (constructively) criticize design, processes and approaches; and also to be criticized in order to learn and improve my outcomes. I've developed most of my career in english and, thus, I can effectively communicate with my coworkers whether they speak english or spanish.\n🛠 Regarding coding and development knowledge, I'm devoted to clean code practices, design patterns, refactoring principles and continuous integration/deployment techniques. I may write good or bad code but I'm always aware of its quality.\n📈 I'm also a solid defender of agile development and certified Scrum Master, and I've some knowledge in agile project management.",
-    "experience": []
+    "aboutTexts": [
+      "💻 I'm a professional, competent and passionate Software Engineer. I'm experienced in web development, frontend design and UI, which I find very rewarding. I also have knowledge in backend, ReST APIs and database design, which allows me to easily adapt to most job positions, being able to work as a full-stack developer.",
+      "⚡ I tend to be very (VERY) fast developing features in technologies I'm confortable with. But learning a new stack is not a problem for me, but rather another strength. My eager to learn has pushed me from frontend into architecture design and cloud services.",
+      "👨🏻‍🏫 I enjoy teamworking and pursuing sinergies to get the best of me and the team. I'm always willing to (constructively) criticize design, processes and approaches; and also to be criticized in order to learn and improve my outcomes. I've developed most of my career in english and, thus, I can effectively communicate with my coworkers whether they speak english or spanish.\n🛠 Regarding coding and development knowledge, I'm devoted to clean code practices, design patterns, refactoring principles and continuous integration/deployment techniques. I may write good or bad code but I'm always aware of its quality.",
+      "📈 I'm also a solid defender of agile development and certified Scrum Master, and I've some knowledge in agile project management."
+    ],
+    "experience": [
+      {
+        "date": "Jun-Aug 2019",
+        "company": "Grupo Vermon",
+        "position": "Full Stack Developer (Internship)",
+        "description": "Full stack development of a web application for real-time home sensor management and monitoring.",
+        "labels": ["angular", "python", "flask"]
+      },
+      {
+        "date": "Jul-Sep 2020",
+        "company": "Grupo Vermon",
+        "position": "Full Stack Developer (Internship)",
+        "description": "Full stack development of a web application for the creation and management of dynamic forms to control incidents in companies.",
+        "labels": ["angular", "aws", "serverless"]
+      },
+      {
+        "date": "Feb-Oct 2021",
+        "company": "Universidad de Castilla-La Mancha",
+        "position": "Researcher / Research support staff",
+        "description": "Research support staff in R&D&i project. Design and evaluation of multi-objective optimization algorithms.",
+        "labels": ["python"]
+      },
+      {
+        "date": "Nov 2021-Present",
+        "company": "Grupo Vermon",
+        "position": "Full Stack Developer & Scrum Master",
+        "description": "Product development in a geographically distributed, multidisciplinar and agile managed team.",
+        "labels": ["angular", "aws", "serverless"]
+      }
+    ]
   },
   "projects": [],
-  "library": [],
+  "library": [
+    {
+      "title": "The Phoenix Project",
+      "cover": "book_phoenix.png",
+      "height": "280px",
+      "width": "190px",
+      "spine": {
+        "text": "The Phoenix Project",
+        "color": "white",
+        "width": "50px",
+        "fontSize": "22px",
+        "fontFamily": "monospace",
+        "textColor": "black",
+        "textShadow": "1px 1px #ffffff",
+        "marginTitle": "15px",
+        "marginTop": "20px"
+      },
+      "link": "https://itrevolution.com/the-phoenix-project/"
+    },
+    {
+      "title": "The Unicorn Project",
+      "cover": "book_unicorn.jpg",
+      "height": "290px",
+      "width": "190px",
+      "spine": {
+        "text": "The Unicorn Project",
+        "color": "rgb(226, 226, 226)",
+        "width": "50px",
+        "fontSize": "22px",
+        "fontFamily": "monospace",
+        "textColor": "rgb(228, 0, 190)",
+        "textShadow": null,
+        "marginTitle": "15px",
+        "marginTop": "20px"
+      },
+      "link": "https://itrevolution.com/the-unicorn-project/"
+    },
+
+    {
+      "title": "Adaptive Code",
+      "cover": "book_adaptive.jpg",
+      "height": "260px",
+      "width": "190px",
+      "spine": {
+        "text": "Adaptive Code",
+        "color": "rgb(104, 97, 77)",
+        "width": "40px",
+        "fontSize": "20px",
+        "fontWeight": "lighter",
+        "fontFamily": "'Open Sans', sans-serif",
+        "textColor": "white",
+        "textShadow": "2px 2px #000000",
+        "marginTitle": "10px",
+        "marginTop": "40px"
+      },
+      "link": "https://www.amazon.com/Adaptive-Code-principles-Developer-Practices/dp/1509302581"
+    },
+    {
+      "title": "The DevOps Handbook",
+      "cover": "book_devops.jpg",
+      "height": "250px",
+      "width": "190px",
+      "spine": {
+        "text": "The DevOps Handbook",
+        "color": "rgb(255, 187, 0)",
+        "width": "40px",
+        "fontSize": "19px",
+        "fontFamily": "monospace",
+        "textColor": "rgb(255, 255, 255)",
+        "textShadow": "1px 1px #000000",
+        "marginTitle": null,
+        "marginTop": null
+      },
+      "link": "https://www.amazon.com/DevOps-Handbook-World-Class-Reliability-Organizations/dp/1942788002"
+    },
+    {
+      "title": "Clean Code",
+      "cover": "book_cleancode.jpg",
+      "height": "265px",
+      "width": "190px",
+      "spine": {
+        "text": "Clean Code",
+        "color": "rgb(235, 235, 235)",
+        "width": "40px",
+        "fontSize": "19px",
+        "fontFamily": "'Roboto', sans-serif",
+        "textColor": "rgb(37, 37, 37)",
+        "textShadow": null,
+        "marginTitle": null,
+        "marginTop": "40px"
+      },
+      "link": "https://www.oreilly.com/library/view/clean-code-a/9780136083238/"
+    },
+    {
+      "title": "Refactoring",
+      "cover": "book_refactoring.jpg",
+      "height": "290px",
+      "width": "190px",
+      "spine": {
+        "text": "REFACTORING",
+        "color": "rgb(27, 27, 27)",
+        "width": "20px",
+        "fontSize": "12px",
+        "fontFamily": "'Times New Roman', Times, serif",
+        "textColor": "white",
+        "textShadow": "1px 1px #000000",
+        "marginTitle": "5px",
+        "marginTop": "40px"
+      },
+      "link": "https://martinfowler.com/books/refactoring.html"
+    }
+  ],
   "resume": "cv.pdf"
 }

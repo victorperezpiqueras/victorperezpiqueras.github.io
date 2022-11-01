@@ -15,14 +15,7 @@ import Projects from "./pages/Projects/AboutMe";
 import Library from "./pages/Library/Library";
 import Resume from "./pages/Resume/Resume";
 import data from "./assets/data.json";
-
-interface PortfolioData {
-  header: { name: string; title: string };
-  aboutMe: { aboutText: string; experience: [] };
-  projects: [];
-  library: [];
-  resume: string;
-}
+import { PortfolioData } from "./models/PortfolioData";
 
 function App() {
   const [value, setValue] = React.useState(0);
@@ -47,6 +40,7 @@ function App() {
             <p className="text-black font-bold text-5xl">
               {portfolioData.header.name}
             </p>
+
             <p className="font-bold text-2xl">{portfolioData.header.title}</p>
 
             <div className="container space-x-4">
@@ -111,7 +105,7 @@ function App() {
               <Projects />
             </TabPanel>
             <TabPanel value={value} index={2}>
-              <Library />
+              <Library books={portfolioData.library} />
             </TabPanel>
             <TabPanel value={value} index={3}>
               <Resume cv={portfolioData.resume} />
