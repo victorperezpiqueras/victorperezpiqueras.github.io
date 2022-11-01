@@ -39,7 +39,7 @@ function Book(props: BookDataProps) {
           width: props.bookData.spine.width,
         }}
       ></div>
-      <a className="side cover link" href={props.bookData.link}>
+      <a className="side cover link" href={props.bookData.link} target="_blank">
         <div
           className="side cover"
           style={{

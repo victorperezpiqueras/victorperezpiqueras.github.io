@@ -1,6 +1,6 @@
 import { BookData } from "./BookData";
 
-export type Experience = {
+export type ExperienceData = {
   date: string;
   company: string;
   position: string;
@@ -10,7 +10,7 @@ export type Experience = {
 
 export interface PortfolioData {
   header: { name: string; title: string };
-  aboutMe: { aboutTexts: string[]; experience: Experience[] };
+  aboutMe: { aboutTexts: string[]; experience: ExperienceData[] };
   projects: [];
   library: BookData[];
   resume: string;

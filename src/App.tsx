@@ -64,7 +64,7 @@ function App() {
                 icon={<FaOrcid color="white" />}
               />
 
-              <a href="https://www.scrum.org/user/746391">
+              <a href="https://www.scrum.org/user/746391" target="_blank">
                 <button
                   type="button"
                   className="psmi-button -ml-3 transition ease-in-out hover:scale-150 duration-300"
