@@ -16,9 +16,8 @@ type ExperienceProps = {
 function ExperienceBar(props: ExperienceProps) {
   const percentageFactor = 90; // 100 makes UI go out of bounds
 
-  function getUIExperiencesAndMaxTime(experiences: ExperienceData[]) {
-    let maxTime = 0;
-    let uiExperiences = experiences.map((ex) => {
+  function getUIExperiences(experiences: ExperienceData[]) {
+    const uiExperiences = experiences.map((ex) => {
       let newEx = {
         ...ex,
         startDateTime: new Date(ex.startDate),
@@ -30,36 +29,19 @@ function ExperienceBar(props: ExperienceProps) {
       let diff =
         newEx.endDateTime.getTime() - newEx.startDateTime.getTime(); /* /
         (1000 * 3600 * 24); */
-      maxTime += diff;
       newEx.diffTime = diff;
       return newEx as UIExperience;
     });
-    return { uiExperiences, maxTime };
+    return uiExperiences;
   }
 
   function calculateTotalYears(uiExperiences: UIExperience[]) {
-    let minLimitTime = Math.min(
-      ...uiExperiences.map((o) => o.startDateTime.getTime())
-    );
-    let maxLimitTime = Math.max(
-      ...uiExperiences.map((o) => o.endDateTime.getTime())
-    );
-    //add one year in ms
-    maxLimitTime += 1000 * 3600 * 24 * 365; //plus a year
-
-    // first and last year
-    let firstYear = new Date(minLimitTime).getFullYear();
-    let lastYear = new Date(maxLimitTime).getFullYear();
-    // get the number of years
-    let years = lastYear - firstYear; //avoid year 0
-
     let timeSum = uiExperiences.reduce((a, b) => a + b.diffTime, 0);
-
     timeSum += 1000 * 3600 * 24 * 365; //plus a year
-    //years in timesum
-    let yearsInTimeSum = timeSum / (1000 * 3600 * 24 * 365);
 
-    //return { years, maxLimitTime };
+    //years in timesum
+    const yearsInTimeSum = timeSum / (1000 * 3600 * 24 * 365);
+
     return { yearsInTimeSum, timeSum };
   }
 
@@ -76,6 +58,10 @@ function ExperienceBar(props: ExperienceProps) {
           <Tooltip content={`${i} years`} style="dark">
             <BsFillFlagFill color="red" />
           </Tooltip>
+          <div
+            className="relative w-1.5 h-1 z-30 rounded-full left-0 bottom-0"
+            style={{ backgroundColor: "rgba(255,0,0,0.7)" }}
+          ></div>
         </div>
       );
       flagsData.push({
@@ -131,10 +117,8 @@ function ExperienceBar(props: ExperienceProps) {
     return experienceSections;
   }
 
-  let { uiExperiences, maxTime } = getUIExperiencesAndMaxTime(
-    props.experiences
-  );
-  let { yearsInTimeSum, timeSum } = calculateTotalYears(uiExperiences);
+  const uiExperiences = getUIExperiences(props.experiences);
+  const { yearsInTimeSum, timeSum } = calculateTotalYears(uiExperiences);
 
   const flags = getFlags(yearsInTimeSum);
   const experienceSections = getExperienceSections(uiExperiences, timeSum);
