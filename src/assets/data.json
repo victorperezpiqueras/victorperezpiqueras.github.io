@@ -13,31 +13,47 @@
     "experience": [
       {
         "date": "Jun-Aug 2019",
+        "startDate": "2019-06-01",
+        "endDate": "2019-08-31",
         "company": "Grupo Vermon",
         "position": "Full Stack Developer (Internship)",
+        "shortPosition": "Internship",
         "description": "Full stack development of a web application for real-time home sensor management and monitoring.",
-        "labels": ["angular", "python", "flask"]
+        "labels": ["angular", "python", "flask"],
+        "color": "#818990"
       },
       {
         "date": "Jul-Sep 2020",
+        "startDate": "2020-07-01",
+        "endDate": "2020-09-30",
         "company": "Grupo Vermon",
         "position": "Full Stack Developer (Internship)",
+        "shortPosition": "Internship",
         "description": "Full stack development of a web application for the creation and management of dynamic forms to control incidents in companies.",
-        "labels": ["angular", "aws", "serverless"]
+        "labels": ["angular", "aws", "serverless"],
+        "color": "#818990"
       },
       {
         "date": "Feb-Oct 2021",
+        "startDate": "2021-02-01",
+        "endDate": "2021-10-31",
         "company": "Universidad de Castilla-La Mancha",
         "position": "Researcher / Research support staff",
+        "shortPosition": "R&D",
         "description": "Research support staff in R&D&i project. Design and evaluation of multi-objective optimization algorithms.",
-        "labels": ["python"]
+        "labels": ["python"],
+        "color": "#0DCAF0"
       },
       {
         "date": "Nov 2021-Present",
+        "startDate": "2021-11-01",
+        "endDate": null,
         "company": "Grupo Vermon",
         "position": "Full Stack Developer & Scrum Master",
+        "shortPosition": "Dev",
         "description": "Product development in a geographically distributed, multidisciplinar and agile managed team.",
-        "labels": ["angular", "aws", "serverless"]
+        "labels": ["angular", "aws", "serverless"],
+        "color": "#3183FD"
       }
     ]
   },

@@ -1,9 +1,6 @@
-import { Timeline, Button, Badge, Tooltip } from "flowbite-react";
+import { Timeline } from "flowbite-react";
 import TechBadge from "../../components/TechBadge/TechBadge";
 import { ExperienceData } from "../../models/PortfolioData";
-import "./AboutMe.css";
-
-import { BsFillFlagFill } from "react-icons/bs";
 import ExperienceBar from "../../components/ExperienceBar/ExperienceBar";
 
 type AboutMeProps = {
@@ -13,19 +10,32 @@ type AboutMeProps = {
 function AboutMe(props: AboutMeProps) {
   let experienceSorted = [...props.aboutData.experience].reverse();
   console.log(experienceSorted);
-  let experiences = [
+  /*   let experiences = [
     {
-      title: "Intern",
-      startDate: new Date("3/1/2020"),
-      endDate: new Date("9/1/2020"),
+      date: "Jun-Aug 2019",
+      startDate: "2019-06-01",
+      endDate: "2019-08-31",
+      company: "Grupo Vermon",
+      position: "Full Stack Developer (Internship)",
+      shortPosition: "Dev",
+      description:
+        "Full stack development of a web application for real-time home sensor management and monitoring.",
+      labels: ["angular", "python", "flask"],
+      color: "#818990",
     },
     {
-      title: "R&D",
-      startDate: new Date("2/15/2021"),
-      endDate: new Date("10/31/2021"),
+      date: "Jul-Sep 2020",
+      startDate: "2020-07-01",
+      endDate: "2020-09-30",
+      company: "Grupo Vermon",
+      position: "Full Stack Developer (Internship)",
+      shortPosition: "Dev",
+      description:
+        "Full stack development of a web application for the creation and management of dynamic forms to control incidents in companies.",
+      labels: ["angular", "aws", "serverless"],
+      color: "#818990",
     },
-    { title: "Dev", startDate: new Date("11/1/2021"), endDate: new Date() },
-  ];
+  ]; */
 
   return (
     <div className="container flex flex-row space-x-6 items-start">
@@ -40,49 +50,21 @@ function AboutMe(props: AboutMeProps) {
       </div>
 
       <div className="flex flex-col basis-1/2 space-y-6">
-        <div className="bg-white rounded text-black p-10">
-          <ExperienceBar experiences={experiences} />
-          {/* <div className="h-10 relative w-full bg-gray-200 rounded-full">
-            <div
-              className="w-4/12 drop-shadow absolute mt-2 z-10 hover:cursor-pointer"
-              style={{ marginLeft: "20%" }}
-            >
-              <Tooltip content="1 year" style="dark">
-                <BsFillFlagFill color="blue" />
-              </Tooltip>
-            </div>
-            <div
-              className="w-4/12 drop-shadow absolute mt-2 z-10 hover:cursor-pointer"
-              style={{ marginLeft: "40%" }}
-            >
-              <Tooltip content="1 year" style="dark">
-                <BsFillFlagFill color="blue" />
-              </Tooltip>
-            </div>
-
-            <div className="flex flex-row">
-              <div
-                style={{ width: "20%" }}
-                className="rounded-l-full h-10 absolute text-xs font-medium text-white text-center p-2.5 shim-green"
-              >
-                Intern
-              </div>
-              <span>
-                <Tooltip content="1 year" style="dark">
-                  <BsFillFlagFill
-                    color="red"
-                    className="mt-2 drop-shadow absolute ml-2 z-10 hover:cursor-pointer"
-                  />
-                </Tooltip>
-              </span>
-              <div
-                style={{ width: "20%" }}
-                className="rounded-l-full h-10 absolute text-xs font-medium text-white text-center p-2.5 shim-green"
-              >
-                Intern
-              </div>
-            </div>
+        <div className="bg-white rounded text-black p-10 relative">
+          {/*          <div
+            style={{ width: "20%", left: "50%" }}
+            className="absolute rounded-l-full h-10 left-40 text-xs font-medium text-white text-center p-2.5 shim-green z-20"
+          >
+            Intern
+          </div>
+          <div
+            style={{ width: "20%" }}
+            className="absolute rounded-l-full h-10 text-xs font-medium text-white text-center p-2.5 shim-green z-20"
+          >
+            Intern
           </div> */}
+
+          <ExperienceBar experiences={props.aboutData.experience} />
         </div>
 
         <div className="bg-white rounded text-black p-10">

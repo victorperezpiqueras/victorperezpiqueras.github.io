@@ -1,7 +1,7 @@
 .shim-green {
-  position: relative;
+  /* position: relative; */
   overflow: hidden;
-  background-color: rgba(0, 255, 0, 0.7);
+  /* background-color: rgba(0, 255, 0, 0.7); */
 }
 .shim-green::after {
   position: absolute;
