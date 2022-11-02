@@ -43,8 +43,6 @@ function ExperienceBar(props: ExperienceProps) {
       (acc, val) => acc.concat(val),
       []
     );
-    console.log(flatUiExperiences);
-
     return flatUiExperiences;
   }
 
@@ -102,11 +100,6 @@ function ExperienceBar(props: ExperienceProps) {
             if (last) {
               last.endDateTime = experiences[i].endDateTime;
               last.diffTime += experiences[i].diffTime;
-              /* updatedExperiences.push({
-                ...last,
-                endDateTime: experiences[i].endDateTime,
-                diffTime: last.diffTime + experiences[i].diffTime,
-              }); */
             }
           } else {
             updatedExperiences.push(experiences[i]);
@@ -118,7 +111,6 @@ function ExperienceBar(props: ExperienceProps) {
     } else {
       updatedExperiences = experiences;
     }
-    console.log(updatedExperiences);
 
     // render bars
     let experienceSections = [];
@@ -140,7 +132,7 @@ function ExperienceBar(props: ExperienceProps) {
       let section = (
         <div
           key={i}
-          className={`absolute ${rounded} h-10 text-xs font-medium text-white text-center p-2.5 shim-green z-20`}
+          className={`absolute ${rounded} h-9 text-xs font-medium text-white text-center p-2.5 shim-green z-20`}
           style={{
             width: `${barPercentage * (percentageFactor / 100)}%`,
             left: `${(start / maxLimitTime) * percentageFactor}%`,
@@ -163,7 +155,7 @@ function ExperienceBar(props: ExperienceProps) {
   const experienceSections = getExperienceSections(uiExperiences, timeSum);
 
   return (
-    <div className="h-10 relative w-full bg-gray-200 rounded-full">
+    <div className="h-9 relative w-full bg-gray-200 rounded-full">
       {/* <div
         style={{ width: "20%" }}
         className="absolute rounded-l-full h-10 text-xs font-medium text-white text-center p-2.5 shim-green z-20"
