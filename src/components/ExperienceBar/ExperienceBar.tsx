@@ -1,9 +1,12 @@
 import { Tooltip } from "flowbite-react";
 import { BsFillFlagFill } from "react-icons/bs";
-import { ExperienceData } from "../../models/PortfolioData";
+import {
+  ExperienceData,
+  SingleExperienceData,
+} from "../../models/PortfolioData";
 import "./ExperienceBar.css";
 
-type UIExperience = ExperienceData & {
+type UIExperience = SingleExperienceData & {
   diffTime: number;
   barPercentage: number;
   startDateTime: Date;
@@ -17,22 +20,32 @@ function ExperienceBar(props: ExperienceProps) {
   const percentageFactor = 90; // 100 makes UI go out of bounds
 
   function getUIExperiences(experiences: ExperienceData[]) {
-    const uiExperiences = experiences.map((ex) => {
-      let newEx = {
-        ...ex,
-        startDateTime: new Date(ex.startDate),
-        endDateTime: new Date(ex.endDate),
-        diffTime: 0,
-        barPercentage: 0,
-      };
-      if (!newEx.endDate) newEx.endDateTime = new Date();
-      let diff =
-        newEx.endDateTime.getTime() - newEx.startDateTime.getTime(); /* /
+    let uiExperiences = experiences.map((ex) => {
+      return ex.experiences.map((exp) => {
+        let newEx = {
+          ...exp,
+
+          startDateTime: new Date(exp.startDate),
+          endDateTime: new Date(exp.endDate),
+          diffTime: 0,
+          barPercentage: 0,
+        };
+        if (!newEx.endDate) newEx.endDateTime = new Date();
+        let diff =
+          newEx.endDateTime.getTime() - newEx.startDateTime.getTime(); /* /
         (1000 * 3600 * 24); */
-      newEx.diffTime = diff;
-      return newEx as UIExperience;
+        newEx.diffTime = diff;
+        return newEx as UIExperience;
+      });
     });
-    return uiExperiences;
+    //flatten array
+    let flatUiExperiences = uiExperiences.reduce(
+      (acc, val) => acc.concat(val),
+      []
+    );
+    console.log(flatUiExperiences);
+
+    return flatUiExperiences;
   }
 
   function calculateTotalYears(uiExperiences: UIExperience[]) {
@@ -74,12 +87,44 @@ function ExperienceBar(props: ExperienceProps) {
 
   function getExperienceSections(
     experiences: UIExperience[],
-    maxLimitTime: number
+    maxLimitTime: number,
+    mergeMode: string = "role"
   ) {
+    let updatedExperiences: UIExperience[] = [];
+    if (mergeMode === "role") {
+      // merge experiences with same shortPosition
+      for (let i = 0; i < experiences.length; i++) {
+        if (i > 0) {
+          if (
+            experiences[i].shortPosition === experiences[i - 1].shortPosition
+          ) {
+            let last = updatedExperiences.at(-1);
+            if (last) {
+              last.endDateTime = experiences[i].endDateTime;
+              last.diffTime += experiences[i].diffTime;
+              /* updatedExperiences.push({
+                ...last,
+                endDateTime: experiences[i].endDateTime,
+                diffTime: last.diffTime + experiences[i].diffTime,
+              }); */
+            }
+          } else {
+            updatedExperiences.push(experiences[i]);
+          }
+        } else {
+          updatedExperiences.push(experiences[i]);
+        }
+      }
+    } else {
+      updatedExperiences = experiences;
+    }
+    console.log(updatedExperiences);
+
+    // render bars
     let experienceSections = [];
     let lastEnd = 0;
-    for (let i = 0; i < experiences.length; i++) {
-      let ex = experiences[i];
+    for (let i = 0; i < updatedExperiences.length; i++) {
+      let ex = updatedExperiences[i];
       let start = lastEnd;
       let end = start + ex.diffTime;
       let barPercentage = (ex.diffTime / maxLimitTime) * 100; //percentageFactor;
@@ -87,7 +132,7 @@ function ExperienceBar(props: ExperienceProps) {
       let rounded: string;
       if (i === 0) {
         rounded = "rounded-l-xl";
-      } else if (i === experiences.length - 1) {
+      } else if (i === updatedExperiences.length - 1) {
         rounded = "rounded-r-xl";
       } else {
         rounded = "rounded-none";
@@ -105,15 +150,9 @@ function ExperienceBar(props: ExperienceProps) {
           {ex.shortPosition}
         </div>
       );
-      console.log(
-        ex.diffTime / 1000 / 3600 / 24,
-        `${barPercentage * (percentageFactor / 100)}%`,
-        `${(start / maxLimitTime) * percentageFactor}%`
-      );
       experienceSections.push(section);
       lastEnd = end;
     }
-    console.log(maxLimitTime);
     return experienceSections;
   }
 

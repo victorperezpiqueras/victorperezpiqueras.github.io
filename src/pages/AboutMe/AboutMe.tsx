@@ -1,6 +1,9 @@
 import { Timeline } from "flowbite-react";
 import TechBadge from "../../components/TechBadge/TechBadge";
-import { ExperienceData } from "../../models/PortfolioData";
+import {
+  ExperienceData,
+  SingleExperienceData,
+} from "../../models/PortfolioData";
 import ExperienceBar from "../../components/ExperienceBar/ExperienceBar";
 
 type AboutMeProps = {
@@ -9,33 +12,36 @@ type AboutMeProps = {
 
 function AboutMe(props: AboutMeProps) {
   let experienceSorted = [...props.aboutData.experience].reverse();
-  console.log(experienceSorted);
-  /*   let experiences = [
-    {
-      date: "Jun-Aug 2019",
-      startDate: "2019-06-01",
-      endDate: "2019-08-31",
-      company: "Grupo Vermon",
-      position: "Full Stack Developer (Internship)",
-      shortPosition: "Dev",
-      description:
-        "Full stack development of a web application for real-time home sensor management and monitoring.",
-      labels: ["angular", "python", "flask"],
-      color: "#818990",
-    },
-    {
-      date: "Jul-Sep 2020",
-      startDate: "2020-07-01",
-      endDate: "2020-09-30",
-      company: "Grupo Vermon",
-      position: "Full Stack Developer (Internship)",
-      shortPosition: "Dev",
-      description:
-        "Full stack development of a web application for the creation and management of dynamic forms to control incidents in companies.",
-      labels: ["angular", "aws", "serverless"],
-      color: "#818990",
-    },
-  ]; */
+
+  experienceSorted.forEach((exp) => {
+    exp.experiences.sort((a, b) => {
+      return new Date(a.endDate).getTime() - new Date(b.endDate).getTime();
+    });
+  });
+
+  function parseDates(experience: SingleExperienceData): string {
+    const startDateTime = new Date(experience.startDate);
+    let endDateTime = new Date(experience.endDate);
+    if (!experience.endDate) endDateTime = new Date();
+    //parse to format Month-Month Year
+    const startYear = startDateTime.getFullYear();
+    const endYear = endDateTime.getFullYear();
+
+    let startMonth = startDateTime.toLocaleString("default", {
+      month: "short",
+    });
+    let endMonth = endDateTime.toLocaleString("default", {
+      month: "short",
+    });
+    // capitalize first letter
+    startMonth = startMonth.charAt(0).toUpperCase() + startMonth.slice(1);
+    endMonth = endMonth.charAt(0).toUpperCase() + endMonth.slice(1);
+    if (startYear === endYear) {
+      return `${startMonth}-${endMonth} ${startYear}`;
+    } else {
+      return `${startMonth} ${startYear}-${endMonth} ${endYear}`;
+    }
+  }
 
   return (
     <div className="container flex flex-row space-x-6 items-start">
@@ -70,29 +76,61 @@ function AboutMe(props: AboutMeProps) {
         <div className="bg-white rounded text-black p-10">
           <h3>💼 Professional Experience</h3>
           <Timeline>
-            {experienceSorted.map((experience: ExperienceData) => (
-              <Timeline.Item>
-                <Timeline.Point />
-                <Timeline.Content>
-                  <Timeline.Time>
-                    <b>{experience.company}</b> - <i>({experience.date})</i>
-                  </Timeline.Time>
-                  <Timeline.Title>{experience.position}</Timeline.Title>
-                  <Timeline.Body>
-                    {experience.description}
-                    <br />
-                    {experience.labels.map((label: string) => (
-                      <TechBadge className="mt-2" tech={label} />
-                    ))}
-                  </Timeline.Body>
-
-                  {/*  <Button color="gray">
-                  Learn More
-                  <HiArrowNarrowRight className="ml-2 h-3 w-3" />
-                </Button> */}
-                </Timeline.Content>
-              </Timeline.Item>
-            ))}
+            {experienceSorted.map((experience: ExperienceData) =>
+              experience.experiences.length > 1 ? (
+                <Timeline.Item>
+                  <b className="font-bold text-gray-400">
+                    {experience.company}
+                  </b>
+                  {experience.experiences.reverse().map((exp) => (
+                    <>
+                      <Timeline.Content>
+                        <span className="italic text-sm text-gray-400">
+                          ({parseDates(exp)})
+                        </span>
+                        <Timeline.Point />
+                        <Timeline.Title className="text-green-500">
+                          {exp.position}
+                        </Timeline.Title>
+                        <Timeline.Body>
+                          {exp.description}
+                          <br />
+                          {exp.labels.map((label: string) => (
+                            <TechBadge className="mt-2" tech={label} />
+                          ))}
+                        </Timeline.Body>
+                      </Timeline.Content>
+                    </>
+                  ))}
+                </Timeline.Item>
+              ) : (
+                <Timeline.Item>
+                  {experience.experiences.reverse().map((exp) => (
+                    <>
+                      <Timeline.Content>
+                        <span className="font-bold text-gray-400">
+                          {experience.company} -{" "}
+                          <span className="italic text-sm text-gray-400">
+                            ({parseDates(exp)})
+                          </span>
+                        </span>
+                        <Timeline.Point />
+                        <Timeline.Title className="text-green-500">
+                          {exp.position}
+                        </Timeline.Title>
+                        <Timeline.Body>
+                          {exp.description}
+                          <br />
+                          {exp.labels.map((label: string) => (
+                            <TechBadge className="mt-2" tech={label} />
+                          ))}
+                        </Timeline.Body>
+                      </Timeline.Content>
+                    </>
+                  ))}
+                </Timeline.Item>
+              )
+            )}
           </Timeline>
         </div>
       </div>

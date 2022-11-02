@@ -1,15 +1,27 @@
 import { BookData } from "./BookData";
 
-export type ExperienceData = {
+export type SingleExperienceData = {
   date: string;
   startDate: string;
   endDate: string;
-  company: string;
   position: string;
   shortPosition: string;
   description: string;
   labels: string[];
   color: string;
+};
+
+export type ExperienceData = {
+  /*   date: string;
+  startDate: string;
+  endDate: string; */
+  company: string;
+  /*  position: string;
+  shortPosition: string;
+  description: string;
+  labels: string[];
+  color: string; */
+  experiences: SingleExperienceData[];
 };
 
 export interface PortfolioData {
