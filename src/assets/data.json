@@ -1,9 +1,13 @@
 {
   "header": {
     "name": "Víctor Pérez Piqueras",
-    "title": "Software Engineer & Researcher"
+    "title": "Software Engineer - Scrum Master - Researcher"
   },
   "aboutMe": {
+    "contactInfo": {
+      "email": "victorperezpiqueras@gmail.com",
+      "phone": "+34 601 13 94 14"
+    },
     "aboutTexts": [
       "💻 I'm a professional, competent and passionate Software Engineer. I'm experienced in web development, frontend design and UI, which I find very rewarding. I also have knowledge in backend, ReST APIs and database design, which allows me to easily adapt to most job positions, being able to work as a full-stack developer.",
       "⚡ I tend to be very (VERY) fast developing features in technologies I'm confortable with. But learning a new stack is not a problem for me, but rather another strength. My eager to learn has pushed me from frontend into architecture design and cloud services.",

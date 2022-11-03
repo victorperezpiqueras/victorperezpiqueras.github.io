@@ -35,15 +35,17 @@ function App() {
             />
           </div>
 
-          <div className="basis-1/6"></div>
-          <div className="container basis-4/5">
-            <p className="text-black font-bold text-5xl">
+          {/*  <div className="basis-1/12"></div> */}
+          <div className="container basis-3/5">
+            <p className="flex justify-center text-black font-bold text-5xl">
               {portfolioData.header.name}
             </p>
 
-            <p className="font-bold text-2xl">{portfolioData.header.title}</p>
+            <p className="flex justify-center font-bold text-2xl">
+              {portfolioData.header.title}
+            </p>
 
-            <div className="container space-x-4">
+            <div className="container flex justify-center space-x-4">
               <SocialIcon
                 link={"https://github.com/victorperezpiqueras"}
                 color={"bg-black"}
@@ -74,6 +76,7 @@ function App() {
               </a>
             </div>
           </div>
+          <div className="basis-1/5"></div>
         </div>
         <div className="container flex flex-col w-full">
           <Box

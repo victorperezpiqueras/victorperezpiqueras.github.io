@@ -24,9 +24,15 @@ export type ExperienceData = {
   experiences: SingleExperienceData[];
 };
 
+export type ContactInfoData = { email: string; phone: string };
+
 export interface PortfolioData {
   header: { name: string; title: string };
-  aboutMe: { aboutTexts: string[]; experience: ExperienceData[] };
+  aboutMe: {
+    contactInfo: ContactInfoData;
+    aboutTexts: string[];
+    experience: ExperienceData[];
+  };
   projects: [];
   library: BookData[];
   resume: string;
