@@ -20,7 +20,8 @@ type AboutMeProps = {
 };
 
 function AboutMe(props: AboutMeProps) {
-  const [active, setActive] = useState(false);
+  const [copiedPhone, setCopiedPhone] = useState(false);
+  const [copiedEmail, setCopiedEmail] = useState(false);
 
   let experienceSorted = [...props.aboutData.experience].reverse();
 
@@ -62,7 +63,20 @@ function AboutMe(props: AboutMeProps) {
 
   function copyPhone() {
     navigator.clipboard.writeText(props.aboutData.contactInfo.phone);
-    setActive(true);
+    setCopiedPhone(true);
+    setCopiedEmail(false);
+    setTimeout(() => {
+      // can happen that previous switch timeout affects next switch state
+      setCopiedPhone(false);
+    }, 2000);
+  }
+  function copyEmail() {
+    navigator.clipboard.writeText(props.aboutData.contactInfo.email);
+    setCopiedEmail(true);
+    setCopiedPhone(false);
+    setTimeout(() => {
+      setCopiedEmail(false);
+    }, 2000);
   }
 
   return (
@@ -72,29 +86,33 @@ function AboutMe(props: AboutMeProps) {
           <h3>📍 Contact info</h3>
           <span className="flex flex-row" onClick={copyPhone}>
             <BsFillTelephoneFill
-              className="mt-1 text-green-600"
+              className="mt-1 text-green-500"
               size={"15px"}
             />{" "}
             &nbsp;&nbsp;
-            <span>{props.aboutData.contactInfo.phone}</span>
+            {props.aboutData.contactInfo.phone}
             <Tooltip
-              content={active ? "Copied!" : "Copy to clipboard"}
+              content={copiedPhone ? "Copied!" : "Copy to clipboard"}
               style="dark"
               placement="right"
             >
-              <button
-                type="button"
-                className="focus:outline-none text-white bg-green-500 hover:bg-green-800 font-medium rounded-lg text-sm px-3 py-2 ml-2 -mt-1"
-                onClick={copyPhone}
-              >
-                {active ? <BsCheckSquareFill /> : <FaCopy />}
-              </button>
+              {copiedPhone ? (
+                <BsCheckSquareFill
+                  className="text-green-300 ml-1 mt-1 hover:cursor-pointer"
+                  onClick={copyPhone}
+                />
+              ) : (
+                <FaCopy
+                  className="text-green-200 ml-1 mt-1 hover:cursor-pointer"
+                  onClick={copyPhone}
+                />
+              )}
             </Tooltip>
           </span>
           <span className="flex flex-row">
-            <MdEmail className="mt-1 text-green-600" size={"20px"} /> &nbsp;{" "}
+            <MdEmail className="mt-1 text-green-500" size={"20px"} /> &nbsp;{" "}
             <a
-              className="text-green-600"
+              className="text-green-500"
               href="mailto:victorperezpiqueras@gmail.com"
               style={{
                 textDecoration: "none",
@@ -102,6 +120,23 @@ function AboutMe(props: AboutMeProps) {
             >
               {props.aboutData.contactInfo.email}
             </a>
+            <Tooltip
+              content={copiedEmail ? "Copied!" : "Copy to clipboard"}
+              style="dark"
+              placement="right"
+            >
+              {copiedEmail ? (
+                <BsCheckSquareFill
+                  className="text-green-300 ml-1 mt-1 hover:cursor-pointer"
+                  onClick={copyEmail}
+                />
+              ) : (
+                <FaCopy
+                  className="text-green-200 ml-1 mt-1 hover:cursor-pointer"
+                  onClick={copyEmail}
+                />
+              )}
+            </Tooltip>
           </span>
         </div>
 
