@@ -83,7 +83,7 @@ function AboutMe(props: AboutMeProps) {
     <div className="container flex flex-row space-x-6 items-start">
       <div className="basis-1/2 container flex flex-col space-y-6">
         <div className="flex flex-col bg-white rounded text-black p-4">
-          <h3>📍 Contact info</h3>
+          <h4>📍 Contact Info</h4>
           <span className="flex flex-row" onClick={copyPhone}>
             <BsFillTelephoneFill
               className="mt-1 text-green-500"
@@ -140,8 +140,8 @@ function AboutMe(props: AboutMeProps) {
           </span>
         </div>
 
-        <div className="basis-1/2 bg-white rounded text-black p-4">
-          <h3>🎯 About me</h3>
+        <div className="basis-1/2 bg-white rounded text-black p-4 pb-0">
+          <h4>🎯 About Me</h4>
           {props.aboutData.aboutTexts.map((text, index) => (
             <div>
               <p>{text}</p>
@@ -153,11 +153,12 @@ function AboutMe(props: AboutMeProps) {
 
       <div className="flex flex-col basis-1/2 space-y-6">
         <div className="bg-white rounded text-black p-4 relative">
+          <h4 className="pb-2.5">🚩 My Progress</h4>
           <ExperienceBar experiences={props.aboutData.experience} />
         </div>
 
-        <div className="bg-white rounded text-black p-10">
-          <h3>💼 Professional Experience</h3>
+        <div className="bg-white rounded text-black px-10 pt-4">
+          <h4 className="-ml-4">💼 Professional Experience</h4>
           <Timeline>
             {experienceSorted.map((experience: ExperienceData) =>
               experience.experiences.length > 1 ? (
