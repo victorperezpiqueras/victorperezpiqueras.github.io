@@ -87,7 +87,7 @@
         "fontFamily": "monospace",
         "textColor": "black",
         "textShadow": "1px 1px #ffffff",
-        "marginTitle": "15px",
+        "marginTitle": "5px",
         "marginTop": "20px"
       },
       "link": "https://itrevolution.com/the-phoenix-project/"
@@ -105,7 +105,7 @@
         "fontFamily": "monospace",
         "textColor": "rgb(228, 0, 190)",
         "textShadow": null,
-        "marginTitle": "15px",
+        "marginTitle": "5px",
         "marginTop": "20px"
       },
       "link": "https://itrevolution.com/the-unicorn-project/"
@@ -125,8 +125,8 @@
         "fontFamily": "'Open Sans', sans-serif",
         "textColor": "white",
         "textShadow": "2px 2px #000000",
-        "marginTitle": "10px",
-        "marginTop": "40px"
+        "marginTitle": "5px",
+        "marginTop": "20px"
       },
       "link": "https://www.amazon.com/Adaptive-Code-principles-Developer-Practices/dp/1509302581"
     },
@@ -143,8 +143,8 @@
         "fontFamily": "monospace",
         "textColor": "rgb(255, 255, 255)",
         "textShadow": "1px 1px #000000",
-        "marginTitle": null,
-        "marginTop": null
+        "marginTitle": "5px",
+        "marginTop": "20px"
       },
       "link": "https://www.amazon.com/DevOps-Handbook-World-Class-Reliability-Organizations/dp/1942788002"
     },
@@ -161,8 +161,8 @@
         "fontFamily": "'Roboto', sans-serif",
         "textColor": "rgb(37, 37, 37)",
         "textShadow": null,
-        "marginTitle": null,
-        "marginTop": "40px"
+        "marginTitle": "5px",
+        "marginTop": "60px"
       },
       "link": "https://www.oreilly.com/library/view/clean-code-a/9780136083238/"
     },
@@ -179,7 +179,7 @@
         "fontFamily": "'Times New Roman', Times, serif",
         "textColor": "white",
         "textShadow": "1px 1px #000000",
-        "marginTitle": "5px",
+        "marginTitle": "2px",
         "marginTop": "40px"
       },
       "link": "https://martinfowler.com/books/refactoring.html"

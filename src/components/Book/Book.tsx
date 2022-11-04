@@ -4,11 +4,12 @@ import "./Book.css";
 
 type BookDataProps = {
   bookData: BookData;
+  index: number;
 };
 
 function Book(props: BookDataProps) {
   return (
-    <div className="book" id="placeholder-book">
+    <div className="book" id={`book-${props.index}`}>
       <div
         className="side spine"
         style={{
@@ -39,11 +40,20 @@ function Book(props: BookDataProps) {
           width: props.bookData.spine.width,
         }}
       ></div>
-      <a className="side cover link" href={props.bookData.link} target="_blank">
+      <a
+        className="side cover link"
+        href={props.bookData.link}
+        target="_blank"
+        style={{
+          backgroundImage: `url(${require(`../../assets/bookCovers/${props.bookData.cover}`)})`,
+          height: props.bookData.height,
+          width: props.bookData.width,
+          left: props.bookData.spine.width,
+        }}
+      >
         <div
           className="side cover"
           style={{
-            backgroundImage: `url(${book_adaptive})`,
             height: props.bookData.height,
             width: props.bookData.width,
             left: props.bookData.spine.width,
