@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Book from "../../components/Book/Book";
 import { BookData } from "../../models/BookData";
-
+import "./Library.css";
 type LibraryProps = {
   books: BookData[];
 };
@@ -34,13 +34,21 @@ function Library(props: LibraryProps) {
   }, []);
 
   return (
-    <div className="container flex flex-column items-center justify-center  bg-white rounded text-black p-4">
-      <p className="font-bold text-2xl">My Library:</p>
-      <div className="bookshelf flex flex-row align-bottom">
+    <div className="container flex flex-column items-center justify-center p-4">
+      <div className="w-1/2 items-center justify-center text-center  bg-white rounded text-black pt-2">
+        <p className="font-bold text-2xl">My Library:</p>
+      </div>
+      <div className="bookshelf flex flex-row align-bottom mt-20">
         {props.books.map((book: BookData, index: number) => (
           <Book bookData={book} index={index} key={index} />
         ))}
       </div>
+      <div
+        className="a bg-green-500 items-center justify-center text-center text-black -mt-10"
+        style={{
+          width: "700px",
+        }}
+      ></div>
     </div>
   );
 }

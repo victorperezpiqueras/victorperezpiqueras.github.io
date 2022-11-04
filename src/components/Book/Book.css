@@ -4,7 +4,7 @@
   position: relative;
   margin-left: 1px;
   transform-style: preserve-3d;
-  transform: translateZ(0) rotateY(-30deg) rotateX(-5deg);
+  transform: translateZ(0) rotateY(-30deg); /* if 3D rotateX(-5deg);*/
   transition: transform 1s;
   margin-right: 10px;
 }
@@ -43,7 +43,7 @@
 }
 
 .top {
-  top: -2px; /* hmm, why -2 and not 0? */
+  top: -0.5px; /* hmm, why -2 and not 0? */
   background-image: linear-gradient(90deg, white 90%, gray 10%);
   background-size: 5px 5px;
   transform: rotateX(90deg) translateZ(95px) translateY(-95px);

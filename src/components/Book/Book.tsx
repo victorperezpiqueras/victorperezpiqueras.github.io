@@ -1,15 +1,15 @@
-import book_adaptive from "../../assets/bookCovers/book_adaptive.jpg";
 import { BookData } from "../../models/BookData";
 import "./Book.css";
 
 type BookDataProps = {
   bookData: BookData;
   index: number;
+  threeD?: boolean;
 };
 
 function Book(props: BookDataProps) {
   return (
-    <div className="book" id={`book-${props.index}`}>
+    <div className="book z-40" id={`book-${props.index}`}>
       <div
         className="side spine"
         style={{
@@ -30,7 +30,7 @@ function Book(props: BookDataProps) {
             marginTop: props.bookData.spine.marginTop,
           }}
         >
-          {props.bookData.title}
+          {props.bookData.spine.text}
         </span>
       </div>
       <div
