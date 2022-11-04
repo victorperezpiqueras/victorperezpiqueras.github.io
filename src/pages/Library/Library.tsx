@@ -7,6 +7,7 @@ type LibraryProps = {
 };
 
 function Library(props: LibraryProps) {
+  let books = props.books.filter((book) => !book.unread);
   function alignBooksBottom(books: BookData[]) {
     //calculate max height of books
     let maxHeight = 0;
@@ -39,7 +40,7 @@ function Library(props: LibraryProps) {
         <p className="font-bold text-2xl">My Library:</p>
       </div>
       <div className="bookshelf flex flex-row align-bottom mt-20">
-        {props.books.map((book: BookData, index: number) => (
+        {books.map((book: BookData, index: number) => (
           <Book bookData={book} index={index} key={index} />
         ))}
       </div>

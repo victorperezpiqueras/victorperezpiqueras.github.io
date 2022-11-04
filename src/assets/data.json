@@ -201,6 +201,43 @@
         "marginTop": "50px"
       },
       "link": "https://martinfowler.com/books/refactoring.html"
+    },
+    {
+      "unread": true,
+      "title": "A Philosophy of Software Design",
+      "cover": "book_philosophy_sw_design.jpg",
+      "height": "250px",
+      "width": "190px",
+      "spine": {
+        "text": "A PHILOSOPHY OF SOFTWARE DESIGN",
+        "color": "#7AC4CE",
+        "width": "20px",
+        "fontSize": "7.5px",
+        "fontFamily": "'Roboto', sans-serif",
+        "textColor": "white",
+        "textShadow": "1px 1px #000000",
+        "marginTitle": "1px",
+        "marginTop": "20px"
+      },
+      "link": "https://www.amazon.com/Philosophy-Software-Design-John-Ousterhout/dp/1732102201"
+    },
+    {
+      "unread": true,
+      "title": "Fixing Your Scrum: Practical Solutions to Common Scrum Problems",
+      "cover": "book_fixing_your_scrum.jpg",
+      "height": "270px",
+      "width": "190px",
+      "spine": {
+        "text": "Fixing Your Scrum",
+        "color": "#fff",
+        "width": "20px",
+        "fontSize": "14px",
+        "fontFamily": "monospace",
+        "textColor": "black",
+        "marginTitle": "-1px",
+        "marginTop": "50px"
+      },
+      "link": "https://www.amazon.com/Fixing-Your-Scrum-Practical-Solutions/dp/1680506978"
     }
   ],
   "resume": "cv.pdf"
