@@ -4,9 +4,10 @@
   position: relative;
   margin-left: 1px;
   transform-style: preserve-3d;
-  transform: translateZ(0) rotateY(-30deg); /* if 3D rotateX(-5deg);*/
+  /* transform: translateZ(0) rotateY(-30deg); */ /* if 3D rotateX(-5deg);*/
+  transform: rotateX(-10deg) rotateZ(-15deg) rotateY(-20deg);
   transition: transform 1s;
-  margin-right: 10px;
+  /* margin-right: 5px; */
 }
 
 .side {
@@ -70,6 +71,8 @@
 
 .book:hover {
   z-index: 100;
-  transform: translateY(30px) translateX(-60px) rotateX(20deg) rotateY(-70deg)
-    rotateZ(-0deg);
+  /* OLD transform: translateY(30px) translateX(-60px) rotateX(20deg) rotateY(-70deg)
+    rotateZ(-0deg); */
+  transform: translateY(30px) translateX(-130px) rotateX(0deg) rotateY(-90deg)
+    rotateZ(-10deg);
 }

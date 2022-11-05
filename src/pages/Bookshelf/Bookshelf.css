@@ -1,0 +1,16 @@
+.a {
+  height: 5rem;
+  transform-style: preserve-3d;
+  transform: translateY(5px) perspective(300px) rotateX(50deg);
+}
+
+.box {
+  width: 700px;
+  height: 600px;
+  transform-style: preserve-3d;
+  border-radius: 32px;
+  transform: translate3d(0px, -16px, 0px) rotateX(81deg) rotateZ(12deg)
+    translateZ(350px) translateX(100px) translateY(250px);
+  box-shadow: 0px 80px 153px 41px rgba(255, 252, 255, 0.7);
+  transition: 0.4s ease-in-out transform, 0.4s ease-in-out box-shadow;
+}

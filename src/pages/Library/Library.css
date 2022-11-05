@@ -1,5 +1,0 @@
-.a {
-  height: 5rem;
-  transform-style: preserve-3d;
-  transform: translateY(5px) perspective(300px) rotateX(50deg);
-}

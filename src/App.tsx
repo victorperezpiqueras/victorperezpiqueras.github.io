@@ -12,7 +12,7 @@ import Tab from "@mui/material/Tab";
 import TabPanel from "./components/TabPanel/TabPanel";
 import AboutMe from "./pages/AboutMe/AboutMe";
 import Projects from "./pages/Projects/AboutMe";
-import Library from "./pages/Library/Library";
+import Bookshelf from "./pages/Bookshelf/Bookshelf";
 import Resume from "./pages/Resume/Resume";
 import data from "./assets/data.json";
 import { PortfolioData } from "./models/PortfolioData";
@@ -96,8 +96,8 @@ function App() {
             >
               <Tab label="About me" />
               <Tab label="Projects" />
-              <Tab label="My Library" />
               <Tab label="Resume" />
+              <Tab label="My Bookshelf" />
             </Tabs>
           </Box>
           <div className="container w-full items-center">
@@ -108,10 +108,10 @@ function App() {
               <Projects />
             </TabPanel>
             <TabPanel value={value} index={2}>
-              <Library books={portfolioData.library} />
+              <Resume cv={portfolioData.resume} />
             </TabPanel>
             <TabPanel value={value} index={3}>
-              <Resume cv={portfolioData.resume} />
+              <Bookshelf books={portfolioData.library} />
             </TabPanel>
           </div>
         </div>

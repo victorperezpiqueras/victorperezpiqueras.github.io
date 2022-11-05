@@ -1,12 +1,13 @@
 import { useEffect } from "react";
 import Book from "../../components/Book/Book";
 import { BookData } from "../../models/BookData";
-import "./Library.css";
-type LibraryProps = {
+import "./Bookshelf.css";
+
+type BookshelfProps = {
   books: BookData[];
 };
 
-function Library(props: LibraryProps) {
+function Bookshelf(props: BookshelfProps) {
   let books = props.books.filter((book) => !book.unread);
   function alignBooksBottom(books: BookData[]) {
     //calculate max height of books
@@ -17,6 +18,27 @@ function Library(props: LibraryProps) {
         maxHeight = height;
       }
     }
+    //calculate max width of books
+    let maxWidth = 0;
+    for (let i = 0; i < books.length; i++) {
+      const width = Number(books[i].spine.width.split("px")[0]);
+      if (width > maxWidth) {
+        maxWidth = width;
+      }
+    }
+    // set margin-right of html books to max width- width of book
+    const minMarginRight = 18;
+    for (let i = 0; i < books.length; i++) {
+      let book: HTMLElement | null = document.getElementById(`book-${i}`);
+      if (book) {
+        book.style.marginRight = `${
+          Number(books[i].spine.width.split("px")[0]) -
+          maxWidth +
+          minMarginRight
+        }px`;
+      }
+    }
+
     //set bottom property of book to maxheight - book.height
     for (let i = 0; i < books.length; i++) {
       let book: HTMLElement | null = document.getElementById(`book-${i}`);
@@ -31,27 +53,19 @@ function Library(props: LibraryProps) {
     }
   }
   useEffect(() => {
-    alignBooksBottom(props.books);
+    alignBooksBottom(books);
   }, []);
 
   return (
     <div className="container flex flex-column items-center justify-center p-4">
-      <div className="w-1/2 items-center justify-center text-center  bg-white rounded text-black pt-2">
-        <p className="font-bold text-2xl">My Library:</p>
-      </div>
       <div className="bookshelf flex flex-row align-bottom mt-20">
         {books.map((book: BookData, index: number) => (
           <Book bookData={book} index={index} key={index} />
         ))}
       </div>
-      <div
-        className="a bg-green-500 items-center justify-center text-center text-black -mt-10"
-        style={{
-          width: "700px",
-        }}
-      ></div>
+      <div className="box bg-white"></div>
     </div>
   );
 }
 
-export default Library;
+export default Bookshelf;
