@@ -58,7 +58,6 @@ function ExperienceBar(props: ExperienceProps) {
 
   function getFlags(years: number) {
     let flags = [];
-    let flagsData = [];
     for (let i = 1; i <= years; i++) {
       flags.push(
         <div
@@ -66,7 +65,7 @@ function ExperienceBar(props: ExperienceProps) {
           className="w-4/12 drop-shadow absolute -mt-3 z-30 hover:cursor-pointer"
           style={{ left: `${(i / years) * percentageFactor}%` }}
         >
-          <Tooltip content={`${i} years`} style="dark">
+          <Tooltip content={`${i} year${i > 1 ? "s" : ""}`} style="dark">
             <BsFillFlagFill color="red" />
           </Tooltip>
           <div
@@ -75,10 +74,6 @@ function ExperienceBar(props: ExperienceProps) {
           ></div>
         </div>
       );
-      flagsData.push({
-        per: `${(i / years) * percentageFactor}%`,
-        text: `${i} years`,
-      });
     }
     return flags;
   }
@@ -122,6 +117,7 @@ function ExperienceBar(props: ExperienceProps) {
       let barPercentage = (ex.diffTime / maxLimitTime) * 100; //percentageFactor;
 
       let rounded: string;
+      // calculate rounds
       if (i === 0) {
         rounded = "rounded-l-xl";
       } else if (i === updatedExperiences.length - 1) {
@@ -129,14 +125,21 @@ function ExperienceBar(props: ExperienceProps) {
       } else {
         rounded = "rounded-none";
       }
+      // calculate gradient
+      let nextGradient: string = ex.color;
+      if (i < updatedExperiences.length - 1) {
+        nextGradient = updatedExperiences[i + 1].color;
+      }
+
       let section = (
         <div
           key={i}
-          className={`absolute ${rounded} h-9 text-xs font-medium text-white text-center p-2.5 shim-green z-20`}
+          className={`absolute ${rounded} h-9 text-xs font-medium text-white text-center p-2.5 experience-bar z-20`}
           style={{
             width: `${barPercentage * (percentageFactor / 100)}%`,
             left: `${(start / maxLimitTime) * percentageFactor}%`,
             backgroundColor: ex.color,
+            background: `linear-gradient(90deg, ${ex.color} 0%, ${ex.color} 92%, ${nextGradient} 100%)`,
           }}
         >
           {ex.shortPosition}
@@ -156,18 +159,6 @@ function ExperienceBar(props: ExperienceProps) {
 
   return (
     <div className="h-9 relative w-full bg-gray-200 rounded-full">
-      {/* <div
-        style={{ width: "20%" }}
-        className="absolute rounded-l-full h-10 text-xs font-medium text-white text-center p-2.5 shim-green z-20"
-      >
-        Intern
-      </div>
-      <div
-        style={{ width: "20%", left: "100%" }}
-        className="absolute rounded-l-full h-10 text-xs font-medium text-white text-center p-2.5 shim-green z-20"
-      >
-        Intern
-      </div> */}
       {experienceSections}
       {flags}
     </div>
