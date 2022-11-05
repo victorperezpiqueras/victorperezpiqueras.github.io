@@ -3,7 +3,7 @@ import "./Book.css";
 
 type BookDataProps = {
   bookData: BookData;
-  index: number;
+  index: string;
   threeD?: boolean;
 };
 

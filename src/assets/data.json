@@ -90,7 +90,8 @@
         "marginTitle": "5px",
         "marginTop": "20px"
       },
-      "link": "https://itrevolution.com/the-phoenix-project/"
+      "link": "https://itrevolution.com/the-phoenix-project/",
+      "tag": "recommended"
     },
     {
       "title": "The Unicorn Project",
@@ -108,7 +109,8 @@
         "marginTitle": "5px",
         "marginTop": "20px"
       },
-      "link": "https://itrevolution.com/the-unicorn-project/"
+      "link": "https://itrevolution.com/the-unicorn-project/",
+      "tag": "recommended"
     },
 
     {
@@ -128,7 +130,8 @@
         "marginTitle": "5px",
         "marginTop": "20px"
       },
-      "link": "https://www.amazon.com/Adaptive-Code-principles-Developer-Practices/dp/1509302581"
+      "link": "https://www.amazon.com/Adaptive-Code-principles-Developer-Practices/dp/1509302581",
+      "tag": "recommended"
     },
     {
       "title": "The DevOps Handbook",
@@ -146,7 +149,8 @@
         "marginTitle": "5px",
         "marginTop": "20px"
       },
-      "link": "https://www.amazon.com/DevOps-Handbook-World-Class-Reliability-Organizations/dp/1942788002"
+      "link": "https://www.amazon.com/DevOps-Handbook-World-Class-Reliability-Organizations/dp/1942788002",
+      "tag": "recommended"
     },
     {
       "title": "Clean Code",
@@ -164,7 +168,8 @@
         "marginTitle": "5px",
         "marginTop": "60px"
       },
-      "link": "https://www.oreilly.com/library/view/clean-code-a/9780136083238/"
+      "link": "https://www.oreilly.com/library/view/clean-code-a/9780136083238/",
+      "tag": "recommended"
     },
     {
       "title": "The Professional Scrum Team",
@@ -182,7 +187,8 @@
         "marginTitle": "0px",
         "marginTop": "30px"
       },
-      "link": "https://www.scrum.org/resources/professional-scrum-team"
+      "link": "https://www.scrum.org/resources/professional-scrum-team",
+      "tag": "recommended"
     },
     {
       "title": "Refactoring",
@@ -200,10 +206,28 @@
         "marginTitle": "0px",
         "marginTop": "50px"
       },
-      "link": "https://martinfowler.com/books/refactoring.html"
+      "link": "https://martinfowler.com/books/refactoring.html",
+      "tag": "recommended"
     },
     {
-      "unread": true,
+      "title": "Fixing Your Scrum: Practical Solutions to Common Scrum Problems",
+      "cover": "book_fixing_your_scrum.jpg",
+      "height": "270px",
+      "width": "190px",
+      "spine": {
+        "text": "Fixing Your Scrum",
+        "color": "#fff",
+        "width": "20px",
+        "fontSize": "14px",
+        "fontFamily": "monospace",
+        "textColor": "black",
+        "marginTitle": "-1px",
+        "marginTop": "50px"
+      },
+      "link": "https://www.amazon.com/Fixing-Your-Scrum-Practical-Solutions/dp/1680506978",
+      "tag": "in_progress"
+    },
+    {
       "title": "A Philosophy of Software Design",
       "cover": "book_philosophy_sw_design.jpg",
       "height": "250px",
@@ -219,25 +243,8 @@
         "marginTitle": "1px",
         "marginTop": "20px"
       },
-      "link": "https://www.amazon.com/Philosophy-Software-Design-John-Ousterhout/dp/1732102201"
-    },
-    {
-      "unread": true,
-      "title": "Fixing Your Scrum: Practical Solutions to Common Scrum Problems",
-      "cover": "book_fixing_your_scrum.jpg",
-      "height": "270px",
-      "width": "190px",
-      "spine": {
-        "text": "Fixing Your Scrum",
-        "color": "#fff",
-        "width": "20px",
-        "fontSize": "14px",
-        "fontFamily": "monospace",
-        "textColor": "black",
-        "marginTitle": "-1px",
-        "marginTop": "50px"
-      },
-      "link": "https://www.amazon.com/Fixing-Your-Scrum-Practical-Solutions/dp/1680506978"
+      "link": "https://www.amazon.com/Philosophy-Software-Design-John-Ousterhout/dp/1732102201",
+      "tag": "in_progress"
     }
   ],
   "resume": "cv.pdf"
