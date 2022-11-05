@@ -16,6 +16,7 @@ import Bookshelf from "./pages/Bookshelf/Bookshelf";
 import Resume from "./pages/Resume/Resume";
 import data from "./assets/data.json";
 import { PortfolioData } from "./models/PortfolioData";
+import Achievements from "./pages/Achievements/Achievements";
 
 function App() {
   const [value, setValue] = React.useState(0);
@@ -96,6 +97,7 @@ function App() {
             >
               <Tab label="About me" />
               <Tab label="Projects" />
+              <Tab label="Achievements" />
               <Tab label="Resume" />
               <Tab label="My Bookshelf" />
             </Tabs>
@@ -108,9 +110,12 @@ function App() {
               <Projects />
             </TabPanel>
             <TabPanel value={value} index={2}>
-              <Resume cv={portfolioData.resume} />
+              <Achievements />
             </TabPanel>
             <TabPanel value={value} index={3}>
+              <Resume cv={portfolioData.resume} />
+            </TabPanel>
+            <TabPanel value={value} index={4}>
               <Bookshelf books={portfolioData.library} />
             </TabPanel>
           </div>
