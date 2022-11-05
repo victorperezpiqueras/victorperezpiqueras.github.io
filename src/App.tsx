@@ -82,11 +82,12 @@ function App() {
         <div className="container flex flex-col w-full">
           <Box
             sx={{
-              width: "50%",
               bgcolor: "white",
               alignSelf: "center",
               borderRadius: "10px",
               marginTop: "20px",
+              paddingLeft: "20px",
+              paddingRight: "20px",
             }}
           >
             <Tabs

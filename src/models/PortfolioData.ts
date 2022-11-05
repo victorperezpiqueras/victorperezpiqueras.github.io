@@ -26,13 +26,22 @@ export type ExperienceData = {
 
 export type ContactInfoData = { email: string; phone: string };
 
+export type LanguagesData = {
+  language: string;
+  description: string;
+  level: number;
+};
+
+export type AboutMeData = {
+  contactInfo: ContactInfoData;
+  aboutTexts: string[];
+  experience: ExperienceData[];
+  languages: LanguagesData[];
+};
+
 export interface PortfolioData {
   header: { name: string; title: string };
-  aboutMe: {
-    contactInfo: ContactInfoData;
-    aboutTexts: string[];
-    experience: ExperienceData[];
-  };
+  aboutMe: AboutMeData;
   projects: [];
   library: BookData[];
   resume: string;

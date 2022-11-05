@@ -1,22 +1,25 @@
 import { Timeline, Toast, Tooltip } from "flowbite-react";
 import TechBadge from "../../components/TechBadge/TechBadge";
 import {
+  AboutMeData,
   ContactInfoData,
   ExperienceData,
   SingleExperienceData,
 } from "../../models/PortfolioData";
 import ExperienceBar from "../../components/ExperienceBar/ExperienceBar";
 import { BsCheckSquareFill, BsFillTelephoneFill } from "react-icons/bs";
-import { MdDone, MdEmail } from "react-icons/md";
-import { FaCopy } from "react-icons/fa";
+import {
+  MdDone,
+  MdEmail,
+  MdOutlineStar,
+  MdOutlineStarHalf,
+  MdOutlineStarOutline,
+} from "react-icons/md";
+import { FaCopy, FaStar, FaStarHalf } from "react-icons/fa";
 import { useState } from "react";
 
 type AboutMeProps = {
-  aboutData: {
-    contactInfo: ContactInfoData;
-    aboutTexts: string[];
-    experience: ExperienceData[];
-  };
+  aboutData: AboutMeData;
 };
 
 function AboutMe(props: AboutMeProps) {
@@ -79,6 +82,22 @@ function AboutMe(props: AboutMeProps) {
     }, 2000);
   }
 
+  function getStars(starNumber: number) {
+    let stars = [];
+    for (let i = 0; i < Math.trunc(starNumber); i++) {
+      stars.push(<MdOutlineStar color="#0E9F6E" size={"20px"} />);
+    }
+    let offset: number = 0;
+    if (starNumber % 1 !== 0) {
+      stars.push(<MdOutlineStarHalf color="#0E9F6E" size={"20px"} />);
+      offset++;
+    }
+    for (let i = Math.trunc(starNumber) + offset; i < 5; i++) {
+      stars.push(<MdOutlineStarOutline color="#0E9F6E" size={"20px"} />);
+    }
+    return stars;
+  }
+
   return (
     <div className="container flex flex-row space-x-6 items-start">
       <div className="basis-1/2 container flex flex-col space-y-6">
@@ -138,6 +157,23 @@ function AboutMe(props: AboutMeProps) {
               )}
             </Tooltip>
           </span>
+        </div>
+
+        <div className="flex flex-col bg-white rounded text-black p-4">
+          <h4>🇬🇧 Language skills</h4>
+          {props.aboutData.languages.map((lang) => {
+            return (
+              <div className="flex flex-column mb-2">
+                <div className="flex flex-row space-x-2">
+                  <span>{lang.language}:</span>
+                  <span className="text-gray-500">{lang.description}</span>
+                </div>
+                <div className="flex flex-row space-x-0">
+                  {getStars(lang.level)}
+                </div>
+              </div>
+            );
+          })}
         </div>
 
         <div className="basis-1/2 bg-white rounded text-black p-4 pb-0">
