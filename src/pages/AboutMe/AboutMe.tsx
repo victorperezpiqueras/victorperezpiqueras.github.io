@@ -1,11 +1,5 @@
 import { Timeline, Toast, Tooltip } from "flowbite-react";
 import TechBadge from "../../components/TechBadge/TechBadge";
-import {
-  AboutMeData,
-  ContactInfoData,
-  ExperienceData,
-  SingleExperienceData,
-} from "../../models/PortfolioData";
 import ExperienceBar from "../../components/ExperienceBar/ExperienceBar";
 import { BsCheckSquareFill, BsFillTelephoneFill } from "react-icons/bs";
 import {
@@ -17,6 +11,11 @@ import {
 } from "react-icons/md";
 import { FaCopy, FaStar, FaStarHalf } from "react-icons/fa";
 import { useState } from "react";
+import {
+  AboutMeData,
+  SingleExperienceData,
+  ExperienceData,
+} from "../../models/AboutMeData";
 
 type AboutMeProps = {
   aboutData: AboutMeData;
@@ -159,6 +158,16 @@ function AboutMe(props: AboutMeProps) {
           </span>
         </div>
 
+        <div className="basis-1/2 bg-white rounded text-black p-4 pb-0">
+          <h4>🎯 About Me</h4>
+          {props.aboutData.aboutTexts.map((text, index) => (
+            <div>
+              <p>{text}</p>
+              <br />
+            </div>
+          ))}
+        </div>
+
         <div className="flex flex-col bg-white rounded text-black p-4">
           <h4>🇬🇧 Language skills</h4>
           {props.aboutData.languages.map((lang) => {
@@ -175,20 +184,10 @@ function AboutMe(props: AboutMeProps) {
             );
           })}
         </div>
-
-        <div className="basis-1/2 bg-white rounded text-black p-4 pb-0">
-          <h4>🎯 About Me</h4>
-          {props.aboutData.aboutTexts.map((text, index) => (
-            <div>
-              <p>{text}</p>
-              <br />
-            </div>
-          ))}
-        </div>
       </div>
 
       <div className="flex flex-col basis-1/2 space-y-6">
-        <div className="bg-white rounded text-black p-4 relative">
+        <div className="flex flex-col bg-white rounded text-black p-4">
           <h4 className="pb-2.5">🚩 My Progress</h4>
           <ExperienceBar experiences={props.aboutData.experience} />
         </div>

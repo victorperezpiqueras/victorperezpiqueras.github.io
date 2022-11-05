@@ -1,5 +1,3 @@
-import { Badge } from "flowbite-react";
-import { IconType } from "react-icons";
 import { FaAngular, FaAws, FaPython } from "react-icons/fa";
 import { SiServerless } from "react-icons/si";
 import { SiFlask } from "react-icons/si";
@@ -67,7 +65,5 @@ function TechBadge(props: TechBadgeProps) {
     </span>
   );
 }
-/* <Badge icon={icon}>
-      {props.tech.charAt(0).toUpperCase() + props.tech.slice(1)}
-    </Badge> */
+
 export default TechBadge;
