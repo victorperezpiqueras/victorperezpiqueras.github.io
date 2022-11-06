@@ -43,7 +43,11 @@ function AboutMe(props: AboutMeProps) {
     });
   });
 
-  function parseDates(startDate: string, endDate: string): string {
+  function parseDates(
+    startDate: string,
+    endDate: string,
+    includeMonths: boolean = true
+  ): string {
     const startDateTime = new Date(startDate);
     let endDateTime = !!endDate ? new Date(endDate) : new Date();
     //parse to format Month-Month Year
@@ -62,12 +66,16 @@ function AboutMe(props: AboutMeProps) {
 
     if (!!endDate) {
       if (startYear === endYear) {
-        return `${startMonth}-${endMonth} ${startYear}`;
+        return `${includeMonths ? startMonth + " " : ""}${
+          includeMonths ? "- " : ""
+        }${includeMonths ? endMonth + " " : ""}${startYear}`;
       } else {
-        return `${startMonth} ${startYear}-${endMonth} ${endYear}`;
+        return `${includeMonths ? startMonth + " " : ""}${startYear} - ${
+          includeMonths ? endMonth + " " : ""
+        }${endYear}`;
       }
     } else {
-      return `${startMonth} ${startYear} - Present`;
+      return `${includeMonths ? startMonth + " " : ""}${startYear} - Present`;
     }
   }
 
@@ -178,8 +186,8 @@ function AboutMe(props: AboutMeProps) {
 
         <div className="basis-1/2 bg-white rounded text-black p-4 pb-3">
           <div className="flex flex-row">
-            <h4 className="w-1/3">🎯 About Me</h4>
-            <div className="w-2/3 flex justify-end">
+            <h4 className="w-2/3">🎯 About Me</h4>
+            <div className="w-1/3 flex justify-end">
               {expandedAboutMe ? (
                 <HiOutlineChevronUp
                   className="text-green-500 hover:cursor-pointer"
@@ -227,7 +235,13 @@ function AboutMe(props: AboutMeProps) {
                       {education.entity}{" "}
                     </span>
                     <span className="text-sm text-gray-400">
-                      ({parseDates(education.startDate, education.endDate)})
+                      (
+                      {parseDates(
+                        education.startDate,
+                        education.endDate,
+                        false
+                      )}
+                      )
                     </span>
                   </div>
                   <Timeline.Body>{education.description}</Timeline.Body>
