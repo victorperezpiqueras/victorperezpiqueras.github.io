@@ -45,7 +45,12 @@ function Book(props: BookDataProps) {
         href={props.bookData.link}
         target="_blank"
         style={{
-          backgroundImage: `url(${require(`../../assets/bookCovers/${props.bookData.cover}`)})`,
+          backgroundImage: `url(${
+            new URL(
+              `../../assets/bookCovers/${props.bookData.cover}`,
+              import.meta.url
+            ).href
+          })`,
           height: props.bookData.height,
           width: props.bookData.width,
           left: props.bookData.spine.width,

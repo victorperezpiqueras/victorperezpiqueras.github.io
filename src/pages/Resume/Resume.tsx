@@ -6,7 +6,7 @@ type ResumeProps = {
 };
 
 function Resume(props: ResumeProps) {
-  let cv = require(`../../assets/${props.cv}`);
+  let cv = new URL(`../../assets/${props.cv}`, import.meta.url).href;
   return (
     <div className="flex flex-col justify-center items-center space-y-4 text-black h-screen">
       <a href={cv} download>
