@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Book from "../../components/Book/Book";
 import { BookData } from "../../models/BookData";
 import "./Bookshelf.css";
@@ -8,6 +8,14 @@ type BookshelfProps = {
 };
 
 function Bookshelf(props: BookshelfProps) {
+  const [isHovering, setIsHovering] = useState({});
+  const handleMouseOver = (id) => {
+    setIsHovering({ ...isHovering, [id]: true });
+  };
+  const handleMouseOut = (id) => {
+    setIsHovering({ ...isHovering, [id]: false });
+  };
+
   // all books have one tag, find all unique tags
   const tags = props.books
     .map((book) => book.tag)
@@ -85,7 +93,11 @@ function Bookshelf(props: BookshelfProps) {
               ))}
             </div>
             <div
-              className="flex relative bg-white rounded text-white text-2xl p-2 items-center justify-center white-shadow from-green-500 via-green-400 to-green-100 bg-gradient-to-r"
+              className={`transition ease-in-out duration-300 hover:cursor-pointer flex relative bg-white rounded text-white text-2xl p-2 items-center justify-center white-shadow from-green-500 via-green-400 to-green-100 bg-gradient-to-r ${
+                isHovering[tag.tag] ? "scale-125" : ""
+              } `}
+              onMouseOver={(e) => handleMouseOver(tag.tag)}
+              onMouseOut={(e) => handleMouseOut(tag.tag)}
               style={{
                 width: "200px",
                 height: "50px",
@@ -103,7 +115,9 @@ function Bookshelf(props: BookshelfProps) {
               }
             </div>
             <div
-              className="box bg-white"
+              className={`box bg-white ${
+                isHovering[tag.tag] ? "box-hover" : ""
+              }`}
               style={{
                 marginLeft: "-150px",
               }}

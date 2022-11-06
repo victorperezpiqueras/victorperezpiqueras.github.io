@@ -1,4 +1,3 @@
-import * as React from "react";
 import "./App.css";
 import portfolio from "./assets/portfolio.jpg";
 import { AiFillGithub } from "react-icons/ai";
@@ -17,11 +16,12 @@ import Resume from "./pages/Resume/Resume";
 import data from "./assets/data.json";
 import { PortfolioData } from "./models/PortfolioData";
 import Achievements from "./pages/Achievements/Achievements";
+import { useState, SyntheticEvent } from "react";
 
 function App() {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
   const portfolioData = data as PortfolioData;
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleChange = (event: SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
   return (
@@ -36,7 +36,6 @@ function App() {
             />
           </div>
 
-          {/*  <div className="basis-1/12"></div> */}
           <div className="container basis-3/5">
             <p className="flex justify-center text-black font-bold text-5xl">
               {portfolioData.header.name}
