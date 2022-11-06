@@ -1,26 +1,28 @@
-import { Timeline, Toast, Tooltip } from "flowbite-react";
+import { Timeline, Tooltip } from "flowbite-react";
 import TechBadge from "../../components/TechBadge/TechBadge";
 import ExperienceBar from "../../components/ExperienceBar/ExperienceBar";
+import { BsCheckSquareFill, BsFillTelephoneFill } from "react-icons/bs";
 import {
-  BsCheckSquareFill,
-  BsChevronCompactDown,
-  BsFillTelephoneFill,
-} from "react-icons/bs";
-import { GrDown, GrUp } from "react-icons/gr";
-import {
-  MdDone,
   MdEmail,
   MdOutlineStar,
   MdOutlineStarHalf,
   MdOutlineStarOutline,
 } from "react-icons/md";
-import { FaCopy, FaStar, FaStarHalf } from "react-icons/fa";
+import {
+  FaCode,
+  FaCopy,
+  FaGraduationCap,
+  FaUserGraduate,
+} from "react-icons/fa";
 import { useState } from "react";
 import {
   AboutMeData,
-  SingleExperienceData,
   ExperienceData,
+  EducationData,
 } from "../../models/AboutMeData";
+import { SlChemistry } from "react-icons/sl";
+import { FcGraduationCap } from "react-icons/fc";
+import { HiOutlineChevronDown, HiOutlineChevronUp } from "react-icons/hi";
 
 type AboutMeProps = {
   aboutData: AboutMeData;
@@ -32,7 +34,8 @@ function AboutMe(props: AboutMeProps) {
 
   const [expandedAboutMe, setExpandedAboutMe] = useState(false);
 
-  let experienceSorted = [...props.aboutData.experience].reverse();
+  const experienceSorted = [...props.aboutData.experience].reverse();
+  const educationSorted = [...props.aboutData.education].reverse();
 
   experienceSorted.forEach((exp) => {
     exp.experiences.sort((a, b) => {
@@ -40,11 +43,9 @@ function AboutMe(props: AboutMeProps) {
     });
   });
 
-  function parseDates(experience: SingleExperienceData): string {
-    const startDateTime = new Date(experience.startDate);
-    let endDateTime = !!experience.endDate
-      ? new Date(experience.endDate)
-      : new Date();
+  function parseDates(startDate: string, endDate: string): string {
+    const startDateTime = new Date(startDate);
+    let endDateTime = !!endDate ? new Date(endDate) : new Date();
     //parse to format Month-Month Year
     const startYear = startDateTime.getFullYear();
     const endYear = endDateTime.getFullYear();
@@ -59,7 +60,7 @@ function AboutMe(props: AboutMeProps) {
     startMonth = startMonth.charAt(0).toUpperCase() + startMonth.slice(1);
     endMonth = endMonth.charAt(0).toUpperCase() + endMonth.slice(1);
 
-    if (!!experience.endDate) {
+    if (!!endDate) {
       if (startYear === endYear) {
         return `${startMonth}-${endMonth} ${startYear}`;
       } else {
@@ -103,6 +104,16 @@ function AboutMe(props: AboutMeProps) {
     }
     return stars;
   }
+
+  const experienceIconsMapping = new Map([
+    ["dev", FaCode],
+    ["rdi", SlChemistry],
+  ]);
+  const educationIconsMapping = new Map([
+    ["bach", FcGraduationCap],
+    ["master", FaGraduationCap],
+    ["phd", FaUserGraduate],
+  ]);
 
   return (
     <div className="container flex flex-row space-x-6 items-start">
@@ -165,18 +176,18 @@ function AboutMe(props: AboutMeProps) {
           </span>
         </div>
 
-        <div className="basis-1/2 bg-white rounded text-black p-4">
+        <div className="basis-1/2 bg-white rounded text-black p-4 pb-3">
           <div className="flex flex-row">
             <h4 className="w-1/3">🎯 About Me</h4>
             <div className="w-2/3 flex justify-end">
               {expandedAboutMe ? (
-                <GrUp
+                <HiOutlineChevronUp
                   className="text-green-500 hover:cursor-pointer"
                   size={30}
                   onClick={() => setExpandedAboutMe(!expandedAboutMe)}
                 />
               ) : (
-                <GrDown
+                <HiOutlineChevronDown
                   className="text-green-500 hover:cursor-pointer"
                   size={30}
                   onClick={() => setExpandedAboutMe(!expandedAboutMe)}
@@ -195,8 +206,35 @@ function AboutMe(props: AboutMeProps) {
               ))}
             </div>
           ) : (
-            <div className="pb-0 text-lg text-gray-300">...</div>
+            <div className="py-0 text-lg text-gray-300"></div>
           )}
+        </div>
+
+        <div className="bg-white rounded text-black px-10 pt-4">
+          <h4 className="-ml-4 mb-3">🎓 Education</h4>
+          <Timeline>
+            {educationSorted.map((education: EducationData) => (
+              <Timeline.Item className="mb-0">
+                <Timeline.Content>
+                  <div>
+                    <Timeline.Point
+                      icon={educationIconsMapping.get(education.type)}
+                    />
+                    <Timeline.Title className="text-green-500 mb-0">
+                      {education.course}
+                    </Timeline.Title>
+                    <span className="font-bold text-gray-400">
+                      {education.entity}{" "}
+                    </span>
+                    <span className="text-sm text-gray-400">
+                      ({parseDates(education.startDate, education.endDate)})
+                    </span>
+                  </div>
+                  <Timeline.Body>{education.description}</Timeline.Body>
+                </Timeline.Content>
+              </Timeline.Item>
+            ))}
+          </Timeline>
         </div>
 
         <div className="flex flex-col bg-white rounded text-black p-4">
@@ -229,7 +267,7 @@ function AboutMe(props: AboutMeProps) {
             {experienceSorted.map((experience: ExperienceData) =>
               experience.experiences.length > 1 ? (
                 // if there are multiple experiences in the same company
-                <Timeline.Item>
+                <Timeline.Item className="mb-0">
                   <b className="font-bold text-gray-400">
                     {experience.company}
                   </b>
@@ -237,10 +275,12 @@ function AboutMe(props: AboutMeProps) {
                     <>
                       <Timeline.Content>
                         <span className="text-sm text-gray-400">
-                          ({parseDates(exp)})
+                          ({parseDates(exp.startDate, exp.endDate)})
                         </span>
-                        <Timeline.Point />
-                        <Timeline.Title className="text-green-500">
+                        <Timeline.Point
+                          icon={experienceIconsMapping.get(exp.type)}
+                        />
+                        <Timeline.Title className="text-green-500 mb-0">
                           {exp.position}
                         </Timeline.Title>
                         <Timeline.Body>
@@ -265,12 +305,14 @@ function AboutMe(props: AboutMeProps) {
                             {experience.company}{" "}
                           </span>
                           <span className="text-sm text-gray-400">
-                            ({parseDates(exp)})
+                            ({parseDates(exp.startDate, exp.endDate)})
                           </span>
                         </div>
 
-                        <Timeline.Point />
-                        <Timeline.Title className="text-green-500">
+                        <Timeline.Point
+                          icon={experienceIconsMapping.get(exp.type)}
+                        />
+                        <Timeline.Title className="text-green-500 mb-0">
                           {exp.position}
                         </Timeline.Title>
                         <Timeline.Body>

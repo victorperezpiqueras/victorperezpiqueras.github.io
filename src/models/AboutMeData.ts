@@ -7,6 +7,7 @@ export type SingleExperienceData = {
   description: string;
   labels: string[];
   color: string;
+  type: string;
 };
 
 export type ExperienceData = {
@@ -22,9 +23,19 @@ export type LanguagesData = {
   level: number;
 };
 
+export type EducationData = {
+  course: string;
+  entity: string;
+  description: string;
+  startDate: string;
+  endDate: string;
+  type: string;
+};
+
 export type AboutMeData = {
   contactInfo: ContactInfoData;
   aboutTexts: string[];
   experience: ExperienceData[];
   languages: LanguagesData[];
+  education: EducationData[];
 };

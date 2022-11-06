@@ -31,24 +31,24 @@
         "company": "Grupo Vermon",
         "experiences": [
           {
-            "date": "Jun-Aug 2019",
             "startDate": "2019-06-01",
             "endDate": "2019-08-31",
             "position": "Full Stack Developer (Internship)",
             "shortPosition": "Internship",
             "description": "Full stack development of a web application for real-time home sensor management and monitoring.",
             "labels": ["angular", "python", "flask"],
-            "color": "#818990"
+            "color": "#818990",
+            "type": "dev"
           },
           {
-            "date": "Jul-Sep 2020",
             "startDate": "2020-07-01",
             "endDate": "2020-09-30",
             "position": "Full Stack Developer (Internship)",
             "shortPosition": "Internship",
             "description": "Full stack development of a web application for the creation and management of dynamic forms to control incidents in companies.",
             "labels": ["angular", "aws", "serverless"],
-            "color": "#818990"
+            "color": "#818990",
+            "type": "dev"
           }
         ]
       },
@@ -56,14 +56,14 @@
         "company": "Universidad de Castilla-La Mancha",
         "experiences": [
           {
-            "date": "Feb-Oct 2021",
             "startDate": "2021-02-01",
             "endDate": "2021-10-31",
             "position": "Researcher / Research support staff",
             "shortPosition": "R&D",
             "description": "Research support staff in R&D&i project. Design and evaluation of multi-objective optimization algorithms.",
             "labels": ["python"],
-            "color": "#0DCAF0"
+            "color": "#0DCAF0",
+            "type": "rdi"
           }
         ]
       },
@@ -71,16 +71,42 @@
         "company": "Grupo Vermon",
         "experiences": [
           {
-            "date": "Nov 2021-Present",
             "startDate": "2021-11-01",
             "endDate": null,
             "position": "Full Stack Developer & Scrum Master",
             "shortPosition": "Dev",
             "description": "Product development in a geographically distributed, multidisciplinar and agile managed team.",
             "labels": ["angular", "aws", "serverless"],
-            "color": "#3183FD"
+            "color": "#3183FD",
+            "type": "dev"
           }
         ]
+      }
+    ],
+    "education": [
+      {
+        "startDate": "2016",
+        "endDate": "2020",
+        "course": "Bachellors Bilingual Degree in Computer Science",
+        "entity": "Universidad de Castilla-La Mancha",
+        "description": "Mention in Software Engineering. 4 distinctions with honours.",
+        "type": "bach"
+      },
+      {
+        "startDate": "2020",
+        "endDate": "2021",
+        "course": "Masters Degree in Computer Science",
+        "entity": "Universidad de Castilla-La Mancha",
+        "description": "Multidisciplinary training and management skills. 5 distinctions with honours.",
+        "type": "master"
+      },
+      {
+        "startDate": "2021",
+        "endDate": null,
+        "course": "PhD in Advanced Computer Technologies",
+        "entity": "Universidad de Castilla-La Mancha",
+        "description": "Part-time researcher at the Intelligent Systems and Data Mining Laboratory.",
+        "type": "phd"
       }
     ]
   },
