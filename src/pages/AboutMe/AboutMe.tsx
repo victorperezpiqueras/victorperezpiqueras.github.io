@@ -1,7 +1,12 @@
 import { Timeline, Toast, Tooltip } from "flowbite-react";
 import TechBadge from "../../components/TechBadge/TechBadge";
 import ExperienceBar from "../../components/ExperienceBar/ExperienceBar";
-import { BsCheckSquareFill, BsFillTelephoneFill } from "react-icons/bs";
+import {
+  BsCheckSquareFill,
+  BsChevronCompactDown,
+  BsFillTelephoneFill,
+} from "react-icons/bs";
+import { GrDown, GrUp } from "react-icons/gr";
 import {
   MdDone,
   MdEmail,
@@ -24,6 +29,8 @@ type AboutMeProps = {
 function AboutMe(props: AboutMeProps) {
   const [copiedPhone, setCopiedPhone] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
+
+  const [expandedAboutMe, setExpandedAboutMe] = useState(false);
 
   let experienceSorted = [...props.aboutData.experience].reverse();
 
@@ -158,14 +165,38 @@ function AboutMe(props: AboutMeProps) {
           </span>
         </div>
 
-        <div className="basis-1/2 bg-white rounded text-black p-4 pb-0">
-          <h4>🎯 About Me</h4>
-          {props.aboutData.aboutTexts.map((text, index) => (
-            <div>
-              <p>{text}</p>
-              <br />
+        <div className="basis-1/2 bg-white rounded text-black p-4">
+          <div className="flex flex-row">
+            <h4 className="w-1/3">🎯 About Me</h4>
+            <div className="w-2/3 flex justify-end">
+              {expandedAboutMe ? (
+                <GrUp
+                  className="text-green-500 hover:cursor-pointer"
+                  size={30}
+                  onClick={() => setExpandedAboutMe(!expandedAboutMe)}
+                />
+              ) : (
+                <GrDown
+                  className="text-green-500 hover:cursor-pointer"
+                  size={30}
+                  onClick={() => setExpandedAboutMe(!expandedAboutMe)}
+                />
+              )}
             </div>
-          ))}
+          </div>
+
+          {expandedAboutMe ? (
+            <div className="pb-0">
+              {props.aboutData.aboutTexts.map((text, index) => (
+                <div>
+                  <p>{text}</p>
+                  <br />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="pb-0 text-lg text-gray-300">...</div>
+          )}
         </div>
 
         <div className="flex flex-col bg-white rounded text-black p-4">
