@@ -184,7 +184,10 @@ function AboutMe(props: AboutMeProps) {
           </span>
         </div>
 
-        <div className="basis-1/2 bg-white rounded text-black p-4 pb-3">
+        <div
+          className="basis-1/2 bg-white rounded text-black p-4 pb-3 hover:cursor-pointer"
+          onClick={() => setExpandedAboutMe(!expandedAboutMe)}
+        >
           <div className="flex flex-row">
             <h4 className="w-2/3">🎯 About Me</h4>
             <div className="w-1/3 flex justify-end">
@@ -192,13 +195,11 @@ function AboutMe(props: AboutMeProps) {
                 <HiOutlineChevronUp
                   className="text-green-500 hover:cursor-pointer"
                   size={30}
-                  onClick={() => setExpandedAboutMe(!expandedAboutMe)}
                 />
               ) : (
                 <HiOutlineChevronDown
                   className="text-green-500 hover:cursor-pointer"
                   size={30}
-                  onClick={() => setExpandedAboutMe(!expandedAboutMe)}
                 />
               )}
             </div>
