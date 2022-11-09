@@ -1,6 +1,7 @@
 export type ProjectData = {
   title: string;
   description: string;
-  video: string;
+  link: string;
+  demoFile: string;
   tags: string[];
 };

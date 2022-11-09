@@ -10,7 +10,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import TabPanel from "./components/TabPanel/TabPanel";
 import AboutMe from "./pages/AboutMe/AboutMe";
-import Projects from "./pages/Projects/AboutMe";
+import Projects from "./pages/Projects/Projects";
 import Bookshelf from "./pages/Bookshelf/Bookshelf";
 import Resume from "./pages/Resume/Resume";
 import data from "./assets/data.json";
@@ -107,7 +107,7 @@ function App() {
               <AboutMe aboutData={portfolioData.aboutMe} />
             </TabPanel>
             <TabPanel value={value} index={1}>
-              <Projects />
+              <Projects projects={portfolioData.projects} />
             </TabPanel>
             <TabPanel value={value} index={2}>
               <Achievements />

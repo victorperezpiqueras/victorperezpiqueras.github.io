@@ -1,0 +1,4 @@
+.demo-video:hover {
+  transform: translateX(-70px) scale(1.5);
+  z-index: 50;
+}
