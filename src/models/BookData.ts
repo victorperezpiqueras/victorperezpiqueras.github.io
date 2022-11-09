@@ -18,5 +18,5 @@ export type BookData = {
   width: string;
   spine: Spine;
   link: string;
-  tag: string;
+  tags: string[];
 };

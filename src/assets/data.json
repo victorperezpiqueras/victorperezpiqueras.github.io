@@ -172,7 +172,7 @@
         "marginTop": "20px"
       },
       "link": "https://itrevolution.com/the-phoenix-project/",
-      "tag": "recommended"
+      "tags": ["recommended", "all_time_favourites"]
     },
     {
       "title": "The Unicorn Project",
@@ -191,7 +191,7 @@
         "marginTop": "20px"
       },
       "link": "https://itrevolution.com/the-unicorn-project/",
-      "tag": "recommended"
+      "tags": ["recommended"]
     },
 
     {
@@ -212,7 +212,7 @@
         "marginTop": "20px"
       },
       "link": "https://www.amazon.com/Adaptive-Code-principles-Developer-Practices/dp/1509302581",
-      "tag": "recommended"
+      "tags": ["recommended"]
     },
     {
       "title": "The DevOps Handbook",
@@ -231,7 +231,7 @@
         "marginTop": "20px"
       },
       "link": "https://www.amazon.com/DevOps-Handbook-World-Class-Reliability-Organizations/dp/1942788002",
-      "tag": "recommended"
+      "tags": ["recommended", "all_time_favourites"]
     },
     {
       "title": "Clean Code",
@@ -250,7 +250,7 @@
         "marginTop": "60px"
       },
       "link": "https://www.oreilly.com/library/view/clean-code-a/9780136083238/",
-      "tag": "recommended"
+      "tags": ["recommended"]
     },
     {
       "title": "The Professional Scrum Team",
@@ -269,7 +269,7 @@
         "marginTop": "30px"
       },
       "link": "https://www.scrum.org/resources/professional-scrum-team",
-      "tag": "recommended"
+      "tags": ["recommended", "all_time_favourites"]
     },
     {
       "title": "Refactoring",
@@ -288,7 +288,7 @@
         "marginTop": "50px"
       },
       "link": "https://martinfowler.com/books/refactoring.html",
-      "tag": "recommended"
+      "tags": ["recommended"]
     },
     {
       "title": "Fixing Your Scrum: Practical Solutions to Common Scrum Problems",
@@ -306,7 +306,7 @@
         "marginTop": "50px"
       },
       "link": "https://www.amazon.com/Fixing-Your-Scrum-Practical-Solutions/dp/1680506978",
-      "tag": "in_progress"
+      "tags": ["recommended"]
     },
     {
       "title": "A Philosophy of Software Design",
@@ -325,7 +325,7 @@
         "marginTop": "20px"
       },
       "link": "https://www.amazon.com/Philosophy-Software-Design-John-Ousterhout/dp/1732102201",
-      "tag": "in_progress"
+      "tags": ["recommended"]
     }
   ],
   "resume": "cv.pdf"

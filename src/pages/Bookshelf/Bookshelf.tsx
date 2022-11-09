@@ -18,18 +18,19 @@ function Bookshelf(props: BookshelfProps) {
 
   // all books have one tag, find all unique tags
   const tags = props.books
-    .map((book) => book.tag)
+    .map((book) => book.tags)
+    .flat()
     .filter((tag, index, self) => self.indexOf(tag) === index);
 
   // group books by tag
   const booksByTag = tags.map((tag) => {
     return {
       tag,
-      books: props.books.filter((book) => book.tag === tag),
+      books: props.books.filter((book) => book.tags.includes(tag)),
     };
   });
 
-  function alignBooksBottom(books: BookData[]) {
+  function alignBooksBottom(books: BookData[], tag: string) {
     //calculate max height of books
     let maxHeight = 0;
     for (let i = 0; i < books.length; i++) {
@@ -42,7 +43,7 @@ function Bookshelf(props: BookshelfProps) {
     const marginRight = 35;
     for (let i = 0; i < books.length; i++) {
       let book: HTMLElement | null = document.getElementById(
-        `book-${i}-${books[i].tag}`
+        `book-${i}-${tag}`
       );
       if (book) {
         book.style.marginRight = `${
@@ -54,14 +55,14 @@ function Bookshelf(props: BookshelfProps) {
     //set bottom property of book to maxheight - book.height
     for (let i = 0; i < books.length; i++) {
       let book: HTMLElement | null = document.getElementById(
-        `book-${i}-${books[i].tag}`
+        `book-${i}-${tag}`
       );
       let child: HTMLElement | null | undefined =
         book?.querySelector(".side.spine");
       let height = child?.style.height;
       if (book && height) {
         (
-          document.querySelector(`#book-${i}-${books[i].tag}`) as HTMLElement
+          document.querySelector(`#book-${i}-${tag}`) as HTMLElement
         ).style.bottom = `${Number(height.split("px")[0]) - maxHeight}px`;
       }
     }
@@ -69,7 +70,7 @@ function Bookshelf(props: BookshelfProps) {
   useEffect(() => {
     // for each tag, align books
     booksByTag.forEach((tag) => {
-      alignBooksBottom(tag.books);
+      alignBooksBottom(tag.books, tag.tag);
     });
   }, []);
 
@@ -99,7 +100,7 @@ function Bookshelf(props: BookshelfProps) {
               onMouseOver={(e) => handleMouseOver(tag.tag)}
               onMouseOut={(e) => handleMouseOut(tag.tag)}
               style={{
-                width: "200px",
+                width: "250px",
                 height: "50px",
                 zIndex: 20,
                 right: "45%",
