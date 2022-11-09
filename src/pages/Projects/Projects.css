@@ -1,4 +1,14 @@
-.demo-video:hover {
-  transform: translateX(-70px) scale(1.5);
-  z-index: 50;
+.demo-video {
+  position: relative;
+}
+
+.demo-video-hover {
+  position: relative;
+  transform: translateX(-40px) scale(1.35);
+  z-index: 1000;
+}
+
+.project-card:hover {
+  background-color: rgb(255, 240, 193) !important;
+  z-index: 1;
 }

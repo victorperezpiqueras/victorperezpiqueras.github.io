@@ -1,4 +1,5 @@
 import { Tooltip } from "flowbite-react";
+import { useState } from "react";
 import { AiFillGithub } from "react-icons/ai";
 import TechIcon from "../../components/TechIcon/TechIcon";
 import { ProjectData } from "../../models/ProjectData";
@@ -9,13 +10,27 @@ type ProjectsProps = {
 };
 
 function Projects(props: ProjectsProps) {
+  let [hoveredProject, setHoveredProject] = useState(null);
+  const handleMouseOver = (id) => {
+    setHoveredProject(id);
+  };
+  const handleMouseOut = (id) => {
+    setHoveredProject(null);
+  };
+
   const projects = [...props.projects].reverse();
   return (
     <div className="container flex flex-col items-center">
       {projects.map((project) => (
-        <div className="flex flex-row w-4/5 mt-4 items-center bg-white rounded-lg border shadow-md hover:bg-gray-100">
+        <div
+          className={`project-card flex flex-row w-4/5 my-6 items-center bg-white rounded-lg transform transition duration-500 ease-in-out hover:scale-110`}
+          onMouseOver={(e) => handleMouseOver(project.title)}
+          onMouseOut={(e) => handleMouseOut(project.title)}
+        >
           <img
-            className="demo-video w-80 rounded-lg transform transition duration-500 ease-in-out"
+            className={`demo-video w-80 rounded-lg transform transition duration-500 ease-in-out ${
+              hoveredProject === project.title ? "demo-video-hover" : ""
+            }`}
             src={
               new URL(
                 `../../assets/projectsDemos/${project.demoFile}`,
