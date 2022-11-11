@@ -5,8 +5,8 @@ type ResumeProps = {};
 
 function Achievements(props: ResumeProps) {
   return (
-    <div className="flex flex-col justify-center items-center space-y-4 text-black h-screen">
-      achievements
+    <div className="flex flex-col bg-white rounded-lg justify-center items-center space-y-4 text-black">
+      In progress
     </div>
   );
 }
