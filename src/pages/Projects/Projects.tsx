@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { AiFillGithub } from "react-icons/ai";
+import TechBadge from "../../components/TechBadge/TechBadge";
 import TechIcon from "../../components/TechIcon/TechIcon";
 import { ProjectData } from "../../models/ProjectData";
 import "./Projects.css";
@@ -22,17 +23,19 @@ function Projects(props: ProjectsProps) {
     <div className="container flex flex-col items-center">
       {projects.map((project) => (
         <div
-          className={`project-card flex flex-row w-4/5 my-6 items-center bg-white rounded-lg transform transition duration-500 ease-in-out hover:scale-110`}
+          className={`ml-2 project-card flex flex-row w-full my-6 items-center bg-white rounded-lg transform transition duration-500 ease-in-out hover:scale-105`}
           onMouseOver={(e) => handleMouseOver(project.title)}
           onMouseOut={(e) => handleMouseOut(project.title)}
         >
           <img
-            className={`demo-video w-80 rounded-lg transform transition duration-500 ease-in-out ${
+            className={`demo-video w-96 rounded-l-lg hover:rounded-lg transform transition duration-500 ease-in-out ${
               hoveredProject === project.title ? "demo-video-hover" : ""
             }`}
             src={
               new URL(
-                `../../assets/projectsDemos/${project.demoFile}`,
+                `../../assets/projectsDemos/${project.demoFile}.${
+                  project.title === hoveredProject ? "gif" : "png"
+                }`,
                 import.meta.url
               ).href
             }
@@ -42,11 +45,14 @@ function Projects(props: ProjectsProps) {
             <div className="flex flex-row justify-start items-center">
               {project.link ? (
                 <a
-                  className="mb-2 transition ease-in-out hover:scale-150 duration-300"
+                  className="mb-2 transition ease-in-out hover:scale-125 duration-300"
                   href={project.link}
                   target="_blank"
                 >
-                  <AiFillGithub size={"35px"} color="black" />
+                  <AiFillGithub
+                    className="hover:text-white text-black"
+                    size={"35px"}
+                  />
                 </a>
               ) : (
                 ""
@@ -59,10 +65,10 @@ function Projects(props: ProjectsProps) {
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
               {project.description}
             </p>
-            <div className="flex flex-row items-center">
+            <div className="flex flex-wrap items-center">
               {project.tags.map((tech) => (
-                <span className="mr-2 transition ease-in-out hover:scale-150 duration-300">
-                  <TechIcon tech={tech} size="30px" />
+                <span className="mr-2">
+                  <TechBadge className="mt-2" tech={tech} />
                 </span>
               ))}
             </div>

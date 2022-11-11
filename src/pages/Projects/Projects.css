@@ -4,7 +4,7 @@
 
 .demo-video-hover {
   position: relative;
-  transform: translateX(-40px) scale(1.35);
+  transform: translateX(-60px) scale(1.35);
   z-index: 1000;
 }
 

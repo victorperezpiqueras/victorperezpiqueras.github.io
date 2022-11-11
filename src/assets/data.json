@@ -36,7 +36,7 @@
             "position": "Full Stack Developer (Internship)",
             "shortPosition": "Internship",
             "description": "Full stack development of a web application for real-time home sensor management and monitoring.",
-            "labels": ["angular", "python", "flask"],
+            "labels": ["angular", "flask", "python"],
             "color": "#818990",
             "type": "dev"
           },
@@ -46,7 +46,7 @@
             "position": "Full Stack Developer (Internship)",
             "shortPosition": "Internship",
             "description": "Full stack development of a web application for the creation and management of dynamic forms to control incidents in companies.",
-            "labels": ["angular", "aws", "serverless"],
+            "labels": ["angular", "aws", "serverless", "python"],
             "color": "#818990",
             "type": "dev"
           }
@@ -76,7 +76,7 @@
             "position": "Full Stack Developer & Scrum Master",
             "shortPosition": "Dev",
             "description": "Product development in a geographically distributed, multidisciplinar and agile managed team.",
-            "labels": ["angular", "aws", "serverless"],
+            "labels": ["angular", "aws", "serverless", "python"],
             "color": "#3183FD",
             "type": "dev"
           }
@@ -113,44 +113,44 @@
   "projects": [
     {
       "title": "El Bombas",
-      "description": "Multiplayer web game based on the classic Bomberman. The game includes a character store and an economy system with coins that can be earned by playing games. Each character has unique attributes. Compete for maximum points on the global Scoreboard.",
+      "description": "Multiplayer web game based on the classic Bomberman. The game includes a character store and an economy system with coins that can be earned by playing games. Each character has unique attributes. Play games and fight for the Nº1 position in the global Scoreboard.",
       "link": "https://github.com/victorperezpiqueras/bombergame",
-      "demoFile": "elbombas.gif",
+      "demoFile": "elbombas",
       "tags": ["javascript", "html", "css", "bootstrap", "nodejs", "mongodb"]
     },
     {
       "title": "PictoTrainer",
       "description": "Web and mobile application for the training and rehabilitation of people with functional diversity, presented to the HackForAlbacity2020 competition in collaboration with the CRMF-IMSERSO.",
       "link": "https://github.com/victorperezpiqueras/PictoTrainer",
-      "demoFile": "pictotrainer.gif",
+      "demoFile": "pictotrainer",
       "tags": ["angular", "nodejs", "mysql"]
     },
     {
       "title": "X-Wing VR",
       "description": "Virtual Reality mobile game in which you can drive an X-Wing starfighter and engage Empire's enemies. Implemented in Unreal Engine 4 for Google Cardboard.",
       "link": null,
-      "demoFile": "xwing.gif",
+      "demoFile": "xwing",
       "tags": ["ue4", "cardboard"]
     },
     {
       "title": "World in Miniature",
       "description": "Virtual Reality interface technique that lets the user interact with a hand-held miniature copy of the virtual environment. Implemented in Unreal Engine 4 using HTC VIVE.",
       "link": "https://github.com/victorperezpiqueras/PictoTrainer",
-      "demoFile": "wim.gif",
+      "demoFile": "wim",
       "tags": ["ue4", "vive"]
     },
     {
       "title": "PuerTICas",
       "description": "Access control application to a smart building using facial recognition authorization. Cloud architecture based on AWS services under the IaaC paradigm.",
-      "link": null,
-      "demoFile": "puerticas.gif",
+      "link": "https://github.com/NiceUCs/puerTICas",
+      "demoFile": "puerticas",
       "tags": ["angular", "serverless", "aws", "raspberrypi3", "python"]
     },
     {
       "title": "ProjectION",
-      "description": "Web application focused on giving the Product Owner and the team the tools to successfully manage software projects using an agile methodology. The project was developed for the Bachellors and Masters Thesis, and for the PhD Thesis.",
+      "description": "Web application focused on giving the Product Owner and the software development team the tools to successfully manage software projects using an agile methodology. The project was developed for the Bachellors and Masters Thesis, and for the PhD Thesis.",
       "link": null,
-      "demoFile": "tpo.gif",
+      "demoFile": "projection",
       "tags": ["angular", "nodejs", "mysql", "aws", "python", "flask"]
     }
   ],
