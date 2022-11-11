@@ -1,4 +1,3 @@
-import { Tooltip } from "flowbite-react";
 import { useState } from "react";
 import { AiFillGithub } from "react-icons/ai";
 import TechIcon from "../../components/TechIcon/TechIcon";
