@@ -157,23 +157,26 @@
   "achievements": [
     {
       "title": "3rd Prize in HackForAlbacity2020 for the best technological solution to help people with functional diversity in collaboration with the CRMF-IMSERSO.",
-      "image": "h4a.jpg"
+      "image": "h4a.jpg",
+      "url": "https://pctclm.com/entrega-de-premios-de-la-tercera-edicion-del-concurso-hack-for-albacity/"
     },
     {
       "title": "Certified as Professional Scrum Master I by Scrum.org.",
-      "image": "psm1.jpg"
+      "image": "psm1.png"
     },
     {
       "title": "Extraordinary award for the best academic record of the Master's Degree in Computer Science, with an average mark of 9.80.",
-      "image": "premio_nota.jpg"
+      "image": "premio_nota.png"
     },
     {
       "title": "Charles Babbage Award for the best Masters Thesis in the Master's Degree in Computer Science.",
-      "image": "premio_tfm.jpg"
+      "image": "premio_tfm.jpg",
+      "url": "https://www.eldigitaldealbacete.com/2021/10/28/el-master-universitario-en-ingenieria-informatica-reconoce-en-albacete-el-trabajo-de-dos-estudiantes/"
     },
     {
       "title": "SISTEDES - NTT Data Award for the best Masters Thesis on new methodologies and tools for software development.",
-      "image": "premio_sistedes.jpeg"
+      "image": "premio_sistedes.jpeg",
+      "url": "https://www.sistedes.es/6a-edicion-premios-sistedes-ntt-data-a-los-mejores-tfg-y-tfm-sobre-nuevas-metodologias-y-herramientas-para-el-desarrollo-de-software"
     }
   ],
   "library": [
