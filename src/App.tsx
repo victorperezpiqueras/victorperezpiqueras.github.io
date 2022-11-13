@@ -70,7 +70,7 @@ function App() {
               <a href="https://www.scrum.org/user/746391" target="_blank">
                 <button
                   type="button"
-                  className="psmi-button -ml-3 transition ease-in-out hover:scale-150 duration-300"
+                  className="psmi-button -ml-3 transition ease-in-out hover:scale-125 duration-300"
                 >
                   <img className="psmi" src={psmi} alt="" />
                 </button>
@@ -112,7 +112,7 @@ function App() {
               <Projects projects={portfolioData.projects} />
             </TabPanel>
             <TabPanel value={value} index={2}>
-              <Achievements />
+              <Achievements achievements={portfolioData.achievements} />
             </TabPanel>
             <TabPanel value={value} index={3}>
               <Resume cv={portfolioData.resume} />
