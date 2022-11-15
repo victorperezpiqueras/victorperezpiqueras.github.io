@@ -31,18 +31,18 @@ function App() {
         <div className="container justify-center m-4 h-52 flex flex-row items-center bg-green-500 rounded">
           <div className="flex w-30 ml-12 justify-center">
             <img
-              className="aspect-square w-48 rounded-full drop-shadow-md ring-2 ring-gray-300"
+              className="aspect-square w-28 lg:w-48 rounded-full drop-shadow-md ring-2 ring-gray-300"
               src={portfolio}
               alt="Rounded avatar"
             />
           </div>
 
           <div className="container basis-3/5">
-            <p className="flex justify-center text-black font-bold text-5xl">
+            <p className="flex justify-center text-black font-bold text-2xl md:text-3xl lg:text-5xl">
               {portfolioData.header.name}
             </p>
 
-            <p className="flex justify-center font-bold text-2xl">
+            <p className="flex justify-center font-bold text-lg md:text-xl lg:text-2xl">
               {portfolioData.header.title}
             </p>
 
@@ -81,6 +81,7 @@ function App() {
         </div>
         <div className="container flex flex-col w-full">
           <Box
+            className="w-2/3"
             sx={{
               bgcolor: "white",
               alignSelf: "center",
@@ -93,8 +94,11 @@ function App() {
             <Tabs
               value={value}
               onChange={handleChange}
+              variant="scrollable"
+              scrollButtons
+              allowScrollButtonsMobile
               centered
-              sx={{ margin: "auto", color: "white" }}
+              sx={{ margin: "auto", color: "black" }}
             >
               <Tab label="About me" />
               <Tab label="Projects" />

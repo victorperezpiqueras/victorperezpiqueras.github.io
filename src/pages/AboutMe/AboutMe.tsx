@@ -124,8 +124,8 @@ function AboutMe(props: AboutMeProps) {
   ]);
 
   return (
-    <div className="container flex flex-row space-x-6 items-start">
-      <div className="basis-1/2 container flex flex-col space-y-6">
+    <div className="container flex flex-row sm:flex-wrap lg:flex-nowrap space-y-6 lg:space-y-0 lg:space-x-6 items-start">
+      <div className="container flex flex-col basis-100 lg:basis-1/2 space-y-6">
         <div className="flex flex-col bg-white rounded text-black p-4">
           <h4>📍 Contact Info</h4>
           <span className="flex flex-row" onClick={copyPhone}>
@@ -270,7 +270,7 @@ function AboutMe(props: AboutMeProps) {
         </div>
       </div>
 
-      <div className="flex flex-col basis-1/2 space-y-6">
+      <div className="container flex flex-col basis-100 lg:basis-1/2 space-y-6">
         <div className="flex flex-col bg-white rounded text-black p-4">
           <h4 className="pb-2.5">🚩 My Progress</h4>
           <ExperienceBar experiences={props.aboutData.experience} />
