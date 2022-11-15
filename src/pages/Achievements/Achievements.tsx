@@ -11,7 +11,7 @@ function Achievements(props: AchievementsProps) {
       <div className="flex flex-wrap justify-center">
         {achievements.map((achievement) => (
           <div className="m-2.5 max-w-sm rounded-lg shadow-md">
-            <a href={achievement.url}>
+            <a href={achievement.url} target="_blank">
               <img
                 className={`rounded-t-lg ${
                   achievement.url ? "hover:brightness-75" : ""

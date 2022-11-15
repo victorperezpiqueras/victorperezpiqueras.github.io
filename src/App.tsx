@@ -17,7 +17,7 @@ import data from "./assets/data.json";
 import { PortfolioData } from "./models/PortfolioData";
 import Achievements from "./pages/Achievements/Achievements";
 import { useState, SyntheticEvent } from "react";
-import Research from "./pages/Research/Achievements";
+import Research from "./pages/Research/Research";
 
 function App() {
   const [value, setValue] = useState(0);
@@ -121,7 +121,7 @@ function App() {
               <Bookshelf books={portfolioData.library} />
             </TabPanel>
             <TabPanel value={value} index={5}>
-              <Research />
+              <Research researches={portfolioData.researches} />
             </TabPanel>
           </div>
         </div>
