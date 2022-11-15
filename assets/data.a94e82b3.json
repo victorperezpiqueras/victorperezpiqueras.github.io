@@ -144,7 +144,7 @@
       "description": "Access control application to a smart building using facial recognition authorization. Cloud architecture based on AWS services under the IaaC paradigm.",
       "link": "https://github.com/NiceUCs/puerTICas",
       "demoFile": "puerticas",
-      "tags": ["angular", "serverless", "aws", "raspberrypi3", "python"]
+      "tags": ["angular", "serverless", "aws", "python", "raspberrypi3"]
     },
     {
       "title": "ProjectION",
@@ -162,7 +162,8 @@
     },
     {
       "title": "Certified as Professional Scrum Master I by Scrum.org.",
-      "image": "psm1.png"
+      "image": "psm1.png",
+      "url": "https://www.scrum.org/user/746391"
     },
     {
       "title": "Extraordinary award for the best academic record of the Master's Degree in Computer Science, with an average mark of 9.80.",
@@ -197,7 +198,7 @@
         "marginTop": "20px"
       },
       "link": "https://itrevolution.com/the-phoenix-project/",
-      "tags": ["recommended", "all_time_favourites"]
+      "tags": ["recommended"]
     },
     {
       "title": "The Unicorn Project",
@@ -218,27 +219,6 @@
       "link": "https://itrevolution.com/the-unicorn-project/",
       "tags": ["recommended"]
     },
-
-    {
-      "title": "Adaptive Code",
-      "cover": "book_adaptive.jpg",
-      "height": "260px",
-      "width": "190px",
-      "spine": {
-        "text": "Adaptive Code",
-        "color": "rgb(104, 97, 77)",
-        "width": "40px",
-        "fontSize": "20px",
-        "fontWeight": "lighter",
-        "fontFamily": "'Open Sans', sans-serif",
-        "textColor": "white",
-        "textShadow": "2px 2px #000000",
-        "marginTitle": "5px",
-        "marginTop": "20px"
-      },
-      "link": "https://www.amazon.com/Adaptive-Code-principles-Developer-Practices/dp/1509302581",
-      "tags": ["recommended"]
-    },
     {
       "title": "The DevOps Handbook",
       "cover": "book_devops.jpg",
@@ -256,7 +236,7 @@
         "marginTop": "20px"
       },
       "link": "https://www.amazon.com/DevOps-Handbook-World-Class-Reliability-Organizations/dp/1942788002",
-      "tags": ["recommended", "all_time_favourites"]
+      "tags": ["recommended"]
     },
     {
       "title": "Clean Code",
@@ -278,25 +258,6 @@
       "tags": ["recommended"]
     },
     {
-      "title": "The Professional Scrum Team",
-      "cover": "book_prof_scrum_team.jpg",
-      "height": "250px",
-      "width": "190px",
-      "spine": {
-        "text": "THE PROFESSIONAL SCRUM TEAM",
-        "color": "#5DBD59",
-        "width": "20px",
-        "fontSize": "10px",
-        "fontFamily": "'Roboto', sans-serif",
-        "textColor": "white",
-        "textShadow": "1px 1px #000000",
-        "marginTitle": "0px",
-        "marginTop": "30px"
-      },
-      "link": "https://www.scrum.org/resources/professional-scrum-team",
-      "tags": ["recommended", "all_time_favourites"]
-    },
-    {
       "title": "Refactoring",
       "cover": "book_refactoring.jpg",
       "height": "290px",
@@ -316,21 +277,43 @@
       "tags": ["recommended"]
     },
     {
-      "title": "Fixing Your Scrum: Practical Solutions to Common Scrum Problems",
-      "cover": "book_fixing_your_scrum.jpg",
-      "height": "270px",
+      "title": "Adaptive Code",
+      "cover": "book_adaptive.jpg",
+      "height": "260px",
       "width": "190px",
       "spine": {
-        "text": "Fixing Your Scrum",
-        "color": "#fff",
-        "width": "20px",
-        "fontSize": "14px",
-        "fontFamily": "monospace",
-        "textColor": "black",
-        "marginTitle": "-1px",
-        "marginTop": "50px"
+        "text": "Adaptive Code",
+        "color": "rgb(104, 97, 77)",
+        "width": "40px",
+        "fontSize": "20px",
+        "fontWeight": "lighter",
+        "fontFamily": "'Open Sans', sans-serif",
+        "textColor": "white",
+        "textShadow": "2px 2px #000000",
+        "marginTitle": "5px",
+        "marginTop": "20px"
       },
-      "link": "https://www.amazon.com/Fixing-Your-Scrum-Practical-Solutions/dp/1680506978",
+      "link": "https://www.amazon.com/Adaptive-Code-principles-Developer-Practices/dp/1509302581",
+      "tags": ["recommended"]
+    },
+
+    {
+      "title": "The Professional Scrum Team",
+      "cover": "book_prof_scrum_team.jpg",
+      "height": "250px",
+      "width": "190px",
+      "spine": {
+        "text": "THE PROFESSIONAL SCRUM TEAM",
+        "color": "#5DBD59",
+        "width": "20px",
+        "fontSize": "10px",
+        "fontFamily": "'Roboto', sans-serif",
+        "textColor": "white",
+        "textShadow": "1px 1px #000000",
+        "marginTitle": "0px",
+        "marginTop": "30px"
+      },
+      "link": "https://www.scrum.org/resources/professional-scrum-team",
       "tags": ["recommended"]
     },
     {
@@ -351,7 +334,59 @@
       },
       "link": "https://www.amazon.com/Philosophy-Software-Design-John-Ousterhout/dp/1732102201",
       "tags": ["recommended"]
+    },
+    {
+      "title": "Fixing Your Scrum: Practical Solutions to Common Scrum Problems",
+      "cover": "book_fixing_your_scrum.jpg",
+      "height": "270px",
+      "width": "190px",
+      "spine": {
+        "text": "Fixing Your Scrum",
+        "color": "#fff",
+        "width": "20px",
+        "fontSize": "14px",
+        "fontFamily": "monospace",
+        "textColor": "black",
+        "marginTitle": "-1px",
+        "marginTop": "50px"
+      },
+      "link": "https://www.amazon.com/Fixing-Your-Scrum-Practical-Solutions/dp/1680506978",
+      "tags": ["recommended"]
     }
   ],
-  "resume": "cv.pdf"
+  "resume": "cv.pdf",
+  "researches": [
+    {
+      "title": "Machine Learning applied to manage effort estimation and requirements in software projects",
+      "authors": "V. Pérez-Piqueras",
+      "conferenceJournalTitle": "1st Early Career Researchers Workshop Collocated With ECCS 2021",
+      "year": "2021",
+      "pdf": "vpp_ecrw21_ml",
+      "url": "https://www.informatics-europe.org/images/ECSS/ECSS2022/members-spotlight/Proceedings-Early-Career-Researchers-Workshop-ECSS2021.pdf#page=16"
+    },
+    {
+      "title": "GRASP-based hybrid search to solve the multi-objective requirements selection problem",
+      "authors": "V. Pérez-Piqueras, P. Bermejo, J.A. Gámez",
+      "conferenceJournalTitle": "OLA'2022 International Conference on Optimization and Learning",
+      "year": "2022",
+      "pdf": "vpp_ola22_grasp",
+      "url": "https://ola2022.sciencesconf.org/data/pages/Proceedings_1.pdf"
+    },
+    {
+      "title": "ProjectION: Herramienta de ayuda a la toma de decisiones en gestión ágil",
+      "authors": "V. Pérez-Piqueras, P. Bermejo",
+      "conferenceJournalTitle": "XXVI Jornadas de Ingeniería del Software y Bases de Datos (JISBD 2022)",
+      "year": "2022",
+      "pdf": "vpp_jisbd22_projection",
+      "url": "http://hdl.handle.net/11705/JISBD/2022/1654"
+    },
+    {
+      "title": "Estimation of Distribution Algorithms Applied to the Next Release Problem",
+      "authors": "V. Pérez-Piqueras, P. Bermejo, J.A. Gámez",
+      "conferenceJournalTitle": "17th International Conference on Soft Computing Models in Industrial and Environmental Applications (SOCO 2022)",
+      "year": "2022",
+      "pdf": "vpp_soco22_eda",
+      "url": "https://link.springer.com/chapter/10.1007/978-3-031-18050-7_10"
+    }
+  ]
 }
