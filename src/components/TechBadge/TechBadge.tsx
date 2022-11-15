@@ -34,7 +34,7 @@ const iconsMapping = new Map([
     "serverless",
     {
       text: "Serverless",
-      color: "bg-gray-100",
+      color: "bg-orange-100",
     },
   ],
   [
@@ -69,7 +69,7 @@ const iconsMapping = new Map([
     "ue4",
     {
       text: "Unreal Engine 4",
-      color: "bg-gray-100",
+      color: "bg-gray-300",
     },
   ],
   [
@@ -89,7 +89,7 @@ const iconsMapping = new Map([
   [
     "javascript",
     {
-      text: "Javascript",
+      text: "JavaScript",
       color: "bg-yellow-100",
     },
   ],
