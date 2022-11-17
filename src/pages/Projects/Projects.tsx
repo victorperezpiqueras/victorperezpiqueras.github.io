@@ -23,12 +23,12 @@ function Projects(props: ProjectsProps) {
     <div className="container flex flex-col items-center">
       {projects.map((project) => (
         <div
-          className={`ml-2 project-card flex flex-row w-full my-6 items-center bg-white rounded-lg transform transition duration-500 ease-in-out hover:scale-105`}
+          className={`ml-2 project-card flex flex-col lg:flex-row w-full my-6 items-center bg-white rounded-lg transform transition duration-500 ease-in-out hover:scale-105`}
           onMouseOver={(e) => handleMouseOver(project.title)}
           onMouseOut={(e) => handleMouseOut(project.title)}
         >
           <img
-            className={`demo-video w-96 rounded-l-lg hover:rounded-lg transform transition duration-500 ease-in-out ${
+            className={`demo-video w-full lg:w-96 rounded-l-lg hover:rounded-lg transform transition duration-500 ease-in-out ${
               hoveredProject === project.title ? "demo-video-hover" : ""
             }`}
             src={

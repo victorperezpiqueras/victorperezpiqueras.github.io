@@ -97,7 +97,6 @@ function App() {
               variant="scrollable"
               scrollButtons
               allowScrollButtonsMobile
-              centered
               sx={{ margin: "auto", color: "black" }}
             >
               <Tab label="About me" />

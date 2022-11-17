@@ -2,10 +2,12 @@
   position: relative;
 }
 
-.demo-video-hover {
-  position: relative;
-  transform: translateX(-60px) scale(1.35);
-  z-index: 1000;
+@media (min-width: 1280px) {
+  .demo-video-hover {
+    position: relative;
+    transform: translateX(-60px) scale(1.35);
+    z-index: 1000;
+  }
 }
 
 .project-card:hover {

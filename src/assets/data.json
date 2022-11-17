@@ -190,12 +190,12 @@
         "text": "The Phoenix Project",
         "color": "white",
         "width": "50px",
-        "fontSize": "22px",
+        "fontSize": "20px",
         "fontFamily": "monospace",
         "textColor": "black",
         "textShadow": "1px 1px #ffffff",
-        "marginTitle": "5px",
-        "marginTop": "20px"
+        "marginTitle": "8px",
+        "marginTop": "35px"
       },
       "link": "https://itrevolution.com/the-phoenix-project/",
       "tags": ["recommended"]
@@ -209,12 +209,12 @@
         "text": "The Unicorn Project",
         "color": "rgb(226, 226, 226)",
         "width": "50px",
-        "fontSize": "22px",
+        "fontSize": "20px",
         "fontFamily": "monospace",
         "textColor": "rgb(228, 0, 190)",
         "textShadow": null,
-        "marginTitle": "5px",
-        "marginTop": "20px"
+        "marginTitle": "8px",
+        "marginTop": "35px"
       },
       "link": "https://itrevolution.com/the-unicorn-project/",
       "tags": ["recommended"]
@@ -228,7 +228,7 @@
         "text": "The DevOps Handbook",
         "color": "rgb(255, 187, 0)",
         "width": "40px",
-        "fontSize": "19px",
+        "fontSize": "16px",
         "fontFamily": "monospace",
         "textColor": "rgb(255, 255, 255)",
         "textShadow": "1px 1px #000000",

@@ -12,6 +12,9 @@ module.exports = {
       rotate: {
         360: "360deg",
       },
+      screens: {
+        xs: "200px",
+      },
     },
   },
   plugins: [require("flowbite/plugin")],
