@@ -3,12 +3,12 @@ import portfolio from "./assets/portfolio.jpg";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaOrcid } from "react-icons/fa";
-import SocialIcon from "./components/SocialIcon/SocialIcon";
+import SocialIcon from "./shared/components/SocialIcon/SocialIcon";
 import psmi from "./assets/psmi.png";
 import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import TabPanel from "./components/TabPanel/TabPanel";
+import TabPanel from "./shared/components/TabPanel/TabPanel";
 import AboutMe from "./pages/AboutMe/AboutMe";
 import Projects from "./pages/Projects/Projects";
 import Bookshelf from "./pages/Bookshelf/Bookshelf";
@@ -103,8 +103,8 @@ function App() {
               <Tab label="Projects" />
               <Tab label="Achievements" />
               <Tab label="Resume" />
-              <Tab label="My Bookshelf" />
               <Tab label="Research" />
+              <Tab label="My Bookshelf" />
             </Tabs>
           </Box>
           <div className="container w-full items-center">
@@ -121,10 +121,10 @@ function App() {
               <Resume cv={portfolioData.resume} />
             </TabPanel>
             <TabPanel value={value} index={4}>
-              <Bookshelf books={portfolioData.library} />
+              <Research researches={portfolioData.researches} />
             </TabPanel>
             <TabPanel value={value} index={5}>
-              <Research researches={portfolioData.researches} />
+              <Bookshelf books={portfolioData.library} />
             </TabPanel>
           </div>
         </div>

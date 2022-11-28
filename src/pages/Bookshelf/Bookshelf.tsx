@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Book from "../../components/Book/Book";
+import Book from "./Book/Book";
 import { BookData } from "../../models/BookData";
 import "./Bookshelf.css";
 

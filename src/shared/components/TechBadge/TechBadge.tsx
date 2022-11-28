@@ -1,6 +1,3 @@
-import { FaAngular, FaAws, FaPython } from "react-icons/fa";
-import { SiServerless } from "react-icons/si";
-import { SiFlask } from "react-icons/si";
 import TechIcon from "../TechIcon/TechIcon";
 
 type TechBadgeProps = {

@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { AiFillGithub } from "react-icons/ai";
-import TechBadge from "../../components/TechBadge/TechBadge";
-import TechIcon from "../../components/TechIcon/TechIcon";
 import { ProjectData } from "../../models/ProjectData";
+import TechBadge from "../../shared/components/TechBadge/TechBadge";
 import "./Projects.css";
 
 type ProjectsProps = {

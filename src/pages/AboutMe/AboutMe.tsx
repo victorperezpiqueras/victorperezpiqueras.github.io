@@ -1,6 +1,6 @@
 import { Timeline, Tooltip } from "flowbite-react";
-import TechBadge from "../../components/TechBadge/TechBadge";
-import ExperienceBar from "../../components/ExperienceBar/ExperienceBar";
+import TechBadge from "../../shared/components/TechBadge/TechBadge";
+import ExperienceBar from "./ExperienceBar/ExperienceBar";
 import { BsCheckSquareFill, BsFillTelephoneFill } from "react-icons/bs";
 import {
   MdEmail,

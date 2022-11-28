@@ -1,4 +1,4 @@
-import { BookData } from "../../models/BookData";
+import { BookData } from "../../../models/BookData";
 import "./Book.css";
 
 type BookDataProps = {
@@ -47,7 +47,7 @@ function Book(props: BookDataProps) {
         style={{
           backgroundImage: `url(${
             new URL(
-              `../../assets/bookCovers/${props.bookData.cover}`,
+              `../../../assets/bookCovers/${props.bookData.cover}`,
               import.meta.url
             ).href
           })`,

@@ -1,6 +1,9 @@
 import { Tooltip } from "flowbite-react";
 import { BsFillFlagFill } from "react-icons/bs";
-import { SingleExperienceData, ExperienceData } from "../../models/AboutMeData";
+import {
+  SingleExperienceData,
+  ExperienceData,
+} from "../../../models/AboutMeData";
 
 import "./ExperienceBar.css";
 

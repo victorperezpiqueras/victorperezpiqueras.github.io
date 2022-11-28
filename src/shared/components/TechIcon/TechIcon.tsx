@@ -1,5 +1,3 @@
-import { Tooltip } from "flowbite-react";
-
 type TechIconProps = {
   tech: string;
   size?: string;
@@ -12,7 +10,7 @@ function TechIcon(props: TechIconProps) {
         height: props.size ? props.size : "50px",
       }}
       src={
-        new URL(`../../assets/techIcons/${props.tech}.png`, import.meta.url)
+        new URL(`../../../assets/techIcons/${props.tech}.png`, import.meta.url)
           .href
       }
       alt=""
