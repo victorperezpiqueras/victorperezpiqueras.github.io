@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ProjectData } from "../../models/ProjectData";
-import Project from "./Project/Project";
+import ProjectItem from "./ProjectItem";
 import "./Projects.css";
 
 type ProjectsProps = {
@@ -14,7 +14,11 @@ function Projects(props: ProjectsProps) {
   return (
     <div className="container flex flex-col items-center">
       {projects.map((project) => (
-        <Project project={project} />
+        <ProjectItem
+          project={project}
+          hoveredProjectTitle={hoveredProjectTitle}
+          setHoveredProjectTitle={setHoveredProjectTitle}
+        />
       ))}
     </div>
   );

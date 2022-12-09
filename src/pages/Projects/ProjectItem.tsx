@@ -1,19 +1,19 @@
-import { useState } from "react";
 import { AiFillGithub } from "react-icons/ai";
-import { ProjectData } from "../../../models/ProjectData";
-import TechBadge from "../../../shared/components/TechBadge/TechBadge";
+import { ProjectData } from "../../models/ProjectData";
+import TechBadge from "../../shared/components/TechBadge/TechBadge";
 
 type ProjectProps = {
   project: ProjectData;
+  hoveredProjectTitle: string | null;
+  setHoveredProjectTitle: (title: string | null) => void;
 };
 
-function Project(props: ProjectProps) {
-  let [hoveredProjectTitle, setHoveredProjectTitle] = useState(null);
+function ProjectItem(props: ProjectProps) {
   const handleMouseOver = (id) => {
-    setHoveredProjectTitle(id);
+    props.setHoveredProjectTitle(id);
   };
   const handleMouseOut = (id) => {
-    setHoveredProjectTitle(null);
+    props.setHoveredProjectTitle(null);
   };
 
   const project = props.project;
@@ -29,14 +29,14 @@ function Project(props: ProjectProps) {
     >
       <img
         className={`demo-video w-full lg:w-96 rounded-l-lg transform transition duration-500 ease-in-out ${
-          hoveredProjectTitle === project.title
+          props.hoveredProjectTitle === project.title
             ? "demo-video-hover rounded-lg"
             : ""
         }`}
         src={
           new URL(
-            `../../../assets/projectsDemos/${project.demoFile}.${
-              project.title === hoveredProjectTitle ? "gif" : "png"
+            `../../assets/projectsDemos/${project.demoFile}.${
+              project.title === props.hoveredProjectTitle ? "gif" : "png"
             }`,
             import.meta.url
           ).href
@@ -79,4 +79,4 @@ function Project(props: ProjectProps) {
   );
 }
 
-export default Project;
+export default ProjectItem;
