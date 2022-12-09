@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { AiFillGithub } from "react-icons/ai";
 import { ProjectData } from "../../models/ProjectData";
+import LoadingSpinner from "../../shared/components/LoadingSpinner/LoadingSpinner";
 import TechBadge from "../../shared/components/TechBadge/TechBadge";
 
 type ProjectProps = {
@@ -9,6 +11,8 @@ type ProjectProps = {
 };
 
 function ProjectItem(props: ProjectProps) {
+  const [loading, setLoading] = useState(false);
+
   const handleMouseOver = (id) => {
     props.setHoveredProjectTitle(id);
   };
@@ -27,22 +31,30 @@ function ProjectItem(props: ProjectProps) {
         handleMouseOut(null);
       }}
     >
-      <img
-        className={`demo-video w-full lg:w-96 rounded-l-lg transform transition duration-500 ease-in-out ${
-          props.hoveredProjectTitle === project.title
-            ? "demo-video-hover rounded-lg"
-            : ""
-        }`}
-        src={
-          new URL(
-            `../../assets/projectsDemos/${project.demoFile}.${
-              project.title === props.hoveredProjectTitle ? "gif" : "png"
-            }`,
-            import.meta.url
-          ).href
-        }
-        alt=""
-      />
+      {loading ? (
+        <LoadingSpinner size="xl" />
+      ) : (
+        <img
+          className={`demo-video w-full lg:w-96 rounded-l-lg transform transition duration-500 ease-in-out ${
+            props.hoveredProjectTitle === project.title
+              ? "demo-video-hover rounded-lg"
+              : ""
+          }`}
+          src={
+            new URL(
+              `../../assets/projectsDemos/${project.demoFile}.${
+                project.title === props.hoveredProjectTitle ? "gif" : "png"
+              }`,
+              import.meta.url
+            ).href
+          }
+          alt=""
+          onLoad={() => {
+            setLoading(false);
+          }}
+          onError={() => setLoading(false)}
+        />
+      )}
       <div className="flex flex-col justify-between p-4 leading-normal">
         <div className="flex flex-row justify-start items-center">
           {project.link ? (
