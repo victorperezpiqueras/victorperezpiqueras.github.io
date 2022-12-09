@@ -23,6 +23,7 @@ import {
 import { SlChemistry } from "react-icons/sl";
 import { FcGraduationCap } from "react-icons/fc";
 import { HiOutlineChevronDown, HiOutlineChevronUp } from "react-icons/hi";
+import uuid from "react-uuid";
 
 type AboutMeProps = {
   aboutData: AboutMeData;
@@ -207,8 +208,8 @@ function AboutMe(props: AboutMeProps) {
 
           {expandedAboutMe ? (
             <div className="pb-0">
-              {props.aboutData.aboutTexts.map((text, index) => (
-                <div>
+              {props.aboutData.aboutTexts.map((text) => (
+                <div key={uuid()}>
                   <p>{text}</p>
                   <br />
                 </div>
@@ -223,7 +224,7 @@ function AboutMe(props: AboutMeProps) {
           <h4 className="-ml-4 mb-3">🎓 Education</h4>
           <Timeline>
             {educationSorted.map((education: EducationData) => (
-              <Timeline.Item className="mb-0">
+              <Timeline.Item className="mb-0" key={uuid()}>
                 <Timeline.Content>
                   <div>
                     <Timeline.Point
@@ -254,19 +255,17 @@ function AboutMe(props: AboutMeProps) {
 
         <div className="flex flex-col bg-white rounded text-black p-4">
           <h4>🇬🇧 Language skills</h4>
-          {props.aboutData.languages.map((lang) => {
-            return (
-              <div className="flex flex-column mb-2">
-                <div className="flex flex-row space-x-2">
-                  <span>{lang.language}:</span>
-                  <span className="text-gray-500">{lang.description}</span>
-                </div>
-                <div className="flex flex-row space-x-0">
-                  {getStars(lang.level)}
-                </div>
+          {props.aboutData.languages.map((lang) => (
+            <div className="flex flex-column mb-2" key={uuid()}>
+              <div className="flex flex-row space-x-2">
+                <span>{lang.language}:</span>
+                <span className="text-gray-500">{lang.description}</span>
               </div>
-            );
-          })}
+              <div className="flex flex-row space-x-0">
+                {getStars(lang.level)}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -282,63 +281,67 @@ function AboutMe(props: AboutMeProps) {
             {experienceSorted.map((experience: ExperienceData) =>
               experience.experiences.length > 1 ? (
                 // if there are multiple experiences in the same company
-                <Timeline.Item className="mb-0">
+                <Timeline.Item className="mb-0" key={uuid()}>
                   <b className="font-bold text-gray-400">
                     {experience.company}
                   </b>
                   {experience.experiences.reverse().map((exp) => (
-                    <>
-                      <Timeline.Content>
-                        <span className="text-sm text-gray-400">
-                          ({parseDates(exp.startDate, exp.endDate)})
-                        </span>
-                        <Timeline.Point
-                          icon={experienceIconsMapping.get(exp.type)}
-                        />
-                        <Timeline.Title className="text-green-500 mb-0">
-                          {exp.position}
-                        </Timeline.Title>
-                        <Timeline.Body>
-                          {exp.description}
-                          <br />
-                          {exp.labels.map((label: string) => (
-                            <TechBadge className="mt-2" tech={label} />
-                          ))}
-                        </Timeline.Body>
-                      </Timeline.Content>
-                    </>
+                    <Timeline.Content key={uuid()}>
+                      <span className="text-sm text-gray-400">
+                        ({parseDates(exp.startDate, exp.endDate)})
+                      </span>
+                      <Timeline.Point
+                        icon={experienceIconsMapping.get(exp.type)}
+                      />
+                      <Timeline.Title className="text-green-500 mb-0">
+                        {exp.position}
+                      </Timeline.Title>
+                      <Timeline.Body>
+                        {exp.description}
+                        <br />
+                        {exp.labels.map((label: string) => (
+                          <TechBadge
+                            className="mt-2"
+                            tech={label}
+                            key={uuid()}
+                          />
+                        ))}
+                      </Timeline.Body>
+                    </Timeline.Content>
                   ))}
                 </Timeline.Item>
               ) : (
                 // if there is only one experience in the company
-                <Timeline.Item>
+                <Timeline.Item key={uuid()}>
                   {experience.experiences.reverse().map((exp) => (
-                    <>
-                      <Timeline.Content>
-                        <div>
-                          <span className="font-bold text-gray-400">
-                            {experience.company}{" "}
-                          </span>
-                          <span className="text-sm text-gray-400">
-                            ({parseDates(exp.startDate, exp.endDate)})
-                          </span>
-                        </div>
+                    <Timeline.Content key={uuid()}>
+                      <div>
+                        <span className="font-bold text-gray-400">
+                          {experience.company}{" "}
+                        </span>
+                        <span className="text-sm text-gray-400">
+                          ({parseDates(exp.startDate, exp.endDate)})
+                        </span>
+                      </div>
 
-                        <Timeline.Point
-                          icon={experienceIconsMapping.get(exp.type)}
-                        />
-                        <Timeline.Title className="text-green-500 mb-0">
-                          {exp.position}
-                        </Timeline.Title>
-                        <Timeline.Body>
-                          {exp.description}
-                          <br />
-                          {exp.labels.map((label: string) => (
-                            <TechBadge className="mt-2" tech={label} />
-                          ))}
-                        </Timeline.Body>
-                      </Timeline.Content>
-                    </>
+                      <Timeline.Point
+                        icon={experienceIconsMapping.get(exp.type)}
+                      />
+                      <Timeline.Title className="text-green-500 mb-0">
+                        {exp.position}
+                      </Timeline.Title>
+                      <Timeline.Body>
+                        {exp.description}
+                        <br />
+                        {exp.labels.map((label: string) => (
+                          <TechBadge
+                            className="mt-2"
+                            tech={label}
+                            key={uuid()}
+                          />
+                        ))}
+                      </Timeline.Body>
+                    </Timeline.Content>
                   ))}
                 </Timeline.Item>
               )
