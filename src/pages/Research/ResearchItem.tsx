@@ -20,7 +20,7 @@ function ResearchItem(props: ResearchItemProps) {
           target="_blank"
         >
           <FaFilePdf
-            className="text-4xl hover:cursor-pointer transition ease-in-out duration-300 hover:scale-105"
+            className="text-5xl mt-2 hover:cursor-pointer transition ease-in-out duration-300 hover:opacity-60"
             color="rgb(226, 0, 0)"
           />
         </a>
