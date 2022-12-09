@@ -18,6 +18,7 @@ import { PortfolioData } from "./models/PortfolioData";
 import Achievements from "./pages/Achievements/Achievements";
 import { useState, SyntheticEvent } from "react";
 import Research from "./pages/Research/Research";
+import ScrollToTopButton from "./shared/components/ScrollToTopButton/ScrollToTopButton";
 
 function App() {
   const [value, setValue] = useState(0);
@@ -129,6 +130,7 @@ function App() {
           </div>
         </div>
       </div>
+      <ScrollToTopButton />
     </div>
   );
 }
