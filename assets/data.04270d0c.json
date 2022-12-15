@@ -361,23 +361,20 @@
       "authors": "V. Pérez-Piqueras",
       "conferenceJournalTitle": "1st Early Career Researchers Workshop Collocated With ECCS 2021",
       "year": "2021",
-      "pdf": "vpp_ecrw21_ml",
       "url": "https://www.informatics-europe.org/images/ECSS/ECSS2022/members-spotlight/Proceedings-Early-Career-Researchers-Workshop-ECSS2021.pdf#page=16"
     },
     {
-      "title": "GRASP-based hybrid search to solve the multi-objective requirements selection problem",
+      "title": "GRASP-Based Hybrid Search to Solve the Multi-objective Requirements Selection Problem",
       "authors": "V. Pérez-Piqueras, P. Bermejo, J.A. Gámez",
       "conferenceJournalTitle": "OLA'2022 International Conference on Optimization and Learning",
       "year": "2022",
-      "pdf": "vpp_ola22_grasp",
-      "url": "https://ola2022.sciencesconf.org/data/pages/Proceedings_1.pdf"
+      "url": "https://link.springer.com/chapter/10.1007/978-3-031-22039-5_15"
     },
     {
       "title": "ProjectION: Herramienta de ayuda a la toma de decisiones en gestión ágil",
       "authors": "V. Pérez-Piqueras, P. Bermejo",
       "conferenceJournalTitle": "XXVI Jornadas de Ingeniería del Software y Bases de Datos (JISBD 2022)",
       "year": "2022",
-      "pdf": "vpp_jisbd22_projection",
       "url": "http://hdl.handle.net/11705/JISBD/2022/1654"
     },
     {
@@ -385,7 +382,6 @@
       "authors": "V. Pérez-Piqueras, P. Bermejo, J.A. Gámez",
       "conferenceJournalTitle": "17th International Conference on Soft Computing Models in Industrial and Environmental Applications (SOCO 2022)",
       "year": "2022",
-      "pdf": "vpp_soco22_eda",
       "url": "https://link.springer.com/chapter/10.1007/978-3-031-18050-7_10"
     }
   ]
