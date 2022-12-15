@@ -9,7 +9,7 @@ type ResearchProps = {
 function Research(props: ResearchProps) {
   const researches = [...props.researches].reverse();
   return (
-    <div className="flex flex-col items-center space-y-4">
+    <div className="flex flex-col items-center space-y-6">
       {researches.map((research: ResearchData) => (
         <ResearchItem research={research} key={uuid()} />
       ))}

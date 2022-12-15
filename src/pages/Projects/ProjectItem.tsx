@@ -20,10 +20,22 @@ function ProjectItem(props: ProjectProps) {
     props.setHoveredProjectTitle(null);
   };
 
+  const onClick = (e) => {
+    if (!props.project.link) {
+      e.preventDefault();
+    }
+  };
+
   const project = props.project;
   return (
-    <div
-      className={`ml-2 project-card flex flex-col lg:flex-row w-full my-6 items-center bg-white rounded-lg transform transition duration-500 ease-in-out hover:scale-105`}
+    <a
+      href={project.link ? project.link : "#"}
+      target="_blank"
+      onClick={onClick}
+      className={`ml-2 project-card flex flex-col lg:flex-row w-full my-6 items-center bg-white rounded-lg no-underline
+       transform transition duration-500 ease-in-out hover:scale-105 ${
+         project.link ? "cursor-pointer" : "cursor-default"
+       }`}
       onMouseOver={(e) => {
         handleMouseOver(props.project.title);
       }}
@@ -58,16 +70,7 @@ function ProjectItem(props: ProjectProps) {
       <div className="flex flex-col justify-between p-4 leading-normal">
         <div className="flex flex-row justify-start items-center">
           {project.link ? (
-            <a
-              className="mb-2 transition ease-in-out hover:scale-125 duration-300"
-              href={project.link}
-              target="_blank"
-            >
-              <AiFillGithub
-                className="hover:text-white text-black"
-                size={"35px"}
-              />
-            </a>
+            <AiFillGithub className="mb-2 text-black" size={"35px"} />
           ) : (
             ""
           )}
@@ -87,7 +90,7 @@ function ProjectItem(props: ProjectProps) {
           ))}
         </div>
       </div>
-    </div>
+    </a>
   );
 }
 
