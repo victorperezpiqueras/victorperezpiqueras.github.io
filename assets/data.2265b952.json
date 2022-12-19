@@ -296,7 +296,6 @@
       "link": "https://www.amazon.com/Adaptive-Code-principles-Developer-Practices/dp/1509302581",
       "tags": ["recommended"]
     },
-
     {
       "title": "The Professional Scrum Team",
       "cover": "book_prof_scrum_team.jpg",
@@ -306,12 +305,12 @@
         "text": "THE PROFESSIONAL SCRUM TEAM",
         "color": "#5DBD59",
         "width": "20px",
-        "fontSize": "10px",
+        "fontSize": "9px",
         "fontFamily": "'Roboto', sans-serif",
         "textColor": "white",
         "textShadow": "1px 1px #000000",
         "marginTitle": "0px",
-        "marginTop": "30px"
+        "marginTop": "40px"
       },
       "link": "https://www.scrum.org/resources/professional-scrum-team",
       "tags": ["recommended"]
@@ -351,6 +350,25 @@
         "marginTop": "50px"
       },
       "link": "https://www.amazon.com/Fixing-Your-Scrum-Practical-Solutions/dp/1680506978",
+      "tags": ["recommended"]
+    },
+    {
+      "title": "Mastering Professional Scrum",
+      "cover": "book_mastering_prof_scrum.jpg",
+      "height": "250px",
+      "width": "190px",
+      "spine": {
+        "text": "MASTERING PROFESSIONAL SCRUM",
+        "color": "#D05F25",
+        "width": "20px",
+        "fontSize": "9px",
+        "fontFamily": "'Roboto', sans-serif",
+        "textColor": "white",
+        "textShadow": "1px 1px #000000",
+        "marginTitle": "0px",
+        "marginTop": "40px"
+      },
+      "link": "https://www.scrum.org/resources/mastering-professional-scrum-book",
       "tags": ["recommended"]
     }
   ],
