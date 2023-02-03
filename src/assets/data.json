@@ -406,7 +406,7 @@
         "width": "30px",
         "fontSize": "12px",
         "fontFamily": "'Roboto', sans-serif",
-        "textColor": "white",
+        "textColor": "#fff",
         "textShadow": "1px 1px #000000",
         "marginTitle": "5px",
         "marginTop": "20px"

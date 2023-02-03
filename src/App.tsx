@@ -4,7 +4,8 @@ import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaOrcid } from "react-icons/fa";
 import SocialIcon from "./shared/components/SocialIcon/SocialIcon";
-import psmii_logo from "./assets/psmii_logo.png";
+import psmii_logo from "./assets/psmi_logo.png";
+import psmii_logo2 from "./assets/psmii_logo.png";
 
 import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
@@ -27,6 +28,15 @@ function App() {
   const handleChange = (event: SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
+
+  const [isHovering, setIsHovering] = useState(false);
+  const handleMouseOver = () => {
+    setIsHovering(true);
+  };
+  const handleMouseOut = () => {
+    setIsHovering(false);
+  };
+
   return (
     <div className="App">
       <div className="container flex flex-col justify-center">
@@ -69,12 +79,42 @@ function App() {
                 icon={<FaOrcid color="white" />}
               />
 
-              <a href="https://www.scrum.org/user/746391" target="_blank">
+              <a
+                className={`mt-2`}
+                href={
+                  data.achievements.find((a) => a.image.includes("psm1"))?.url
+                }
+                target="_blank"
+                onMouseOver={(e) => handleMouseOver()}
+                onMouseOut={(e) => handleMouseOut()}
+              >
                 <button
                   type="button"
-                  className="psmi-button ml-1 transition ease-in-out hover:scale-150 duration-300"
+                  className={`psmi-button transition ease-in-out duration-300 hover:opacity-90 ${
+                    isHovering ? "scale-125 translate-x-6 -translate-y-1" : ""
+                  }`}
                 >
                   <img className="psmi" src={psmii_logo} alt="" />
+                </button>
+              </a>
+              <a
+                href={
+                  data.achievements.find((a) => a.image.includes("psm2"))?.url
+                }
+                target="_blank"
+                onMouseOver={(e) => handleMouseOver()}
+                onMouseOut={(e) => handleMouseOut()}
+              >
+                <button
+                  type="button"
+                  className={`psmi-button transition ease-in-out duration-300 hover:opacity-90 ${
+                    isHovering ? "scale-125  translate-x-20 translate-y-1" : ""
+                  }`}
+                  style={{
+                    marginLeft: "-5rem",
+                  }}
+                >
+                  <img className="psmi" src={psmii_logo2} alt="" />
                 </button>
               </a>
             </div>
