@@ -163,7 +163,7 @@
     {
       "title": "Certified as Professional Scrum Master I by Scrum.org.",
       "image": "psm1.png",
-      "url": "https://www.scrum.org/user/746391"
+      "url": "https://www.credly.com/badges/e6bcffb6-b237-4cbc-8c89-80ba8b625a6b/public_url"
     },
     {
       "title": "Extraordinary award for the best academic record of the Master's Degree in Computer Science, with an average mark of 9.80.",
@@ -178,6 +178,11 @@
       "title": "SISTEDES - NTT Data Award for the best Masters Thesis on new methodologies and tools for software development.",
       "image": "premio_sistedes.jpeg",
       "url": "https://www.sistedes.es/6a-edicion-premios-sistedes-ntt-data-a-los-mejores-tfg-y-tfm-sobre-nuevas-metodologias-y-herramientas-para-el-desarrollo-de-software"
+    },
+    {
+      "title": "Certified as Professional Scrum Master II by Scrum.org.",
+      "image": "psm2.png",
+      "url": "https://www.credly.com/badges/3b4acfba-b5d9-4ab4-89e5-0ef1be7b6269/public_url"
     }
   ],
   "library": [
@@ -369,6 +374,44 @@
         "marginTop": "40px"
       },
       "link": "https://www.scrum.org/resources/mastering-professional-scrum-book",
+      "tags": ["recommended"]
+    },
+    {
+      "title": "The Professional Agile Leaders",
+      "cover": "book_professional_agile_leader.jpg",
+      "height": "250px",
+      "width": "190px",
+      "spine": {
+        "text": "THE PROFESSIONAL AGILE LEADER",
+        "color": "#2E92B6",
+        "width": "20px",
+        "fontSize": "9px",
+        "fontFamily": "'Roboto', sans-serif",
+        "textColor": "white",
+        "textShadow": "1px 1px #000000",
+        "marginTitle": "0px",
+        "marginTop": "40px"
+      },
+      "link": "https://www.scrum.org/resources/professional-agile-leader",
+      "tags": ["recommended"]
+    },
+    {
+      "title": "Zombie Scrum Survival Guide",
+      "cover": "book_zombie_scrum_survival_guide.jpg",
+      "height": "250px",
+      "width": "190px",
+      "spine": {
+        "text": "ZOMBIE SCRUM SURVIVAL GUIDE",
+        "color": "#FCEF00",
+        "width": "30px",
+        "fontSize": "12px",
+        "fontFamily": "'Roboto', sans-serif",
+        "textColor": "#fff",
+        "textShadow": "1px 1px #000000",
+        "marginTitle": "5px",
+        "marginTop": "20px"
+      },
+      "link": "https://www.scrum.org/resources/zombie-scrum-survival-guide",
       "tags": ["recommended"]
     }
   ],
