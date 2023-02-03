@@ -15,7 +15,7 @@ function AchievementItem(props: AchievementProps) {
       <a href={achievement.url} target="_blank">
         {loading && <LoadingSpinner size="xl" />}
         <img
-          className={`rounded-t-lg ${
+          className={`rounded-t-lg w-96 h-72 object-cover ${
             achievement.url ? "hover:brightness-75" : ""
           } ${loading ? "hidden" : "visible"}`}
           src={

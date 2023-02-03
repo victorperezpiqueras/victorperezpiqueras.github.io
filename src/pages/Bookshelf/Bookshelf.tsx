@@ -120,7 +120,7 @@ function Bookshelf(props: BookshelfProps) {
                 isHovering[tag.tag] ? "box-hover" : ""
               }`}
               style={{
-                marginLeft: "-150px",
+                marginLeft: "-100px",
               }}
             ></div>
           </div>

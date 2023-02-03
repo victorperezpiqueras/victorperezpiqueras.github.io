@@ -4,7 +4,8 @@ import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaOrcid } from "react-icons/fa";
 import SocialIcon from "./shared/components/SocialIcon/SocialIcon";
-import psmi from "./assets/psmi.png";
+import psmii_logo from "./assets/psmii_logo.png";
+
 import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -71,9 +72,9 @@ function App() {
               <a href="https://www.scrum.org/user/746391" target="_blank">
                 <button
                   type="button"
-                  className="psmi-button -ml-3 transition ease-in-out hover:scale-125 duration-300"
+                  className="psmi-button ml-1 transition ease-in-out hover:scale-150 duration-300"
                 >
-                  <img className="psmi" src={psmi} alt="" />
+                  <img className="psmi" src={psmii_logo} alt="" />
                 </button>
               </a>
             </div>
