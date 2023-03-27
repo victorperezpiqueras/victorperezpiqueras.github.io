@@ -429,7 +429,7 @@
       "authors": "V. Pérez-Piqueras, P. Bermejo, J.A. Gámez",
       "conferenceJournalTitle": "OLA'2022 International Conference on Optimization and Learning",
       "year": "2022",
-      "url": "https://link.springer.com/chapter/10.1007/978-3-031-22039-5_15"
+      "url": "https://doi.org/10.1007/978-3-031-22039-5_15"
     },
     {
       "title": "ProjectION: Herramienta de ayuda a la toma de decisiones en gestión ágil",
@@ -443,7 +443,14 @@
       "authors": "V. Pérez-Piqueras, P. Bermejo, J.A. Gámez",
       "conferenceJournalTitle": "17th International Conference on Soft Computing Models in Industrial and Environmental Applications (SOCO 2022)",
       "year": "2022",
-      "url": "https://link.springer.com/chapter/10.1007/978-3-031-18050-7_10"
+      "url": "https://doi.org/10.1007/978-3-031-18050-7_10"
+    },
+    {
+      "title": "A Report Contents Framework for The Final Year Project in Computer Science Degrees",
+      "authors": "P. Bermejo, V. Pérez-Piqueras",
+      "conferenceJournalTitle": "17th International Technology, Education and Development Conference (INTED 2023)",
+      "year": "2023",
+      "url": "https://doi.org/10.21125/inted.2023.0434"
     }
   ]
 }
