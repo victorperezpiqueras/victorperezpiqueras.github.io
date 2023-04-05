@@ -413,6 +413,44 @@
       },
       "link": "https://www.scrum.org/resources/zombie-scrum-survival-guide",
       "tags": ["recommended"]
+    },
+    {
+      "title": "When Will It Be Done?",
+      "cover": "book_wwibd.jpg",
+      "height": "265px",
+      "width": "190px",
+      "spine": {
+        "text": "When Will It Be Done?",
+        "color": "black",
+        "width": "30px",
+        "fontSize": "14px",
+        "fontFamily": "'Times New Roman', Times, serif",
+        "textColor": "white",
+        "textShadow": null,
+        "marginTitle": "5px",
+        "marginTop": "60px"
+      },
+      "link": "https://actionableagile.com/resources/publications/wwibd/",
+      "tags": ["recommended"]
+    },
+    {
+      "title": "The Professional Product Owner",
+      "cover": "book_professional_product_owner.jpg",
+      "height": "250px",
+      "width": "190px",
+      "spine": {
+        "text": "THE PROFESSIONAL PRODUCT OWNER",
+        "color": "#7C1569",
+        "width": "30px",
+        "fontSize": "10px",
+        "fontFamily": "'Roboto', sans-serif",
+        "textColor": "#fff",
+        "textShadow": "1px 1px #000000",
+        "marginTitle": "5px",
+        "marginTop": "20px"
+      },
+      "link": "https://www.scrum.org/resources/zombie-scrum-survival-guide",
+      "tags": []
     }
   ],
   "resume": "cv.pdf",

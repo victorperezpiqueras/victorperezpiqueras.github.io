@@ -103,7 +103,7 @@ function Bookshelf(props: BookshelfProps) {
                 width: "250px",
                 height: "50px",
                 zIndex: 20,
-                right: "45%",
+                right: "35%", // <-- reduce this to move the tag closer to the books
                 top: "0%",
               }}
             >
@@ -120,7 +120,7 @@ function Bookshelf(props: BookshelfProps) {
                 isHovering[tag.tag] ? "box-hover" : ""
               }`}
               style={{
-                marginLeft: "-100px",
+                marginLeft: "-50px", // <-- reduce this to move the books to the left
               }}
             ></div>
           </div>
