@@ -1,5 +1,5 @@
 import "./App.css";
-import portfolio from "./assets/portfolio.jpg";
+import portfolio from "./assets/portfolio.png";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaOrcid } from "react-icons/fa";
@@ -43,7 +43,7 @@ function App() {
         <div className="container justify-center m-4 h-52 flex flex-row items-center bg-green-500 rounded">
           <div className="flex w-30 ml-12 justify-center">
             <img
-              className="aspect-square w-28 lg:w-48 rounded-full drop-shadow-md ring-2 ring-gray-300"
+              className="aspect-square w-28 lg:w-48 rounded-full drop-shadow-md ring-4 ring-gray-300"
               src={portfolio}
               alt="Rounded avatar"
             />
