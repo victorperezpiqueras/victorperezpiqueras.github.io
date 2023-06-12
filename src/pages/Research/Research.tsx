@@ -7,7 +7,9 @@ type ResearchProps = {
 };
 
 function Research(props: ResearchProps) {
-  const researches = [...props.researches].reverse();
+  const researches = [...props.researches]
+    .filter((research) => research.published)
+    .reverse();
   return (
     <div className="flex flex-col items-center space-y-6">
       {researches.map((research: ResearchData) => (

@@ -4,5 +4,6 @@ export type ResearchData = {
   conferenceJournalTitle: string;
   year: string;
   url?: string;
-  pdf: string;
+  type: string;
+  published: boolean;
 };
