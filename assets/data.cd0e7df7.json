@@ -460,35 +460,72 @@
       "authors": "V. Pérez-Piqueras",
       "conferenceJournalTitle": "1st Early Career Researchers Workshop Collocated With ECCS 2021",
       "year": "2021",
-      "url": "https://www.informatics-europe.org/images/ECSS/ECSS2022/members-spotlight/Proceedings-Early-Career-Researchers-Workshop-ECSS2021.pdf#page=16"
+      "url": "https://www.informatics-europe.org/images/ECSS/ECSS2022/members-spotlight/Proceedings-Early-Career-Researchers-Workshop-ECSS2021.pdf#page=16",
+      "type": "conference",
+      "published": true
     },
     {
       "title": "GRASP-Based Hybrid Search to Solve the Multi-objective Requirements Selection Problem",
       "authors": "V. Pérez-Piqueras, P. Bermejo, J.A. Gámez",
       "conferenceJournalTitle": "OLA'2022 International Conference on Optimization and Learning",
       "year": "2022",
-      "url": "https://doi.org/10.1007/978-3-031-22039-5_15"
+      "url": "https://doi.org/10.1007/978-3-031-22039-5_15",
+      "type": "conference",
+      "published": true
     },
     {
       "title": "ProjectION: Herramienta de ayuda a la toma de decisiones en gestión ágil",
       "authors": "V. Pérez-Piqueras, P. Bermejo, J.A. Gámez",
       "conferenceJournalTitle": "XXVI Jornadas de Ingeniería del Software y Bases de Datos (JISBD 2022)",
       "year": "2022",
-      "url": "http://hdl.handle.net/11705/JISBD/2022/1654"
+      "url": "http://hdl.handle.net/11705/JISBD/2022/1654",
+      "type": "conference",
+      "published": true
     },
     {
       "title": "Estimation of Distribution Algorithms Applied to the Next Release Problem",
       "authors": "V. Pérez-Piqueras, P. Bermejo, J.A. Gámez",
       "conferenceJournalTitle": "17th International Conference on Soft Computing Models in Industrial and Environmental Applications (SOCO 2022)",
       "year": "2022",
-      "url": "https://doi.org/10.1007/978-3-031-18050-7_10"
+      "url": "https://doi.org/10.1007/978-3-031-18050-7_10",
+      "type": "conference",
+      "published": true
     },
     {
       "title": "A Report Contents Framework for The Final Year Project in Computer Science Degrees",
       "authors": "P. Bermejo, V. Pérez-Piqueras",
       "conferenceJournalTitle": "17th International Technology, Education and Development Conference (INTED 2023)",
       "year": "2023",
-      "url": "https://doi.org/10.21125/inted.2023.0434"
+      "url": "https://doi.org/10.21125/inted.2023.0434",
+      "type": "conference",
+      "published": true
+    },
+    {
+      "title": "FEDA-NRP: A fixed-structure multivariate estimation of distribution algorithm to solve the multi-objective Next Release Problem with requirements interactions",
+      "authors": "V. Pérez-Piqueras, P. Bermejo, J.A. Gámez",
+      "conferenceJournalTitle": "Journal of Engineering Applications of Artificial Intelligence",
+      "year": "2023",
+      "url": "https://doi.org/10.1016/j.engappai.2023.106555",
+      "type": "journal",
+      "published": true
+    },
+    {
+      "title": "Estimation of Distribution Algorithms with Solution Subset Selection for the Next Release Problem",
+      "authors": "V. Pérez-Piqueras, P. Bermejo, J.A. Gámez",
+      "conferenceJournalTitle": "Logic Journal of the IGPL",
+      "year": "2023",
+      "url": "",
+      "type": "journal",
+      "published": false
+    },
+    {
+      "title": "GRASP multiobjetivo con reencadenamiento de trayectorias aplicado al problema de la siguiente versión",
+      "authors": "V. Pérez-Piqueras, P. Bermejo, J.A. Gámez",
+      "conferenceJournalTitle": "XXVII Jornadas de Ingeniería del Software y Bases de Datos (JISBD 2023)",
+      "year": "2023",
+      "url": "",
+      "type": "conference",
+      "published": false
     }
   ]
 }
