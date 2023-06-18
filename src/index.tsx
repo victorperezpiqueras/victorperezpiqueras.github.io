@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ReactGA from "react-ga4";
 
-const TRACKING_ID = "G-YVBGDMP93K";
+const TRACKING_ID = "G-Z3X95VK0NL";
 ReactGA.initialize(TRACKING_ID);
 
 const root = ReactDOM.createRoot(
