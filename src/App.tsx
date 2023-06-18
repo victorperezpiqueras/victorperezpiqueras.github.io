@@ -21,11 +21,7 @@ import Achievements from "./pages/Achievements/Achievements";
 import { useState, SyntheticEvent } from "react";
 import Research from "./pages/Research/Research";
 import ScrollToTopButton from "./shared/components/ScrollToTopButton/ScrollToTopButton";
-import ReactGA from "react-ga4";
 import useAnalyticsEventTracker from "./shared/GoogleTagManager";
-
-const TRACKING_ID = "G-YVBGDMP93K";
-ReactGA.initialize(TRACKING_ID);
 
 function App() {
   const [value, setValue] = useState(0);
