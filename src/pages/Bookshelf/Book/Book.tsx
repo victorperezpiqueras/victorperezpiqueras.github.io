@@ -1,4 +1,5 @@
 import { BookData } from "../../../models/BookData";
+import useAnalyticsEventTracker from "../../../shared/GoogleTagManager";
 import "./Book.css";
 
 type BookDataProps = {
@@ -9,7 +10,19 @@ type BookDataProps = {
 
 function Book(props: BookDataProps) {
   return (
-    <div className="book z-40" id={`book-${props.index}`}>
+    <div
+      className="book z-40"
+      id={`book-${props.index}`}
+      onClick={() => {
+        if (props.bookData.link) {
+          useAnalyticsEventTracker({
+            category: "link",
+            action: `open ${props.bookData.link}`,
+            label: "bookshelf",
+          });
+        }
+      }}
+    >
       <div
         className="side spine"
         style={{

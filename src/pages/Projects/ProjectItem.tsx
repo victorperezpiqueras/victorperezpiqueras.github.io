@@ -3,6 +3,7 @@ import { AiFillGithub } from "react-icons/ai";
 import { ProjectData } from "../../models/ProjectData";
 import LoadingSpinner from "../../shared/components/LoadingSpinner/LoadingSpinner";
 import TechBadge from "../../shared/components/TechBadge/TechBadge";
+import useAnalyticsEventTracker from "../../shared/GoogleTagManager";
 
 type ProjectProps = {
   project: ProjectData;
@@ -23,7 +24,13 @@ function ProjectItem(props: ProjectProps) {
   const onClick = (e) => {
     if (!props.project.link) {
       e.preventDefault();
+      return;
     }
+    useAnalyticsEventTracker({
+      category: "link",
+      action: `open ${props.project.link}`,
+      label: "projects",
+    });
   };
 
   const project = props.project;

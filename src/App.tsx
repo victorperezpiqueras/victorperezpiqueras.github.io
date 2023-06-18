@@ -21,12 +21,38 @@ import Achievements from "./pages/Achievements/Achievements";
 import { useState, SyntheticEvent } from "react";
 import Research from "./pages/Research/Research";
 import ScrollToTopButton from "./shared/components/ScrollToTopButton/ScrollToTopButton";
+import ReactGA from "react-ga4";
+import useAnalyticsEventTracker from "./shared/GoogleTagManager";
+
+const TRACKING_ID = "G-YVBGDMP93K";
+ReactGA.initialize(TRACKING_ID);
 
 function App() {
   const [value, setValue] = useState(0);
   const portfolioData = data as PortfolioData;
+  const menuMappings = {
+    0: "about",
+    1: "projects",
+    2: "achievements",
+    3: "resume",
+    4: "research",
+    5: "bookshelf",
+  };
   const handleChange = (event: SyntheticEvent, newValue: number) => {
     setValue(newValue);
+    useAnalyticsEventTracker({
+      category: "link",
+      action: "open from menu",
+      label: menuMappings[newValue],
+    });
+  };
+
+  const onClickHeaderLink = (link: string) => {
+    useAnalyticsEventTracker({
+      category: "link",
+      action: `open ${link}`,
+      label: "header",
+    });
   };
 
   const [isHovering, setIsHovering] = useState(false);
@@ -62,7 +88,12 @@ function App() {
               <SocialIcon
                 link={"https://github.com/victorperezpiqueras"}
                 color={"bg-black"}
-                icon={<AiFillGithub color="white" />}
+                icon={
+                  <AiFillGithub
+                    color="white"
+                    onClick={() => onClickHeaderLink("open github profile")}
+                  />
+                }
               />
 
               <SocialIcon
@@ -70,13 +101,23 @@ function App() {
                   "https://www.linkedin.com/in/v%C3%ADctor-p%C3%A9rez-piqueras/"
                 }
                 color={"bg-blue-700"}
-                icon={<FaLinkedinIn color="white" />}
+                icon={
+                  <FaLinkedinIn
+                    color="white"
+                    onClick={() => onClickHeaderLink("open linkedin profile")}
+                  />
+                }
               />
 
               <SocialIcon
                 link={"https://orcid.org/0000-0002-2305-5755"}
                 color={"bg-green-400"}
-                icon={<FaOrcid color="white" />}
+                icon={
+                  <FaOrcid
+                    color="white"
+                    onClick={() => onClickHeaderLink("open orcid profile")}
+                  />
+                }
               />
 
               <a
@@ -87,6 +128,7 @@ function App() {
                 target="_blank"
                 onMouseOver={(e) => handleMouseOver()}
                 onMouseOut={(e) => handleMouseOut()}
+                onClick={() => onClickHeaderLink("open psm1")}
               >
                 <button
                   type="button"
@@ -104,6 +146,7 @@ function App() {
                 target="_blank"
                 onMouseOver={(e) => handleMouseOver()}
                 onMouseOut={(e) => handleMouseOut()}
+                onClick={() => onClickHeaderLink("open psm2")}
               >
                 <button
                   type="button"

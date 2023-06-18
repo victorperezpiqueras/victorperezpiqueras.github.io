@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { AchievementData } from "../../models/AchievementsData";
 import LoadingSpinner from "../../shared/components/LoadingSpinner/LoadingSpinner";
+import useAnalyticsEventTracker from "../../shared/GoogleTagManager";
 
 type AchievementProps = {
   achievement: AchievementData;
@@ -12,7 +13,19 @@ function AchievementItem(props: AchievementProps) {
   const { achievement } = props;
   return (
     <div className="m-2.5 max-w-sm rounded-lg shadow-md">
-      <a href={achievement.url} target="_blank">
+      <a
+        href={achievement.url}
+        target="_blank"
+        onClick={() => {
+          if (props.achievement.url) {
+            useAnalyticsEventTracker({
+              category: "link",
+              action: `open ${props.achievement.url}`,
+              label: "achievements",
+            });
+          }
+        }}
+      >
         {loading && <LoadingSpinner size="xl" />}
         <img
           className={`rounded-t-lg w-96 h-72 object-cover ${

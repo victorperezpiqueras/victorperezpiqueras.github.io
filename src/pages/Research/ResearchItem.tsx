@@ -1,4 +1,5 @@
 import { ResearchData } from "../../models/ResearchData";
+import useAnalyticsEventTracker from "../../shared/GoogleTagManager";
 import "./ResearchItem.css";
 
 function getArticleType(type: string) {
@@ -24,6 +25,15 @@ function ResearchItem(props: ResearchItemProps) {
       className={`flex flex-row px-8 py-3 space-y-4 bg-white rounded text-black w-5/6 no-underline research-item ${
         props.research.url ? "cursor-pointer" : ""
       } hover:scale-110 transition-all duration-300 ease-in-out`}
+      onClick={() => {
+        if (props.research.url) {
+          useAnalyticsEventTracker({
+            category: "link",
+            action: `open ${props.research.url}`,
+            label: "research",
+          });
+        }
+      }}
     >
       <div className="flex flex-col">
         <div className="text-lg flex flex-row">{props.research.title}</div>
