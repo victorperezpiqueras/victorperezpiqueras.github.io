@@ -1,7 +1,7 @@
 import { Button } from "flowbite-react";
-import { useEffect, useState } from "react";
 import { MdFileDownload } from "react-icons/md";
 import useAnalyticsEventTracker from "../../shared/GoogleTagManager";
+import { isMobileScreen } from "../../shared/isMobile";
 
 type ResumeProps = {
   cv: string;
@@ -9,20 +9,6 @@ type ResumeProps = {
 
 function Resume(props: ResumeProps) {
   let cv = new URL(`../../assets/${props.cv}`, import.meta.url).href;
-  const [width, setWidth] = useState<number>(window.innerWidth);
-
-  function handleWindowSizeChange() {
-    setWidth(window.innerWidth);
-  }
-  useEffect(() => {
-    window.addEventListener("resize", handleWindowSizeChange);
-    return () => {
-      window.removeEventListener("resize", handleWindowSizeChange);
-    };
-  }, []);
-
-  const isMobile = width <= 768;
-
   return (
     <div className="flex flex-col justify-start items-center space-y-4 text-black h-screen">
       <a
@@ -41,7 +27,7 @@ function Resume(props: ResumeProps) {
           Download
         </Button>
       </a>
-      {isMobile ? (
+      {isMobileScreen() ? (
         <></>
       ) : (
         <iframe

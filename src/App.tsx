@@ -62,8 +62,8 @@ function App() {
   return (
     <div className="App">
       <div className="container flex flex-col justify-center">
-        <div className="container justify-center m-4 h-52 flex flex-row items-center bg-green-500 rounded">
-          <div className="flex w-30 ml-12 justify-center">
+        <div className="justify-center py-8 mt-4 xs:h-72 md:h-52 flex xs:flex-col md:flex-row items-center bg-green-500 rounded">
+          <div className="flex w-30 h-30 ml-4 justify-center">
             <img
               className="aspect-square w-28 lg:w-48 rounded-full drop-shadow-md ring-4 ring-gray-300"
               src={portfolio}
@@ -71,12 +71,12 @@ function App() {
             />
           </div>
 
-          <div className="container basis-3/5">
-            <p className="flex justify-center text-black font-bold text-2xl md:text-3xl lg:text-5xl">
+          <div className="container basis-3/5 pb-1">
+            <p className="flex justify-center text-center mt-1 text-black font-bold text-2xl md:text-3xl lg:text-5xl">
               {portfolioData.header.name}
             </p>
 
-            <p className="flex justify-center font-bold text-lg md:text-xl lg:text-2xl">
+            <p className="flex justify-center text-center font-bold text-base md:text-xl lg:text-2xl">
               {portfolioData.header.title}
             </p>
 
@@ -158,11 +158,10 @@ function App() {
               </a>
             </div>
           </div>
-          <div className="basis-1/5"></div>
         </div>
-        <div className="container flex flex-col w-full">
+        <div className="flex flex-col w-full">
           <Box
-            className="w-2/3"
+            className="w-11/12 md:w-2/3"
             sx={{
               bgcolor: "white",
               alignSelf: "center",
@@ -188,7 +187,7 @@ function App() {
               <Tab label="My Bookshelf" />
             </Tabs>
           </Box>
-          <div className="container w-full items-center">
+          <div className="w-full items-center">
             <TabPanel value={value} index={0}>
               <AboutMe aboutData={portfolioData.aboutMe} />
             </TabPanel>

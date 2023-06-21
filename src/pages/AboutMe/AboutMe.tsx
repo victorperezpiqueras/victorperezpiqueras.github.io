@@ -125,17 +125,19 @@ function AboutMe(props: AboutMeProps) {
   ]);
 
   return (
-    <div className="container flex flex-row xs:flex-wrap lg:flex-nowrap space-y-6 lg:space-y-0 lg:space-x-6 items-start">
+    <div className="flex flex-row xs:flex-wrap lg:flex-nowrap space-y-6 lg:space-y-0 lg:space-x-6 items-start">
       <div className="container flex flex-col basis-100 lg:basis-1/2 space-y-6">
         <div className="flex flex-col bg-white rounded text-black p-4">
           <h4>📍 Contact Info</h4>
           <span className="flex flex-row" onClick={copyPhone}>
             <BsFillTelephoneFill
-              className="mt-1 text-green-500"
+              className="mt-1 text-green-500 min-w-max"
               size={"15px"}
             />{" "}
             &nbsp;&nbsp;
-            {props.aboutData.contactInfo.phone}
+            <span className="text-sm md:text-base">
+              {props.aboutData.contactInfo.phone}
+            </span>
             <Tooltip
               content={copiedPhone ? "Copied!" : "Copy to clipboard"}
               style="dark"
@@ -155,7 +157,8 @@ function AboutMe(props: AboutMeProps) {
             </Tooltip>
           </span>
           <span className="flex flex-row">
-            <MdEmail className="mt-1 text-green-500" size={"20px"} /> &nbsp;{" "}
+            <MdEmail className="mt-1 text-green-500 min-w-max" size={"20px"} />{" "}
+            &nbsp;{" "}
             <a
               className="text-green-500"
               href="mailto:victorperezpiqueras@gmail.com"
@@ -163,7 +166,9 @@ function AboutMe(props: AboutMeProps) {
                 textDecoration: "none",
               }}
             >
-              {props.aboutData.contactInfo.email}
+              <span className="text-sm md:text-base">
+                {props.aboutData.contactInfo.email}
+              </span>
             </a>
             <Tooltip
               content={copiedEmail ? "Copied!" : "Copy to clipboard"}

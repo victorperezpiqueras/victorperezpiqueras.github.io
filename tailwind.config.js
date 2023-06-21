@@ -7,6 +7,9 @@ module.exports = {
   theme: {
     container: {
       center: true,
+      screens: {
+        xs: "100%",
+      },
     },
     extend: {
       rotate: {
