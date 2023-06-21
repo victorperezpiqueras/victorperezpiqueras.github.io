@@ -22,6 +22,7 @@ import { useState, SyntheticEvent } from "react";
 import Research from "./pages/Research/Research";
 import ScrollToTopButton from "./shared/components/ScrollToTopButton/ScrollToTopButton";
 import useAnalyticsEventTracker from "./shared/GoogleTagManager";
+import { isMobileScreen } from "./shared/isMobile";
 
 function App() {
   const [value, setValue] = useState(0);
@@ -72,7 +73,7 @@ function App() {
           </div>
 
           <div className="container basis-3/5 pb-1">
-            <p className="flex justify-center text-center mt-1 text-black font-bold text-2xl md:text-3xl lg:text-5xl">
+            <p className="flex justify-center text-center mt-1 text-black font-bold text-3xl md:text-4xl lg:text-5xl">
               {portfolioData.header.name}
             </p>
 
@@ -132,7 +133,13 @@ function App() {
                     isHovering ? "scale-125 translate-x-6 -translate-y-1" : ""
                   }`}
                 >
-                  <img className="psmi" src={psmii_logo} alt="" />
+                  <img
+                    className={`psmi w-1/2 md:w-3/5 ${
+                      isMobileScreen() ? "mt-2" : ""
+                    }`}
+                    src={psmii_logo}
+                    alt=""
+                  />
                 </button>
               </a>
               <a
@@ -153,7 +160,13 @@ function App() {
                     marginLeft: "-5rem",
                   }}
                 >
-                  <img className="psmi" src={psmii_logo2} alt="" />
+                  <img
+                    className={`psmi w-1/2 md:w-3/5 ${
+                      isMobileScreen() ? "mt-2" : ""
+                    }`} /*  mt-2 md:mt-0 */
+                    src={psmii_logo2}
+                    alt=""
+                  />
                 </button>
               </a>
             </div>
