@@ -197,7 +197,7 @@ function App() {
               <Tab label="Achievements" />
               <Tab label="Resume" />
               <Tab label="Research" />
-              <Tab label="My Bookshelf" />
+              {!isMobileScreen() ? <Tab label="Bookshelf" /> : ""}
             </Tabs>
           </Box>
           <div className="w-full items-center">

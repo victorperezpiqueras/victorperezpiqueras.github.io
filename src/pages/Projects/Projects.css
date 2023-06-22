@@ -10,7 +10,12 @@
   }
 }
 
-.project-card:hover {
+.project-card:hover,
+.project-card-clicked {
   background-color: rgb(255, 240, 193) !important;
   z-index: 1;
 }
+/* .project-card-clicked {
+  background-color: rgb(255, 240, 193) !important;
+  z-index: 1;
+} */

@@ -4,11 +4,14 @@ import { ProjectData } from "../../models/ProjectData";
 import LoadingSpinner from "../../shared/components/LoadingSpinner/LoadingSpinner";
 import TechBadge from "../../shared/components/TechBadge/TechBadge";
 import useAnalyticsEventTracker from "../../shared/GoogleTagManager";
+import { isMobileScreen } from "../../shared/isMobile";
 
 type ProjectProps = {
   project: ProjectData;
   hoveredProjectTitle: string | null;
   setHoveredProjectTitle: (title: string | null) => void;
+  clickedProject: string | null;
+  setClickedProject: (title: string | null) => void;
 };
 
 function ProjectItem(props: ProjectProps) {
@@ -22,6 +25,15 @@ function ProjectItem(props: ProjectProps) {
   };
 
   const onClick = (e) => {
+    if (isMobileScreen()) {
+      if (props.clickedProject === props.project.title) {
+      } else {
+        e.preventDefault();
+        props.setClickedProject(props.project.title);
+        props.setHoveredProjectTitle(props.project.title);
+        return;
+      }
+    }
     if (!props.project.link) {
       e.preventDefault();
       return;
@@ -39,10 +51,14 @@ function ProjectItem(props: ProjectProps) {
       href={project.link ? project.link : "#"}
       target="_blank"
       onClick={onClick}
-      className={`ml-2 project-card flex flex-col lg:flex-row w-full my-6 items-center bg-white rounded-lg no-underline
+      className={`ml-2 project-card flex flex-col lg:flex-row w-full my-6 items-center rounded-lg no-underline
        transform transition duration-500 ease-in-out hover:scale-105 ${
          project.link ? "cursor-pointer" : "cursor-default"
-       }`}
+       } ${
+        props.clickedProject === props.project.title
+          ? "project-card-clicked scale-105"
+          : "bg-white"
+      }`}
       onMouseOver={(e) => {
         handleMouseOver(props.project.title);
       }}
@@ -54,10 +70,10 @@ function ProjectItem(props: ProjectProps) {
       <img
         className={`${
           loading ? "hidden" : "visible"
-        } demo-video w-full lg:w-96 rounded-l-lg transform transition duration-500 ease-in-out ${
+        } demo-video w-full lg:w-96 transform transition duration-500 ease-in-out ${
           props.hoveredProjectTitle === project.title
-            ? "demo-video-hover rounded-lg"
-            : ""
+            ? "demo-video-hover rounded-tl-lg rounded-tr-lg lg:rounded-tr-lg lg:rounded-bl-lg rounded-br-lg"
+            : " rounded-tl-lg rounded-tr-lg lg:rounded-tr-none rounded-bl-none lg:rounded-bl-lg rounded-br-none"
         }`}
         src={
           new URL(
