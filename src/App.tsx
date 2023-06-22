@@ -44,7 +44,16 @@ function App() {
     });
   };
 
-  const onClickHeaderLink = (link: string) => {
+  const onClickHeaderLink = (link: string, event?) => {
+    if (isMobileScreen()) {
+      // on mobiles open link on second click
+      if (!!event && !IsHoveringLink) {
+        event.preventDefault();
+        setIsHoveringLink(true);
+      } else if (!!event && IsHoveringLink) {
+        setIsHoveringLink(false);
+      }
+    }
     useAnalyticsEventTracker({
       category: "link",
       action: `open ${link}`,
@@ -52,16 +61,26 @@ function App() {
     });
   };
 
-  const [isHovering, setIsHovering] = useState(false);
+  const handleClickOutside = (event) => {
+    // cancel hoveredLink states on click outside
+    if (!IsHoveringLink) return;
+    setIsHoveringLink(false);
+  };
+
+  const onClickHeaderLinkAuto = (link: string) => {
+    onClickHeaderLink(link);
+  };
+
+  const [IsHoveringLink, setIsHoveringLink] = useState(false);
   const handleMouseOver = () => {
-    setIsHovering(true);
+    setIsHoveringLink(true);
   };
   const handleMouseOut = () => {
-    setIsHovering(false);
+    setIsHoveringLink(false);
   };
 
   return (
-    <div className="App">
+    <div className="App" onClick={handleClickOutside}>
       <div className="container flex flex-col justify-center">
         <div className="justify-center py-8 mt-4 xs:h-72 md:h-52 flex xs:flex-col md:flex-row items-center bg-green-500 rounded">
           <div className="flex w-30 h-30 ml-4 justify-center">
@@ -88,7 +107,7 @@ function App() {
                 icon={
                   <AiFillGithub
                     color="white"
-                    onClick={() => onClickHeaderLink("open github profile")}
+                    onClick={() => onClickHeaderLinkAuto("open github profile")}
                   />
                 }
               />
@@ -101,7 +120,9 @@ function App() {
                 icon={
                   <FaLinkedinIn
                     color="white"
-                    onClick={() => onClickHeaderLink("open linkedin profile")}
+                    onClick={() =>
+                      onClickHeaderLinkAuto("open linkedin profile")
+                    }
                   />
                 }
               />
@@ -112,7 +133,7 @@ function App() {
                 icon={
                   <FaOrcid
                     color="white"
-                    onClick={() => onClickHeaderLink("open orcid profile")}
+                    onClick={() => onClickHeaderLinkAuto("open orcid profile")}
                   />
                 }
               />
@@ -125,12 +146,14 @@ function App() {
                 target="_blank"
                 onMouseOver={(e) => handleMouseOver()}
                 onMouseOut={(e) => handleMouseOut()}
-                onClick={() => onClickHeaderLink("open psm1")}
+                onClick={(e) => onClickHeaderLink("open psm1", e)}
               >
                 <button
                   type="button"
                   className={`psmi-button transition ease-in-out duration-300 hover:opacity-90 ${
-                    isHovering ? "scale-125 translate-x-6 -translate-y-1" : ""
+                    IsHoveringLink
+                      ? "scale-125 translate-x-6 -translate-y-1"
+                      : ""
                   }`}
                 >
                   <img
@@ -149,12 +172,14 @@ function App() {
                 target="_blank"
                 onMouseOver={(e) => handleMouseOver()}
                 onMouseOut={(e) => handleMouseOut()}
-                onClick={() => onClickHeaderLink("open psm2")}
+                onClick={(e) => onClickHeaderLink("open psm2", e)}
               >
                 <button
                   type="button"
                   className={`psmi-button transition ease-in-out duration-300 hover:opacity-90 ${
-                    isHovering ? "scale-125  translate-x-20 translate-y-1" : ""
+                    IsHoveringLink
+                      ? "scale-125  translate-x-20 translate-y-1"
+                      : ""
                   }`}
                   style={{
                     marginLeft: "-5rem",
@@ -163,7 +188,7 @@ function App() {
                   <img
                     className={`psmi w-1/2 md:w-3/5 ${
                       isMobileScreen() ? "mt-2" : ""
-                    }`} /*  mt-2 md:mt-0 */
+                    }`}
                     src={psmii_logo2}
                     alt=""
                   />
