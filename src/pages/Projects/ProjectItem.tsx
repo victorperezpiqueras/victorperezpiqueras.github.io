@@ -10,8 +10,6 @@ type ProjectProps = {
   project: ProjectData;
   hoveredProjectTitle: string | null;
   setHoveredProjectTitle: (title: string | null) => void;
-  clickedProject: string | null;
-  setClickedProject: (title: string | null) => void;
 };
 
 function ProjectItem(props: ProjectProps) {
@@ -26,10 +24,8 @@ function ProjectItem(props: ProjectProps) {
 
   const onClick = (e) => {
     if (isMobileScreen()) {
-      if (props.clickedProject === props.project.title) {
-      } else {
+      if (props.hoveredProjectTitle !== props.project.title) {
         e.preventDefault();
-        props.setClickedProject(props.project.title);
         props.setHoveredProjectTitle(props.project.title);
         return;
       }
@@ -55,7 +51,7 @@ function ProjectItem(props: ProjectProps) {
        transform transition duration-500 ease-in-out hover:scale-105 ${
          project.link ? "cursor-pointer" : "cursor-default"
        } ${
-        props.clickedProject === props.project.title
+        props.hoveredProjectTitle === props.project.title
           ? "project-card-clicked scale-105"
           : "bg-white"
       }`}
@@ -72,8 +68,12 @@ function ProjectItem(props: ProjectProps) {
           loading ? "hidden" : "visible"
         } demo-video w-full lg:w-96 transform transition duration-500 ease-in-out ${
           props.hoveredProjectTitle === project.title
-            ? "demo-video-hover rounded-tl-lg rounded-tr-lg lg:rounded-tr-lg lg:rounded-bl-lg rounded-br-lg"
-            : " rounded-tl-lg rounded-tr-lg lg:rounded-tr-none rounded-bl-none lg:rounded-bl-lg rounded-br-none"
+            ? `demo-video-hover rounded-tl-lg rounded-tr-lg lg:rounded-tr-lg lg:rounded-bl-lg lg:rounded-br-lg ${
+                isMobileScreen()
+                  ? "scale-125 rounded-bl-lg rounded-br-lg"
+                  : "rounded-br-none"
+              }`
+            : "rounded-tl-lg rounded-tr-lg lg:rounded-tr-none rounded-bl-none lg:rounded-bl-lg rounded-br-none"
         }`}
         src={
           new URL(

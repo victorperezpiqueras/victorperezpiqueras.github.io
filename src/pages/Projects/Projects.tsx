@@ -9,8 +9,6 @@ type ProjectsProps = {
 
 function Projects(props: ProjectsProps) {
   let [hoveredProjectTitle, setHoveredProjectTitle] = useState(null);
-  let [clickedProject, setClickedProject] = useState(null);
-
   const projects = [...props.projects].reverse();
 
   return (
@@ -20,8 +18,6 @@ function Projects(props: ProjectsProps) {
           project={project}
           hoveredProjectTitle={hoveredProjectTitle}
           setHoveredProjectTitle={setHoveredProjectTitle}
-          clickedProject={clickedProject}
-          setClickedProject={setClickedProject}
         />
       ))}
     </div>
