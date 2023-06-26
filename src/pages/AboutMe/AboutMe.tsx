@@ -24,6 +24,7 @@ import { SlChemistry } from "react-icons/sl";
 import { FcGraduationCap } from "react-icons/fc";
 import { HiOutlineChevronDown, HiOutlineChevronUp } from "react-icons/hi";
 import uuid from "react-uuid";
+import { Alert, Snackbar } from "@mui/material";
 
 type AboutMeProps = {
   aboutData: AboutMeData;
@@ -84,18 +85,16 @@ function AboutMe(props: AboutMeProps) {
     navigator.clipboard.writeText(props.aboutData.contactInfo.phone);
     setCopiedPhone(true);
     setCopiedEmail(false);
-    setTimeout(() => {
-      // can happen that previous switch timeout affects next switch state
-      setCopiedPhone(false);
-    }, 2000);
   }
   function copyEmail() {
     navigator.clipboard.writeText(props.aboutData.contactInfo.email);
     setCopiedEmail(true);
     setCopiedPhone(false);
-    setTimeout(() => {
-      setCopiedEmail(false);
-    }, 2000);
+  }
+
+  function handleClose() {
+    setCopiedEmail(false);
+    setCopiedPhone(false);
   }
 
   function getStars(starNumber: number) {
@@ -138,23 +137,17 @@ function AboutMe(props: AboutMeProps) {
             <span className="text-sm md:text-base">
               {props.aboutData.contactInfo.phone}
             </span>
-            <Tooltip
-              content={copiedPhone ? "Copied!" : "Copy to clipboard"}
-              style="dark"
-              placement="right"
-            >
-              {copiedPhone ? (
-                <BsCheckSquareFill
-                  className="text-green-300 ml-1 mt-1 hover:cursor-pointer"
-                  onClick={copyPhone}
-                />
-              ) : (
-                <FaCopy
-                  className="text-green-200 ml-1 mt-1 hover:cursor-pointer"
-                  onClick={copyPhone}
-                />
-              )}
-            </Tooltip>
+            {copiedPhone ? (
+              <BsCheckSquareFill
+                className="text-green-300 ml-1 mt-1 hover:cursor-pointer"
+                onClick={copyPhone}
+              />
+            ) : (
+              <FaCopy
+                className="text-green-200 ml-1 mt-1 hover:cursor-pointer"
+                onClick={copyPhone}
+              />
+            )}
           </span>
           <span className="flex flex-row">
             <MdEmail className="mt-1 text-green-500 min-w-max" size={"20px"} />{" "}
@@ -170,23 +163,17 @@ function AboutMe(props: AboutMeProps) {
                 {props.aboutData.contactInfo.email}
               </span>
             </a>
-            <Tooltip
-              content={copiedEmail ? "Copied!" : "Copy to clipboard"}
-              style="dark"
-              placement="right"
-            >
-              {copiedEmail ? (
-                <BsCheckSquareFill
-                  className="text-green-300 ml-1 mt-1 hover:cursor-pointer"
-                  onClick={copyEmail}
-                />
-              ) : (
-                <FaCopy
-                  className="text-green-200 ml-1 mt-1 hover:cursor-pointer"
-                  onClick={copyEmail}
-                />
-              )}
-            </Tooltip>
+            {copiedEmail ? (
+              <BsCheckSquareFill
+                className="text-green-300 ml-1 mt-1 hover:cursor-pointer"
+                onClick={copyEmail}
+              />
+            ) : (
+              <FaCopy
+                className="text-green-200 ml-1 mt-1 hover:cursor-pointer"
+                onClick={copyEmail}
+              />
+            )}
           </span>
         </div>
 
@@ -354,6 +341,24 @@ function AboutMe(props: AboutMeProps) {
           </Timeline>
         </div>
       </div>
+      {copiedEmail || copiedPhone ? (
+        <Snackbar
+          open={copiedEmail || copiedPhone}
+          onClose={handleClose}
+          autoHideDuration={2000}
+          anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+        >
+          <Alert severity="success" sx={{ width: "100%" }}>
+            {copiedEmail
+              ? "Email copied to clipboard!"
+              : copiedPhone
+              ? "Phone copied to clipboard!"
+              : ""}
+          </Alert>
+        </Snackbar>
+      ) : (
+        <></>
+      )}
     </div>
   );
 }

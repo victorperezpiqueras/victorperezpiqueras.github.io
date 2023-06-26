@@ -150,7 +150,9 @@ function App() {
               >
                 <button
                   type="button"
-                  className={`psmi-button transition ease-in-out duration-300 hover:opacity-90 ${
+                  className={`psmi-button transition ease-in-out duration-300 ${
+                    isMobileScreen() ? "" : "hover:opacity-90"
+                  } ${
                     IsHoveringLink
                       ? "scale-125 translate-x-6 -translate-y-1"
                       : ""
