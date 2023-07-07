@@ -2,6 +2,7 @@ import { useState } from "react";
 import { AchievementData } from "../../models/AchievementsData";
 import LoadingSpinner from "../../shared/components/LoadingSpinner/LoadingSpinner";
 import useAnalyticsEventTracker from "../../shared/GoogleTagManager";
+import { get } from "http";
 
 type AchievementProps = {
   achievement: AchievementData;
@@ -9,6 +10,14 @@ type AchievementProps = {
 
 function AchievementItem(props: AchievementProps) {
   const [loading, setLoading] = useState(true);
+  const [displayFullImage, setDisplayFullImage] = useState(false);
+
+  function getImageSize(imageData) {
+    const width = imageData.nativeEvent.srcElement.width;
+    const height = imageData.nativeEvent.srcElement.height;
+    // display full if ratio is less than 1:1 (not h-rectangular)
+    setDisplayFullImage(width / height <= 1);
+  }
 
   const { achievement } = props;
   return (
@@ -28,9 +37,11 @@ function AchievementItem(props: AchievementProps) {
       >
         {loading && <LoadingSpinner size="xl" />}
         <img
-          className={`rounded-t-lg w-96 h-72 object-cover ${
-            achievement.url ? "hover:brightness-75" : ""
-          } ${loading ? "hidden" : "visible"}`}
+          className={`rounded-t-lg w-96 h-72 ${
+            displayFullImage ? "object-contain" : "object-cover"
+          }  bg-white ${achievement.url ? "hover:brightness-75" : ""} ${
+            loading ? "hidden" : "visible"
+          }`}
           src={
             new URL(
               `../../assets/achievements/${achievement.image}`,
@@ -38,8 +49,9 @@ function AchievementItem(props: AchievementProps) {
             ).href
           }
           alt=""
-          onLoad={() => {
+          onLoad={(imageData) => {
             setLoading(false);
+            getImageSize(imageData);
           }}
           onError={() => setLoading(false)}
         />
