@@ -157,7 +157,7 @@
     {
       "title": "World in Miniature",
       "description": "Virtual Reality interface technique that lets the user interact with a hand-held miniature copy of the virtual environment. Implemented in Unreal Engine 4 using HTC VIVE.",
-      "link": "https://github.com/victorperezpiqueras/PictoTrainer",
+      "link": "https://github.com/victorperezpiqueras/VIVE_WorldInMiniature",
       "demoFile": "wim",
       "tags": ["ue4", "vive"]
     },
