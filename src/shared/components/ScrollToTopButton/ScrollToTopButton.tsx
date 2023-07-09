@@ -6,7 +6,8 @@ function ScrollToTopButton() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setHideButton(window.scrollY === 0);
+      // check if scrollY is less than 10%:
+      setHideButton(window.scrollY < window.innerHeight * 0.1);
     };
 
     window.addEventListener("scroll", handleScroll);

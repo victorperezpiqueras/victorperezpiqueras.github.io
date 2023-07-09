@@ -4,8 +4,8 @@ import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaOrcid } from "react-icons/fa";
 import SocialIcon from "./shared/components/SocialIcon/SocialIcon";
-import psmii_logo from "./assets/psmi_logo.png";
-import psmii_logo2 from "./assets/psmii_logo.png";
+import psmii_logo from "./assets/stackedBadges/psmi_logo.png";
+import psmii_logo2 from "./assets/stackedBadges/psmii_logo.png";
 
 import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
@@ -23,6 +23,7 @@ import Research from "./pages/Research/Research";
 import ScrollToTopButton from "./shared/components/ScrollToTopButton/ScrollToTopButton";
 import useAnalyticsEventTracker from "./shared/GoogleTagManager";
 import { isMobileScreen } from "./shared/isMobile";
+import StackedBadges from "./shared/components/StackedBadges/StackedBadges";
 
 function App() {
   const [value, setValue] = useState(0);
@@ -138,64 +139,11 @@ function App() {
                 }
               />
 
-              <a
-                className={`mt-2`}
-                href={
-                  data.achievements.find((a) => a.image.includes("psm1"))?.url
-                }
-                target="_blank"
-                onMouseOver={(e) => handleMouseOver()}
-                onMouseOut={(e) => handleMouseOut()}
-                onClick={(e) => onClickHeaderLink("open psm1", e)}
-              >
-                <button
-                  type="button"
-                  className={`psmi-button transition ease-in-out duration-300 ${
-                    isMobileScreen() ? "" : "hover:opacity-90"
-                  } ${
-                    IsHoveringLink
-                      ? "scale-125 translate-x-6 -translate-y-1"
-                      : ""
-                  }`}
-                >
-                  <img
-                    className={`psmi w-1/2 md:w-3/5 ${
-                      isMobileScreen() ? "mt-2" : ""
-                    }`}
-                    src={psmii_logo}
-                    alt=""
-                  />
-                </button>
-              </a>
-              <a
-                href={
-                  data.achievements.find((a) => a.image.includes("psm2"))?.url
-                }
-                target="_blank"
-                onMouseOver={(e) => handleMouseOver()}
-                onMouseOut={(e) => handleMouseOut()}
-                onClick={(e) => onClickHeaderLink("open psm2", e)}
-              >
-                <button
-                  type="button"
-                  className={`psmi-button transition ease-in-out duration-300 hover:opacity-90 ${
-                    IsHoveringLink
-                      ? "scale-125  translate-x-20 translate-y-1"
-                      : ""
-                  }`}
-                  style={{
-                    marginLeft: "-5rem",
-                  }}
-                >
-                  <img
-                    className={`psmi w-1/2 md:w-3/5 ${
-                      isMobileScreen() ? "mt-2" : ""
-                    }`}
-                    src={psmii_logo2}
-                    alt=""
-                  />
-                </button>
-              </a>
+              <div className="whitespace-nowrap">
+                {portfolioData.header.badgeStacks.map((stack, index) => (
+                  <StackedBadges badges={stack.badges} index={index} />
+                ))}
+              </div>
             </div>
           </div>
         </div>

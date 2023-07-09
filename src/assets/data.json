@@ -1,7 +1,29 @@
 {
   "header": {
     "name": "Víctor Pérez Piqueras",
-    "title": "Software Engineer - Scrum Master - Researcher"
+    "title": "Software Engineer - Scrum Master - Researcher",
+    "badgeStacks": [
+      {
+        "badges": [
+          {
+            "img": "psmi_logo.png",
+            "url": "https://www.credly.com/badges/e6bcffb6-b237-4cbc-8c89-80ba8b625a6b/public_url"
+          },
+          {
+            "img": "psmii_logo.png",
+            "url": "https://www.credly.com/badges/3b4acfba-b5d9-4ab4-89e5-0ef1be7b6269/public_url"
+          }
+        ]
+      },
+      {
+        "badges": [
+          {
+            "img": "aws_ccp_logo.png",
+            "url": "https://www.credly.com/badges/baf037ec-9e41-4a46-8c23-6c60c64ef0ee/public_url"
+          }
+        ]
+      }
+    ]
   },
   "aboutMe": {
     "contactInfo": {
@@ -186,7 +208,7 @@
     },
     {
       "title": "Certified as AWS Cloud Practitioner.",
-      "image": "aws_cpp.png",
+      "image": "aws_ccp.png",
       "url": "https://www.credly.com/badges/baf037ec-9e41-4a46-8c23-6c60c64ef0ee/public_url"
     }
   ],
