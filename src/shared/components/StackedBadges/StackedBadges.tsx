@@ -40,9 +40,9 @@ function StackedBadges(props: StackedBadgesProps) {
 
   const getStylesByIndex = (index: number) => {
     const extraMarginLeft = isMobileScreen() ? -30 : -40;
-    const extraMarginTop = -4;
+    const extraTop = -4;
 
-    const translateExtraXOffset = isMobileScreen() ? 10 : 14;
+    const translateExtraXOffset = isMobileScreen() ? 12 : 14;
 
     const translateYOffset = -1;
     const translateExtraYOffset = 2;
@@ -50,8 +50,11 @@ function StackedBadges(props: StackedBadgesProps) {
     const translateYSign = translateYValue > 0 ? "" : "-";
 
     return {
+      // on top if hovered, else each badge of a stack on top of previous one
+      zIndex: isHoveringLink ? 10000 : 1000 + index,
+      left: `${props.index == 0 ? 0 : 5}%`,
       marginLeft: `${extraMarginLeft * index}px`,
-      marginTop: `${extraMarginTop * index}px`,
+      top: `${extraTop * index}px`,
       translateX: `translate-x-${translateExtraXOffset * index}`,
       translateY: `${translateYSign}translate-y-${translateYValue}`,
     };
@@ -61,7 +64,7 @@ function StackedBadges(props: StackedBadgesProps) {
     <OutsideClickHandler onOutsideClick={handleClickOutside}>
       {props.badges.map((badge, index) => (
         <a
-          className={`inline-flex w-12 md:w-16 relative hover:opacity-90  transition ease-in-out duration-300 ${
+          className={`inline-flex w-12 md:w-16 relative hover:opacity-90 transition ease-in-out duration-300 ${
             isHoveringLink
               ? `scale-125  ${getStylesByIndex(index).translateX} ${
                   getStylesByIndex(index).translateY
@@ -74,8 +77,9 @@ function StackedBadges(props: StackedBadgesProps) {
           onMouseOut={() => setIsHoveringLink(false)}
           onClick={(e) => onClickHeaderLink(badge.url, e)}
           style={{
-            top: getStylesByIndex(index).marginTop,
-            zIndex: 1000 + index - props.index * 100,
+            top: getStylesByIndex(index).top,
+            left: getStylesByIndex(index).left,
+            zIndex: getStylesByIndex(index).zIndex,
             marginLeft: getStylesByIndex(index).marginLeft,
           }}
         >

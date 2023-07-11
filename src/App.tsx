@@ -103,8 +103,8 @@ function App() {
 
             <div className="container flex justify-center space-x-4">
               <SocialIcon
+                cssClasses={"bg-black"}
                 link={"https://github.com/victorperezpiqueras"}
-                color={"bg-black"}
                 icon={
                   <AiFillGithub
                     color="white"
@@ -114,10 +114,10 @@ function App() {
               />
 
               <SocialIcon
+                cssClasses={"bg-blue-700"}
                 link={
                   "https://www.linkedin.com/in/v%C3%ADctor-p%C3%A9rez-piqueras/"
                 }
-                color={"bg-blue-700"}
                 icon={
                   <FaLinkedinIn
                     color="white"
@@ -129,8 +129,8 @@ function App() {
               />
 
               <SocialIcon
+                cssClasses={"bg-green-400"}
                 link={"https://orcid.org/0000-0002-2305-5755"}
-                color={"bg-green-400"}
                 icon={
                   <FaOrcid
                     color="white"
