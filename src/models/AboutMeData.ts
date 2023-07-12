@@ -8,6 +8,7 @@ export type SingleExperienceData = {
   labels: string[];
   color: string;
   type: string;
+  category: string;
 };
 
 export type ExperienceData = {

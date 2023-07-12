@@ -60,7 +60,8 @@
             "description": "Full stack development of a web application for real-time home sensor management and monitoring.",
             "labels": ["angular", "flask", "python"],
             "color": "#818990",
-            "type": "dev"
+            "type": "dev",
+            "category": "internship"
           },
           {
             "startDate": "2020-07-01",
@@ -70,7 +71,8 @@
             "description": "Full stack development of a web application for the creation and management of dynamic forms to control incidents in companies.",
             "labels": ["angular", "aws", "serverless", "python"],
             "color": "#818990",
-            "type": "dev"
+            "type": "dev",
+            "category": "internship"
           }
         ]
       },
@@ -85,7 +87,8 @@
             "description": "Research support staff in R&D&i project. Design and evaluation of multi-objective optimization algorithms.",
             "labels": ["python"],
             "color": "#0DCAF0",
-            "type": "rdi"
+            "type": "rdi",
+            "category": "rdi"
           }
         ]
       },
@@ -100,7 +103,8 @@
             "description": "Product development in a geographically distributed, multidisciplinar and agile managed team.",
             "labels": ["angular", "aws", "serverless", "python"],
             "color": "#3183FD",
-            "type": "dev"
+            "type": "dev",
+            "category": "dev"
           }
         ]
       }

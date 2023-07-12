@@ -1,11 +1,15 @@
 import { Tooltip } from "flowbite-react";
 import { BsFillFlagFill } from "react-icons/bs";
+import { IoMdSchool } from "react-icons/io";
+import { ImLab } from "react-icons/im";
 import {
   SingleExperienceData,
   ExperienceData,
 } from "../../../models/AboutMeData";
 
 import "./ExperienceBar.css";
+import { isMobileScreen } from "../../../shared/isMobile";
+import { FaCode } from "react-icons/fa";
 
 type UIExperience = SingleExperienceData & {
   diffTime: number;
@@ -32,15 +36,14 @@ function ExperienceBar(props: ExperienceProps) {
           barPercentage: 0,
         };
         if (!newEx.endDate) newEx.endDateTime = new Date();
-        let diff =
-          newEx.endDateTime.getTime() - newEx.startDateTime.getTime(); /* /
-        (1000 * 3600 * 24); */
+        const diff =
+          newEx.endDateTime.getTime() - newEx.startDateTime.getTime();
         newEx.diffTime = diff;
         return newEx as UIExperience;
       });
     });
     //flatten array
-    let flatUiExperiences = uiExperiences.reduce(
+    const flatUiExperiences = uiExperiences.reduce(
       (acc, val) => acc.concat(val),
       []
     );
@@ -79,6 +82,55 @@ function ExperienceBar(props: ExperienceProps) {
     return flags;
   }
 
+  function parseTimestampToTimeInYearsAndMonths(timestamp: number): string {
+    const date = new Date(timestamp);
+    const years = date.getFullYear() - 1970;
+    const months = date.getMonth();
+    const yearsString =
+      years > 0 ? `${years} year${years > 1 ? "s" : ""} and ` : "";
+
+    return `${yearsString}${months} month${months > 1 ? "s" : ""}`;
+  }
+
+  function getExperienceText(experience: UIExperience) {
+    return (
+      <div className="inline-flex cursor-pointer">
+        {
+          <Tooltip
+            className={isMobileScreen() ? "w-64" : "w-96"}
+            content={`${
+              experience.position
+            }: ${parseTimestampToTimeInYearsAndMonths(experience.diffTime)}`}
+            style="dark"
+            placement="bottom"
+            trigger={isMobileScreen() ? "click" : "hover"}
+          >
+            {getExperienceIcon(experience)}
+          </Tooltip>
+        }
+        &nbsp;&nbsp;
+        <span className="mt-0.5">
+          {isMobileScreen() || experience.barPercentage < 15
+            ? ""
+            : experience.shortPosition}
+        </span>
+      </div>
+    );
+  }
+
+  function getExperienceIcon(experience: UIExperience) {
+    switch (experience.category) {
+      case "dev":
+        return <FaCode color="white" size="1.2rem" />;
+      case "internship":
+        return <IoMdSchool size="1.2rem" />;
+      case "rdi":
+        return <ImLab size="1.2rem" />;
+      default:
+        return <FaCode size="1.2rem" />;
+    }
+  }
+
   function getExperienceSections(
     experiences: UIExperience[],
     maxLimitTime: number,
@@ -115,8 +167,7 @@ function ExperienceBar(props: ExperienceProps) {
       let ex = updatedExperiences[i];
       let start = lastEnd;
       let end = start + ex.diffTime;
-      let barPercentage = (ex.diffTime / maxLimitTime) * 100; //percentageFactor;
-
+      updatedExperiences[i].barPercentage = (ex.diffTime / maxLimitTime) * 100; //percentageFactor;
       let rounded: string;
       // calculate rounds
       if (i === 0) {
@@ -137,13 +188,15 @@ function ExperienceBar(props: ExperienceProps) {
           key={i}
           className={`absolute ${rounded} h-9 text-xs font-medium text-white text-center p-2.5 experience-bar z-20`}
           style={{
-            width: `${barPercentage * (percentageFactor / 100)}%`,
+            width: `${
+              updatedExperiences[i].barPercentage * (percentageFactor / 100)
+            }%`,
             left: `${(start / maxLimitTime) * percentageFactor}%`,
             backgroundColor: ex.color,
             background: `linear-gradient(90deg, ${ex.color} 0%, ${ex.color} 92%, ${nextGradient} 100%)`,
           }}
         >
-          {ex.shortPosition}
+          {getExperienceText(ex)}
         </div>
       );
       experienceSections.push(section);
