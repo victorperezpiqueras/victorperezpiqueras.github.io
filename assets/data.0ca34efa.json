@@ -554,6 +554,15 @@
       "authors": "V. Pérez-Piqueras, P. Bermejo, J.A. Gámez",
       "conferenceJournalTitle": "XXVII Jornadas de Ingeniería del Software y Bases de Datos (JISBD 2023)",
       "year": "2023",
+      "url": "https://hdl.handle.net/11705/JISBD/2023/2784",
+      "type": "conference",
+      "published": true
+    },
+    {
+      "title": "Hybrid Multi-Objective Relinked GRASP for the constrained Next Release Problem",
+      "authors": "V. Pérez-Piqueras, P. Bermejo, J.A. Gámez",
+      "conferenceJournalTitle": "26th IEEE International COnference on Computational Science and Engineering (CSE-2023)",
+      "year": "2023",
       "url": "",
       "type": "conference",
       "published": false
