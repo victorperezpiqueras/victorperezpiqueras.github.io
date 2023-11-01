@@ -49,7 +49,7 @@ function Book(props: BookDataProps) {
       <div
         className="side top"
         style={{
-          height: props.bookData.width,
+          height: "190px", // height of the books face without img//props.bookData.width,
           width: props.bookData.spine.width,
         }}
       ></div>
