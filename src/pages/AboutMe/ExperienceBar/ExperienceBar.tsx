@@ -86,28 +86,19 @@ function ExperienceBar(props: ExperienceProps) {
     const date = new Date(timestamp);
     const years = date.getFullYear() - 1970;
     const months = date.getMonth();
-    const yearsString =
-      years > 0 ? `${years} year${years > 1 ? "s" : ""} and ` : "";
+    const yearsString = years > 0 ? `${years} year${years > 1 ? "s" : ""}` : "";
+    const monthString =
+      months > 0 ? `${months} month${months > 1 ? "s" : ""}` : "";
 
-    return `${yearsString}${months} month${months > 1 ? "s" : ""}`;
+    return `${yearsString}${
+      yearsString && monthString ? " and " : ""
+    }${monthString}`;
   }
 
   function getExperienceText(experience: UIExperience) {
     return (
-      <div className="inline-flex cursor-pointer">
-        {
-          <Tooltip
-            className={isMobileScreen() ? "w-64" : "w-96"}
-            content={`${
-              experience.position
-            }: ${parseTimestampToTimeInYearsAndMonths(experience.diffTime)}`}
-            style="dark"
-            placement="bottom"
-            trigger={isMobileScreen() ? "click" : "hover"}
-          >
-            {getExperienceIcon(experience)}
-          </Tooltip>
-        }
+      <div className="inline-flex ml-2 cursor-pointer">
+        {getExperienceIcon(experience)}
         &nbsp;&nbsp;
         <span className="mt-0.5">
           {isMobileScreen() || experience.barPercentage < 15
@@ -186,7 +177,7 @@ function ExperienceBar(props: ExperienceProps) {
       let section = (
         <div
           key={i}
-          className={`absolute ${rounded} h-9 text-xs font-medium text-white text-center p-2.5 experience-bar z-20`}
+          className={`absolute ${rounded} h-9 text-xs font-medium text-white flex justify-content-start p-2.5 experience-bar z-20`}
           style={{
             width: `${
               updatedExperiences[i].barPercentage * (percentageFactor / 100)
@@ -196,7 +187,19 @@ function ExperienceBar(props: ExperienceProps) {
             background: `linear-gradient(90deg, ${ex.color} 0%, ${ex.color} 92%, ${nextGradient} 100%)`,
           }}
         >
-          {getExperienceText(ex)}
+          <Tooltip
+            className={`inline-flex cursor-pointer absolute z-30 ${
+              isMobileScreen() ? "w-64" : "w-96"
+            }`}
+            content={`${ex.position}: ${parseTimestampToTimeInYearsAndMonths(
+              ex.diffTime
+            )}`}
+            style="dark"
+            placement="bottom"
+            trigger={isMobileScreen() ? "click" : "hover"}
+          >
+            {getExperienceText(ex)}
+          </Tooltip>
         </div>
       );
       experienceSections.push(section);

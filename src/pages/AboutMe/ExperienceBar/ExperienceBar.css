@@ -18,3 +18,28 @@
     opacity: 0;
   }
 }
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
+
+.experience-bar:hover {
+  animation: 3s linear infinite placeHolderShimmer;
+  background: linear-gradient(
+    90deg,
+    #eeeeee 0%,
+    #dddddd 8%,
+    #eeeeee 16%,
+    #eeeeee 50%,
+    #dddddd 58%,
+    #eeeeee 66%
+  );
+  background-size: 200%;
+  height: 100%;
+  width: 100%;
+}
