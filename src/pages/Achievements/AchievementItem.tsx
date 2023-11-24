@@ -2,7 +2,6 @@ import { useState } from "react";
 import { AchievementData } from "../../models/AchievementsData";
 import LoadingSpinner from "../../shared/components/LoadingSpinner/LoadingSpinner";
 import useAnalyticsEventTracker from "../../shared/GoogleTagManager";
-import { get } from "http";
 
 type AchievementProps = {
   achievement: AchievementData;
@@ -61,7 +60,7 @@ function AchievementItem(props: AchievementProps) {
         <p
           className="mb-3 font-normal text-gray-700"
           style={{
-            minHeight: "80px",
+            minHeight: "60px",
           }}
         >
           {achievement.title}
