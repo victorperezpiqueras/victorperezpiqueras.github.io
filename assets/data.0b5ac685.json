@@ -565,7 +565,7 @@
       },
       "link": "https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/",
       "tags": [
-        "backlog"
+        "recommended"
       ]
     }
   ],
@@ -646,7 +646,7 @@
     {
       "title": "Hybrid Multi-Objective Relinked GRASP for the constrained Next Release Problem",
       "authors": "V. Pérez-Piqueras, P. Bermejo, J.A. Gámez",
-      "conferenceJournalTitle": "26th IEEE International COnference on Computational Science and Engineering (CSE-2023)",
+      "conferenceJournalTitle": "26th IEEE International Conference on Computational Science and Engineering (CSE-2023)",
       "year": "2023",
       "url": "",
       "type": "conference",
