@@ -285,7 +285,7 @@
       },
       "link": "https://itrevolution.com/the-phoenix-project/",
       "tags": [
-        "recommended"
+        "agilityDevops"
       ]
     },
     {
@@ -305,7 +305,7 @@
       },
       "link": "https://itrevolution.com/the-unicorn-project/",
       "tags": [
-        "recommended"
+        "agilityDevops"
       ]
     },
     {
@@ -325,7 +325,146 @@
       },
       "link": "https://www.amazon.com/DevOps-Handbook-World-Class-Reliability-Organizations/dp/1942788002",
       "tags": [
-        "recommended"
+        "agilityDevops"
+      ]
+    },
+    {
+      "title": "Fixing Your Scrum: Practical Solutions to Common Scrum Problems",
+      "cover": "book_fixing_your_scrum.jpg",
+      "height": "270px",
+      "spine": {
+        "text": "Fixing Your Scrum",
+        "color": "#fff",
+        "width": "20px",
+        "fontSize": "14px",
+        "fontFamily": "monospace",
+        "textColor": "black",
+        "marginTitle": "-1px",
+        "marginTop": "50px"
+      },
+      "link": "https://www.amazon.com/Fixing-Your-Scrum-Practical-Solutions/dp/1680506978",
+      "tags": [
+        "agilityDevops"
+      ]
+    },
+    {
+      "title": "The Professional Scrum Team",
+      "cover": "book_prof_scrum_team.jpg",
+      "height": "250px",
+      "spine": {
+        "text": "THE PROFESSIONAL SCRUM TEAM",
+        "color": "#5DBD59",
+        "width": "20px",
+        "fontSize": "9px",
+        "fontFamily": "'Roboto', sans-serif",
+        "textColor": "white",
+        "textShadow": "1px 1px #000000",
+        "marginTitle": "0px",
+        "marginTop": "40px"
+      },
+      "link": "https://www.scrum.org/resources/professional-scrum-team",
+      "tags": [
+        "agilityDevops"
+      ]
+    },
+    {
+      "title": "Mastering Professional Scrum",
+      "cover": "book_mastering_prof_scrum.jpg",
+      "height": "250px",
+      "spine": {
+        "text": "MASTERING PROFESSIONAL SCRUM",
+        "color": "#D05F25",
+        "width": "20px",
+        "fontSize": "9px",
+        "fontFamily": "'Roboto', sans-serif",
+        "textColor": "white",
+        "textShadow": "1px 1px #000000",
+        "marginTitle": "0px",
+        "marginTop": "40px"
+      },
+      "link": "https://www.scrum.org/resources/mastering-professional-scrum-book",
+      "tags": [
+        "agilityDevops"
+      ]
+    },
+    {
+      "title": "Zombie Scrum Survival Guide",
+      "cover": "book_zombie_scrum_survival_guide.jpg",
+      "height": "250px",
+      "spine": {
+        "text": "ZOMBIE SCRUM SURVIVAL GUIDE",
+        "color": "#FCEF00",
+        "width": "30px",
+        "fontSize": "12px",
+        "fontFamily": "'Roboto', sans-serif",
+        "textColor": "#fff",
+        "textShadow": "1px 1px #000000",
+        "marginTitle": "5px",
+        "marginTop": "20px"
+      },
+      "link": "https://www.scrum.org/resources/zombie-scrum-survival-guide",
+      "tags": [
+        "agilityDevops"
+      ]
+    },
+    {
+      "title": "The Professional Agile Leaders",
+      "cover": "book_professional_agile_leader.jpg",
+      "height": "250px",
+      "spine": {
+        "text": "THE PROFESSIONAL AGILE LEADER",
+        "color": "#2E92B6",
+        "width": "20px",
+        "fontSize": "9px",
+        "fontFamily": "'Roboto', sans-serif",
+        "textColor": "white",
+        "textShadow": "1px 1px #000000",
+        "marginTitle": "0px",
+        "marginTop": "40px"
+      },
+      "link": "https://www.scrum.org/resources/professional-agile-leader",
+      "tags": [
+        "agilityDevops"
+      ]
+    },
+    {
+      "title": "The Professional Product Owner",
+      "cover": "book_professional_product_owner.jpg",
+      "height": "250px",
+      "spine": {
+        "text": "THE PROFESSIONAL PRODUCT OWNER",
+        "color": "#7C1569",
+        "width": "30px",
+        "fontSize": "11px",
+        "fontFamily": "'Roboto', sans-serif",
+        "textColor": "#fff",
+        "textShadow": "1px 1px #000000",
+        "marginTitle": "5px",
+        "marginTop": "20px"
+      },
+      "link": "https://www.scrum.org/resources/professional-scrum-product-owner-book",
+      "tags": [
+        "agilityDevops"
+      ]
+    },
+    {
+      "title": "When Will It Be Done?",
+      "cover": "book_wwibd.jpg",
+      "height": "265px",
+      "spine": {
+        "text": "When Will It Be Done?",
+        "color": "black",
+        "width": "30px",
+        "fontSize": "14px",
+        "fontFamily": "'Times New Roman', Times, serif",
+        "textColor": "white",
+        "textShadow": null,
+        "marginTitle": "1px",
+        "marginTop": "40px"
+      },
+      "link": "https://actionableagile.com/resources/publications/wwibd/",
+      "tags": [
+        "agilityDevops"
       ]
     },
     {
@@ -345,27 +484,47 @@
       },
       "link": "https://www.oreilly.com/library/view/clean-code-a/9780136083238/",
       "tags": [
-        "recommended"
+        "software"
       ]
     },
     {
-      "title": "Refactoring",
-      "cover": "book_refactoring.jpg",
-      "height": "290px",
+      "title": "The Pragmatic Programmer",
+      "cover": "book_pragmatic_programmer.jpg",
+      "height": "270px",
       "spine": {
-        "text": "REFACTORING",
-        "color": "rgb(27, 27, 27)",
-        "width": "20px",
-        "fontSize": "12px",
+        "text": "The Pragmatic \nProgrammer",
+        "color": "#A18A80",
+        "width": "25px",
+        "fontSize": "15px",
         "fontFamily": "'Times New Roman', Times, serif",
+        "textColor": "#fff",
+        "textShadow": "1px 1px #000000",
+        "marginTitle": "1px",
+        "marginTop": "25px"
+      },
+      "link": "https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/",
+      "tags": [
+        "software"
+      ]
+    },
+    {
+      "title": "A Philosophy of Software Design",
+      "cover": "book_philosophy_sw_design.jpg",
+      "height": "250px",
+      "spine": {
+        "text": "A PHILOSOPHY OF SOFTWARE DESIGN",
+        "color": "#7AC4CE",
+        "width": "20px",
+        "fontSize": "7.5px",
+        "fontFamily": "'Roboto', sans-serif",
         "textColor": "white",
         "textShadow": "1px 1px #000000",
-        "marginTitle": "0px",
-        "marginTop": "50px"
+        "marginTitle": "1px",
+        "marginTop": "20px"
       },
-      "link": "https://martinfowler.com/books/refactoring.html",
+      "link": "https://www.amazon.com/Philosophy-Software-Design-John-Ousterhout/dp/1732102201",
       "tags": [
-        "recommended"
+        "software"
       ]
     },
     {
@@ -386,186 +545,27 @@
       },
       "link": "https://www.amazon.com/Adaptive-Code-principles-Developer-Practices/dp/1509302581",
       "tags": [
-        "recommended"
+        "software"
       ]
     },
     {
-      "title": "The Professional Scrum Team",
-      "cover": "book_prof_scrum_team.jpg",
-      "height": "250px",
+      "title": "Refactoring",
+      "cover": "book_refactoring.jpg",
+      "height": "290px",
       "spine": {
-        "text": "THE PROFESSIONAL SCRUM TEAM",
-        "color": "#5DBD59",
+        "text": "REFACTORING",
+        "color": "rgb(27, 27, 27)",
         "width": "20px",
-        "fontSize": "9px",
-        "fontFamily": "'Roboto', sans-serif",
+        "fontSize": "12px",
+        "fontFamily": "'Times New Roman', Times, serif",
         "textColor": "white",
         "textShadow": "1px 1px #000000",
         "marginTitle": "0px",
-        "marginTop": "40px"
-      },
-      "link": "https://www.scrum.org/resources/professional-scrum-team",
-      "tags": [
-        "recommended"
-      ]
-    },
-    {
-      "title": "A Philosophy of Software Design",
-      "cover": "book_philosophy_sw_design.jpg",
-      "height": "250px",
-      "spine": {
-        "text": "A PHILOSOPHY OF SOFTWARE DESIGN",
-        "color": "#7AC4CE",
-        "width": "20px",
-        "fontSize": "7.5px",
-        "fontFamily": "'Roboto', sans-serif",
-        "textColor": "white",
-        "textShadow": "1px 1px #000000",
-        "marginTitle": "1px",
-        "marginTop": "20px"
-      },
-      "link": "https://www.amazon.com/Philosophy-Software-Design-John-Ousterhout/dp/1732102201",
-      "tags": [
-        "recommended"
-      ]
-    },
-    {
-      "title": "Fixing Your Scrum: Practical Solutions to Common Scrum Problems",
-      "cover": "book_fixing_your_scrum.jpg",
-      "height": "270px",
-      "spine": {
-        "text": "Fixing Your Scrum",
-        "color": "#fff",
-        "width": "20px",
-        "fontSize": "14px",
-        "fontFamily": "monospace",
-        "textColor": "black",
-        "marginTitle": "-1px",
         "marginTop": "50px"
       },
-      "link": "https://www.amazon.com/Fixing-Your-Scrum-Practical-Solutions/dp/1680506978",
+      "link": "https://martinfowler.com/books/refactoring.html",
       "tags": [
-        "recommended"
-      ]
-    },
-    {
-      "title": "Mastering Professional Scrum",
-      "cover": "book_mastering_prof_scrum.jpg",
-      "height": "250px",
-      "spine": {
-        "text": "MASTERING PROFESSIONAL SCRUM",
-        "color": "#D05F25",
-        "width": "20px",
-        "fontSize": "9px",
-        "fontFamily": "'Roboto', sans-serif",
-        "textColor": "white",
-        "textShadow": "1px 1px #000000",
-        "marginTitle": "0px",
-        "marginTop": "40px"
-      },
-      "link": "https://www.scrum.org/resources/mastering-professional-scrum-book",
-      "tags": [
-        "recommended"
-      ]
-    },
-    {
-      "title": "The Professional Agile Leaders",
-      "cover": "book_professional_agile_leader.jpg",
-      "height": "250px",
-      "spine": {
-        "text": "THE PROFESSIONAL AGILE LEADER",
-        "color": "#2E92B6",
-        "width": "20px",
-        "fontSize": "9px",
-        "fontFamily": "'Roboto', sans-serif",
-        "textColor": "white",
-        "textShadow": "1px 1px #000000",
-        "marginTitle": "0px",
-        "marginTop": "40px"
-      },
-      "link": "https://www.scrum.org/resources/professional-agile-leader",
-      "tags": [
-        "recommended"
-      ]
-    },
-    {
-      "title": "Zombie Scrum Survival Guide",
-      "cover": "book_zombie_scrum_survival_guide.jpg",
-      "height": "250px",
-      "spine": {
-        "text": "ZOMBIE SCRUM SURVIVAL GUIDE",
-        "color": "#FCEF00",
-        "width": "30px",
-        "fontSize": "12px",
-        "fontFamily": "'Roboto', sans-serif",
-        "textColor": "#fff",
-        "textShadow": "1px 1px #000000",
-        "marginTitle": "5px",
-        "marginTop": "20px"
-      },
-      "link": "https://www.scrum.org/resources/zombie-scrum-survival-guide",
-      "tags": [
-        "recommended"
-      ]
-    },
-    {
-      "title": "When Will It Be Done?",
-      "cover": "book_wwibd.jpg",
-      "height": "265px",
-      "spine": {
-        "text": "When Will It Be Done?",
-        "color": "black",
-        "width": "30px",
-        "fontSize": "14px",
-        "fontFamily": "'Times New Roman', Times, serif",
-        "textColor": "white",
-        "textShadow": null,
-        "marginTitle": "1px",
-        "marginTop": "40px"
-      },
-      "link": "https://actionableagile.com/resources/publications/wwibd/",
-      "tags": [
-        "recommended"
-      ]
-    },
-    {
-      "title": "The Professional Product Owner",
-      "cover": "book_professional_product_owner.jpg",
-      "height": "250px",
-      "spine": {
-        "text": "THE PROFESSIONAL PRODUCT OWNER",
-        "color": "#7C1569",
-        "width": "30px",
-        "fontSize": "11px",
-        "fontFamily": "'Roboto', sans-serif",
-        "textColor": "#fff",
-        "textShadow": "1px 1px #000000",
-        "marginTitle": "5px",
-        "marginTop": "20px"
-      },
-      "link": "https://www.scrum.org/resources/professional-scrum-product-owner-book",
-      "tags": [
-        "backlog"
-      ]
-    },
-    {
-      "title": "The Pragmatic Programmer",
-      "cover": "book_pragmatic_programmer.jpg",
-      "height": "270px",
-      "spine": {
-        "text": "The Pragmatic \nProgrammer",
-        "color": "#A18A80",
-        "width": "25px",
-        "fontSize": "15px",
-        "fontFamily": "'Times New Roman', Times, serif",
-        "textColor": "#fff",
-        "textShadow": "1px 1px #000000",
-        "marginTitle": "1px",
-        "marginTop": "25px"
-      },
-      "link": "https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/",
-      "tags": [
-        "recommended"
+        "software"
       ]
     }
   ],
