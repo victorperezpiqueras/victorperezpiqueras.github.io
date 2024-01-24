@@ -7,6 +7,12 @@ type BookshelfProps = {
   books: BookData[];
 };
 
+type TagType = {
+  shadowColor: string;
+  bgColor: string;
+  label: string;
+};
+
 function Bookshelf(props: BookshelfProps) {
   const [isHovering, setIsHovering] = useState({});
   const handleMouseOver = (id) => {
@@ -22,11 +28,30 @@ function Bookshelf(props: BookshelfProps) {
     .flat()
     .filter((tag, index, self) => self.indexOf(tag) === index);
 
+  const TAG_TYPES: { [key: string]: TagType } = {
+    software: {
+      shadowColor: "rgba(59, 130, 246, 0.9)",
+      bgColor: "from-blue-500 via-blue-400 to-blue-100",
+      label: "Software",
+    },
+    default: {
+      shadowColor: "rgba(34, 197, 94, 0.9)",
+      bgColor: "from-green-500 via-green-400 to-green-100",
+      label: "Default",
+    },
+    agilityDevops: {
+      shadowColor: "rgba(234, 179, 8, 0.9)",
+      bgColor: "from-yellow-500 via-yellow-400 to-yellow-100",
+      label: "Agility & DevOps",
+    },
+  };
+
   // group books by tag
   const booksByTag = tags.map((tag) => {
     return {
       tag,
       books: props.books.filter((book) => book.tags.includes(tag)),
+      tagType: TAG_TYPES[tag],
     };
   });
 
@@ -78,46 +103,43 @@ function Bookshelf(props: BookshelfProps) {
     <div className="container flex flex-column items-center justify-center p-4 mb-4">
       {
         //display all books grouped by their tag
-        booksByTag.map((tag, tagIndex: number) => (
+        booksByTag.map((tagGroup, tagIndex: number) => (
           <div
             style={{
               marginTop: `${tagIndex === 0 ? "0px" : "-500px"}`,
             }}
           >
             <div className="bookshelf flex flex-row align-bottom mt-4">
-              {tag.books.map((book: BookData, index: number) => (
+              {tagGroup.books.map((book: BookData, index: number) => (
                 <Book
                   bookData={book}
-                  index={`${index}-${tag.tag}`}
-                  key={`${index}-${tag.tag}`}
+                  index={`${index}-${tagGroup.tag}`}
+                  key={`${index}-${tagGroup.tag}`}
                 />
               ))}
             </div>
             <div
-              className={`transition ease-in-out duration-300 hover:cursor-pointer flex relative bg-white rounded text-white text-2xl p-2 items-center justify-center white-shadow from-green-500 via-green-400 to-green-100 bg-gradient-to-r ${
-                isHovering[tag.tag] ? "scale-125" : ""
+              className={`transition ease-in-out duration-300 hover:cursor-pointer flex relative bg-white 
+              rounded text-white text-2xl p-2 items-center justify-center
+              ${tagGroup.tagType.bgColor} bg-gradient-to-r ${
+                isHovering[tagGroup.tag] ? "scale-125" : ""
               } `}
-              onMouseOver={(e) => handleMouseOver(tag.tag)}
-              onMouseOut={(e) => handleMouseOut(tag.tag)}
+              onMouseOver={(e) => handleMouseOver(tagGroup.tag)}
+              onMouseOut={(e) => handleMouseOut(tagGroup.tag)}
               style={{
                 width: "250px",
                 height: "50px",
                 zIndex: 20,
                 right: "35%", // <-- reduce this to move the tag closer to the books
                 top: "0%",
+                boxShadow: `0px 0px 18px 4px ${tagGroup.tagType.shadowColor}`,
               }}
             >
-              {
-                // first capital and low_bar to space
-                tag.tag
-                  .split("_")
-                  .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-                  .join(" ")
-              }
+              {tagGroup.tagType.label}
             </div>
             <div
               className={`box bg-white ${
-                isHovering[tag.tag] ? "box-hover" : ""
+                isHovering[tagGroup.tag] ? "box-hover" : ""
               }`}
               style={{
                 marginLeft: "-50px", // <-- reduce this to move the books to the left
