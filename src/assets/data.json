@@ -448,6 +448,26 @@
       ]
     },
     {
+      "title": "Practical Product Management for Product Owners",
+      "cover": "book_practical_product_management.jpg",
+      "height": "250px",
+      "spine": {
+        "text": "PRACTICAL PRODUCT MANAGEMENT FOR PRODUCT OWNERS",
+        "color": "#9B2012",
+        "width": "32px",
+        "fontSize": "7px",
+        "fontFamily": "'Roboto', sans-serif",
+        "textColor": "#fff",
+        "textShadow": "1px 1px #000000",
+        "marginTitle": "8px",
+        "marginTop": "15px"
+      },
+      "link": "https://www.scrum.org/resources/practical-product-management-for-product-owners",
+      "tags": [
+        "pending"
+      ]
+    },
+    {
       "title": "When Will It Be Done?",
       "cover": "book_wwibd.jpg",
       "height": "265px",

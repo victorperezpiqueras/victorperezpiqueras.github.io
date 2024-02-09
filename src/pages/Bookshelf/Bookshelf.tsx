@@ -29,25 +29,25 @@ function Bookshelf(props: BookshelfProps) {
     .filter((tag, index, self) => self.indexOf(tag) === index);
 
   const TAG_TYPES: { [key: string]: TagType } = {
-    software: {
-      shadowColor: "rgba(59, 130, 246, 0.9)",
-      bgColor: "from-blue-500 via-blue-400 to-blue-100",
-      label: "Software",
-    },
-    default: {
-      shadowColor: "rgba(34, 197, 94, 0.9)",
-      bgColor: "from-green-500 via-green-400 to-green-100",
-      label: "Default",
-    },
     agilityDevops: {
       shadowColor: "rgba(234, 179, 8, 0.9)",
       bgColor: "from-yellow-500 via-yellow-400 to-yellow-100",
       label: "Agility & DevOps",
     },
+    software: {
+      shadowColor: "rgba(59, 130, 246, 0.9)",
+      bgColor: "from-blue-500 via-blue-400 to-blue-100",
+      label: "Software",
+    },
+    pending: {
+      shadowColor: "rgba(129, 128, 129, 0.9)",
+      bgColor: "from-gray-500 via-gray-400 to-gray-100",
+      label: "In Progress",
+    },
   };
 
   // group books by tag
-  const booksByTag = tags.map((tag) => {
+  const booksByTag = Object.keys(TAG_TYPES).map((tag) => {
     return {
       tag,
       books: props.books.filter((book) => book.tags.includes(tag)),
