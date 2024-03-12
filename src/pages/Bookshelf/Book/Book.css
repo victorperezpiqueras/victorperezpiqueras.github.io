@@ -30,10 +30,10 @@
   position: absolute;
   top: 0px;
   left: 0px;
-  font-size: 16px;
   color: black;
   writing-mode: vertical-rl;
   text-orientation: mixed;
+  text-size-adjust: none;
 }
 
 .spine-author {
