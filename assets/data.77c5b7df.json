@@ -276,7 +276,7 @@
         "text": "The Phoenix Project",
         "color": "white",
         "width": "50px",
-        "fontSize": "1.3em",
+        "fontSize": "2.8vmin",
         "fontFamily": "monospace",
         "textColor": "black",
         "textShadow": "1px 1px #ffffff",
