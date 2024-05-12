@@ -108,10 +108,10 @@
         "experiences": [
           {
             "startDate": "2021-11-01",
-            "endDate": null,
+            "endDate": "2023-12-31",
             "position": "Full Stack Developer & Scrum Master",
-            "shortPosition": "Full-Stack Dev & SM",
-            "description": "Product development in a geographically distributed, multidisciplinar and agile managed team.",
+            "shortPosition": "Dev + SM",
+            "description": "Full-stack developer on behalf of TMConnected, developing its MCO product: a management and monitoring system for maintenance machinery fleets in the railway sector. I supported our international agile team as their Scrum Master by doing training, meeting facilitation, communication improvement, innovation in technical and value delivery practices.",
             "labels": [
               "angular",
               "aws",
@@ -119,6 +119,28 @@
               "python"
             ],
             "color": "#3183FD",
+            "type": "dev",
+            "category": "dev"
+          }
+        ]
+      },
+      {
+        "company": "Teknei",
+        "experiences": [
+          {
+            "startDate": "2024-01-01",
+            "endDate": null,
+            "position": "Full Stack Developer & Product Manager",
+            "shortPosition": "Dev + PM",
+            "description": "Product management and full stack development in the Innovation and Product Department. My duties included supporting the inception, design, prioritization and implementation of new software products for the company.",
+            "labels": [
+              "angular",
+              "flutter",
+              "aws",
+              "serverless",
+              "python"
+            ],
+            "color": "#0E9F6E",
             "type": "dev",
             "category": "dev"
           }
