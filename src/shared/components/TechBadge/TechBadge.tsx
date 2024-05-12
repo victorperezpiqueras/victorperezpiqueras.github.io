@@ -5,12 +5,20 @@ type TechBadgeProps = {
   className?: string;
 };
 
+// icons are downloaded from https://techicons.dev/
 const iconsMapping = new Map([
   [
     "angular",
     {
       text: "Angular",
       color: "bg-red-200",
+    },
+  ],
+  [
+    "flutter",
+    {
+      text: "Flutter",
+      color: "bg-blue-200",
     },
   ],
   [
