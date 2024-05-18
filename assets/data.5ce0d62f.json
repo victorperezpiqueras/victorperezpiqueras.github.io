@@ -668,15 +668,6 @@
       "published": true
     },
     {
-      "title": "Estimation of Distribution Algorithms with Solution Subset Selection for the Next Release Problem",
-      "authors": "V. Pérez-Piqueras, P. Bermejo, J.A. Gámez",
-      "conferenceJournalTitle": "Logic Journal of the IGPL",
-      "year": "2023",
-      "url": "",
-      "type": "journal",
-      "published": false
-    },
-    {
       "title": "GRASP multiobjetivo con reencadenamiento de trayectorias aplicado al problema de la siguiente versión",
       "authors": "V. Pérez-Piqueras, P. Bermejo, J.A. Gámez",
       "conferenceJournalTitle": "XXVII Jornadas de Ingeniería del Software y Bases de Datos (JISBD 2023)",
@@ -690,9 +681,18 @@
       "authors": "V. Pérez-Piqueras, P. Bermejo, J.A. Gámez",
       "conferenceJournalTitle": "26th IEEE International Conference on Computational Science and Engineering (CSE-2023)",
       "year": "2023",
-      "url": "",
+      "url": "https://doi.org/10.1109/TrustCom60117.2023.00331",
       "type": "conference",
-      "published": false
+      "published": true
+    },
+    {
+      "title": "Estimation of Distribution Algorithms with Solution Subset Selection for the Next Release Problem",
+      "authors": "V. Pérez-Piqueras, P. Bermejo, J.A. Gámez",
+      "conferenceJournalTitle": "Logic Journal of the IGPL",
+      "year": "2024",
+      "url": "https://doi.org/10.1093/jigpal/jzae052",
+      "type": "journal",
+      "published": true
     }
   ]
 }
