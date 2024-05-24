@@ -486,7 +486,7 @@
       },
       "link": "https://www.scrum.org/resources/practical-product-management-for-product-owners",
       "tags": [
-        "pending"
+        "agilityDevops"
       ]
     },
     {
@@ -608,6 +608,25 @@
       "link": "https://martinfowler.com/books/refactoring.html",
       "tags": [
         "software"
+      ]
+    },
+    {
+      "title": "Tidy First?",
+      "cover": "book_tidy_first.jpg",
+      "height": "260px",
+      "spine": {
+        "text": "Tidy First?",
+        "color": "rgb(255, 255, 255)",
+        "width": "12px",
+        "fontSize": "0.4em",
+        "fontFamily": "'Times New Roman', Times, serif",
+        "textColor": "black",
+        "marginTitle": "-0px",
+        "marginTop": "40px"
+      },
+      "link": "https://www.amazon.com/Tidy-First-Personal-Exercise-Empirical/dp/1098151240",
+      "tags": [
+        "pending"
       ]
     }
   ],
