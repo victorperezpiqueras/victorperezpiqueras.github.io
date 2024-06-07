@@ -626,6 +626,25 @@
       },
       "link": "https://www.amazon.com/Tidy-First-Personal-Exercise-Empirical/dp/1098151240",
       "tags": [
+        "software"
+      ]
+    },
+    {
+      "title": "The Software Engineer's Guidebook",
+      "cover": "book_sw_engineers_guidebook.jpg",
+      "height": "260px",
+      "spine": {
+        "text": "The Software Engineer's Guidebook",
+        "color": "#212832",
+        "width": "32px",
+        "fontSize": "0.6em",
+        "fontFamily": "'Quicksand', sans-serif",
+        "textColor": "white",
+        "marginTitle": "5px",
+        "marginTop": "40px"
+      },
+      "link": "https://www.engguidebook.com",
+      "tags": [
         "pending"
       ]
     }
