@@ -39,24 +39,19 @@ function StackedBadges(props: StackedBadgesProps) {
   };
 
   const getStylesByIndex = (index: number) => {
-    const extraMarginLeft = isMobileScreen() ? -30 : -40;
+    const extraMarginLeft = isMobileScreen() ? -30 : -45;
     const extraTop = -4;
 
     const translateExtraXOffset = isMobileScreen() ? 12 : 14;
-
-    const translateYOffset = -1;
-    const translateExtraYOffset = 2;
-    const translateYValue = translateYOffset + translateExtraYOffset * index;
-    const translateYSign = translateYValue > 0 ? "" : "-";
 
     return {
       // on top if hovered, else each badge of a stack on top of previous one
       zIndex: isHoveringLink ? 10000 : 1000 + index,
       left: `${props.index == 0 ? 0 : 5}%`,
-      marginLeft: `${extraMarginLeft * index}px`,
-      top: `${extraTop * index}px`,
+      marginLeft: `${index === 0 ? 0 : extraMarginLeft}px`,
+      top: `${index === 0 || isHoveringLink ? 0 : extraTop * index}px`,
       translateX: `translate-x-${translateExtraXOffset * index}`,
-      translateY: `${translateYSign}translate-y-${translateYValue}`,
+      translateY: `translate-y-1`,
     };
   };
 
@@ -64,9 +59,9 @@ function StackedBadges(props: StackedBadgesProps) {
     <OutsideClickHandler onOutsideClick={handleClickOutside}>
       {props.badges.map((badge, index) => (
         <a
-          className={`inline-flex w-12 md:w-16 relative hover:opacity-90 transition ease-in-out duration-300 ${
+          className={`inline-flex w-12 md:w-16 relative hover:opacity-90 hover:scale-125 transition ease-in-out duration-200 ${
             isHoveringLink
-              ? `scale-125  ${getStylesByIndex(index).translateX} ${
+              ? `scale-110  ${getStylesByIndex(index).translateX} ${
                   getStylesByIndex(index).translateY
                 }`
               : ""
