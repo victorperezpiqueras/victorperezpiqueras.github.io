@@ -24,6 +24,10 @@
           {
             "img": "aws_ccp_logo.png",
             "url": "https://www.credly.com/badges/baf037ec-9e41-4a46-8c23-6c60c64ef0ee/public_url"
+          },
+          {
+            "img": "aws_saa_logo.png",
+            "url": "https://www.credly.com/badges/7ddc7533-451e-4006-b094-045894b68197/public_url"
           }
         ]
       }
@@ -283,7 +287,7 @@
       "url": "https://www.credly.com/badges/3b4acfba-b5d9-4ab4-89e5-0ef1be7b6269/public_url"
     },
     {
-      "title": "Certified as AWS Cloud Practitioner (CLF-C01) by AWS.",
+      "title": "Certified as AWS Cloud Practitioner.",
       "image": "aws_ccp.png",
       "url": "https://www.credly.com/badges/baf037ec-9e41-4a46-8c23-6c60c64ef0ee/public_url"
     },
@@ -296,6 +300,11 @@
       "title": "Certified as Professional Scrum Product Owner I (PSPO-I) by Scrum.org.",
       "image": "pspo1.png",
       "url": "https://www.credly.com/badges/3fea66e0-7063-4d19-96f7-29a93b8796ec/public_url"
+    },
+    {
+      "title": "Certified as AWS Solutions Architect – Associate.",
+      "image": "aws_saa.png",
+      "url": "https://www.credly.com/badges/7ddc7533-451e-4006-b094-045894b68197/public_url"
     }
   ],
   "library": [
