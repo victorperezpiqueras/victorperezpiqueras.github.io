@@ -126,6 +126,20 @@ const iconsMapping = new Map([
       color: "bg-gray-100",
     },
   ],
+  [
+    "svelte",
+    {
+      text: "Svelte",
+      color: "bg-orange-100",
+    },
+  ],
+  [
+    "tailwind",
+    {
+      text: "Tailwind CSS",
+      color: "bg-blue-100",
+    },
+  ],
 ]);
 
 const getIcon = (tech: string) => {

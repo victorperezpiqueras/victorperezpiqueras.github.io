@@ -254,6 +254,16 @@
         "python",
         "flask"
       ]
+    },
+    {
+      "title": "Unfollower Finder",
+      "description": "Unfollower Finder allows you to see which Instagram profiles that you follow dont follow you back, and vice versa. The app does not require any user account information, and provides a simple guide on how to find your unfollowers, without asking, sending or storing any user information.",
+      "link": "https://github.com/victorperezpiqueras/unfollower-finder",
+      "demoFile": "unfollower_finder",
+      "tags": [
+        "svelte",
+        "tailwind"
+      ]
     }
   ],
   "achievements": [
