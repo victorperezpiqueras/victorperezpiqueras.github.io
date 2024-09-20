@@ -256,6 +256,17 @@
       ]
     },
     {
+      "title": "Journal Paper AutoChecker",
+      "description": "Track the status of your research papers by scraping them daily, and notifies you via email/Telegram when there are updates.",
+      "link": "https://github.com/victorperezpiqueras/journal-paper-auto-checker",
+      "demoFile": "journal_paper_autochecker",
+      "tags": [
+        "python",
+        "aws",
+        "serverless"
+      ]
+    },
+    {
       "title": "Unfollower Finder",
       "description": "Unfollower Finder allows you to see which Instagram profiles that you follow dont follow you back, and vice versa. The app does not require any user account information, and provides a simple guide on how to find your unfollowers, without asking, sending or storing any user information.",
       "link": "https://github.com/victorperezpiqueras/unfollower-finder",
