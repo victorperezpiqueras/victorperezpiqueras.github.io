@@ -99,7 +99,13 @@ function ProjectItem(props: ProjectProps) {
           onLoad={() => {
             setLoading(false);
           }}
-          onError={() => setLoading(false)}
+          onError={(event) => {
+            (event.target as any).src = new URL(
+              `../../assets/projectsDemos/${project.demoFile}.png`,
+              import.meta.url
+            ).href;
+            setLoading(false);
+          }}
         />
 
         <div className="flex flex-col justify-between p-4 leading-normal">
