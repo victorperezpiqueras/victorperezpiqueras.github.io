@@ -115,9 +115,7 @@ function App() {
 
               <SocialIcon
                 cssClasses={"bg-blue-700"}
-                link={
-                  "https://www.linkedin.com/in/v%C3%ADctor-p%C3%A9rez-piqueras/"
-                }
+                link={"https://www.linkedin.com/in/victorperezpiqueras/"}
                 icon={
                   <FaLinkedinIn
                     color="white"

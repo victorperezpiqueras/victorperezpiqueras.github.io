@@ -101,7 +101,7 @@ function ExperienceBar(props: ExperienceProps) {
         {getExperienceIcon(experience)}
         &nbsp;&nbsp;
         <span className="mt-0.5">
-          {isMobileScreen() || experience.barPercentage < 15
+          {isMobileScreen() || experience.barPercentage < 20
             ? ""
             : experience.shortPosition}
         </span>
