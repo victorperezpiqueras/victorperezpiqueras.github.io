@@ -1,7 +1,7 @@
-import { Timeline, Tooltip } from "flowbite-react";
+import { Timeline } from "flowbite-react";
 import TechBadge from "../../shared/components/TechBadge/TechBadge";
 import ExperienceBar from "./ExperienceBar/ExperienceBar";
-import { BsCheckSquareFill, BsFillTelephoneFill } from "react-icons/bs";
+import { BsCheckSquareFill } from "react-icons/bs";
 import {
   MdEmail,
   MdOutlineStar,
@@ -31,7 +31,6 @@ type AboutMeProps = {
 };
 
 function AboutMe(props: AboutMeProps) {
-  const [copiedPhone, setCopiedPhone] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
 
   const [expandedAboutMe, setExpandedAboutMe] = useState(false);
@@ -81,20 +80,13 @@ function AboutMe(props: AboutMeProps) {
     }
   }
 
-  function copyPhone() {
-    navigator.clipboard.writeText(props.aboutData.contactInfo.phone);
-    setCopiedPhone(true);
-    setCopiedEmail(false);
-  }
   function copyEmail() {
     navigator.clipboard.writeText(props.aboutData.contactInfo.email);
     setCopiedEmail(true);
-    setCopiedPhone(false);
   }
 
   function handleClose() {
     setCopiedEmail(false);
-    setCopiedPhone(false);
   }
 
   function getStars(starNumber: number) {
@@ -320,19 +312,15 @@ function AboutMe(props: AboutMeProps) {
           </Timeline>
         </div>
       </div>
-      {copiedEmail || copiedPhone ? (
+      {copiedEmail ? (
         <Snackbar
-          open={copiedEmail || copiedPhone}
+          open={copiedEmail}
           onClose={handleClose}
           autoHideDuration={2000}
           anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
         >
           <Alert severity="success" sx={{ width: "100%" }}>
-            {copiedEmail
-              ? "Email copied to clipboard!"
-              : copiedPhone
-              ? "Phone copied to clipboard!"
-              : ""}
+            {copiedEmail ? "Email copied to clipboard!" : ""}
           </Alert>
         </Snackbar>
       ) : (

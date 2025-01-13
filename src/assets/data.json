@@ -35,8 +35,7 @@
   },
   "aboutMe": {
     "contactInfo": {
-      "email": "victorperezpiqueras@gmail.com",
-      "phone": "+34 601 13 94 14"
+      "email": "victorperezpiqueras@gmail.com"
     },
     "languages": [
       {
@@ -118,7 +117,7 @@
             "endDate": "2023-12-31",
             "position": "Full Stack Developer & Scrum Master",
             "shortPosition": "Dev + SM",
-            "description": "Full-stack developer on behalf of TMConnected, developing its MCO product: a management and monitoring system for maintenance machinery fleets in the railway sector. I supported our international agile team as their Scrum Master by doing training, meeting facilitation, communication improvement, innovation in technical and value delivery practices.",
+            "description": "Hired on behalf of TMConnected to develop its MCO product, a management and monitoring system for maintenance machinery fleets in the railway sector. I supported our international agile team as a developer, creating new product modules and features. Later, I transitioned to the role of Scrum Master, where I facilitated training, improved team communication, and introduced innovations in technical and value delivery practices. With a strong focus on rapid delivery, I implemented pair programming, feature flags, and flow metrics. Additionally, I coached team members on best practices and architectural principles.",
             "labels": [
               "angular",
               "aws",
@@ -139,7 +138,7 @@
             "endDate": null,
             "position": "Full Stack Developer & Product Manager",
             "shortPosition": "Dev + PM",
-            "description": "Product management and full stack development in the Innovation and Product Department. My duties included supporting the inception, design, prioritization and implementation of new software products for the company.",
+            "description": "As a member of the Innovation and Product department, I contributed to transforming a prototype into a fully functional, CI/CD-supported, production-deployed web and mobile application for technical assistance services. My role encompassed both full-stack development and product management. Subsequently, I played a key role in developing the backend for billing software integrated with public administration systems, utilizing Hexagonal architecture and automated testing.",
             "labels": [
               "angular",
               "flutter",

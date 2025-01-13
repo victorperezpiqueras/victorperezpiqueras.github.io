@@ -16,7 +16,7 @@ export type ExperienceData = {
   experiences: SingleExperienceData[];
 };
 
-export type ContactInfoData = { email: string; phone: string };
+export type ContactInfoData = { email: string };
 
 export type LanguagesData = {
   language: string;
