@@ -128,27 +128,6 @@ function AboutMe(props: AboutMeProps) {
       <div className="flex flex-col basis-100 lg:basis-1/2 space-y-6">
         <div className="flex flex-col bg-white rounded text-black p-4">
           <h4>📍 Contact Info</h4>
-          <span className="flex flex-row" onClick={copyPhone}>
-            <BsFillTelephoneFill
-              className="mt-1 text-green-500 min-w-max"
-              size={"15px"}
-            />{" "}
-            &nbsp;&nbsp;
-            <span className="text-sm md:text-base">
-              {props.aboutData.contactInfo.phone}
-            </span>
-            {copiedPhone ? (
-              <BsCheckSquareFill
-                className="text-green-300 ml-1 mt-1 hover:cursor-pointer"
-                onClick={copyPhone}
-              />
-            ) : (
-              <FaCopy
-                className="text-green-200 ml-1 mt-1 hover:cursor-pointer"
-                onClick={copyPhone}
-              />
-            )}
-          </span>
           <span className="flex flex-row">
             <MdEmail className="mt-1 text-green-500 min-w-max" size={"20px"} />{" "}
             &nbsp;{" "}
