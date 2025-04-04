@@ -711,7 +711,7 @@
     {
       "title": "GRASP-Based Hybrid Search to Solve the Multi-objective Requirements Selection Problem",
       "authors": "V. Pérez-Piqueras, P. Bermejo, J.A. Gámez",
-      "conferenceJournalTitle": "OLA'2022 International Conference on Optimization and Learning",
+      "conferenceJournalTitle": "5th International Conference on Optimization and Learning (OLA-2022)",
       "year": "2022",
       "url": "https://doi.org/10.1007/978-3-031-22039-5_15",
       "type": "conference",
@@ -720,7 +720,7 @@
     {
       "title": "ProjectION: Herramienta de ayuda a la toma de decisiones en gestión ágil",
       "authors": "V. Pérez-Piqueras, P. Bermejo, J.A. Gámez",
-      "conferenceJournalTitle": "XXVI Jornadas de Ingeniería del Software y Bases de Datos (JISBD 2022)",
+      "conferenceJournalTitle": "XXVI Jornadas de Ingeniería del Software y Bases de Datos (JISBD-2022)",
       "year": "2022",
       "url": "http://hdl.handle.net/11705/JISBD/2022/1654",
       "type": "conference",
@@ -729,7 +729,7 @@
     {
       "title": "Estimation of Distribution Algorithms Applied to the Next Release Problem",
       "authors": "V. Pérez-Piqueras, P. Bermejo, J.A. Gámez",
-      "conferenceJournalTitle": "17th International Conference on Soft Computing Models in Industrial and Environmental Applications (SOCO 2022)",
+      "conferenceJournalTitle": "17th International Conference on Soft Computing Models in Industrial and Environmental Applications (SOCO-2022)",
       "year": "2022",
       "url": "https://doi.org/10.1007/978-3-031-18050-7_10",
       "type": "conference",
@@ -738,7 +738,7 @@
     {
       "title": "A Report Contents Framework for The Final Year Project in Computer Science Degrees",
       "authors": "P. Bermejo, V. Pérez-Piqueras",
-      "conferenceJournalTitle": "17th International Technology, Education and Development Conference (INTED 2023)",
+      "conferenceJournalTitle": "17th International Technology, Education and Development Conference (INTED-2023)",
       "year": "2023",
       "url": "https://doi.org/10.21125/inted.2023.0434",
       "type": "conference",
@@ -756,7 +756,7 @@
     {
       "title": "GRASP multiobjetivo con reencadenamiento de trayectorias aplicado al problema de la siguiente versión",
       "authors": "V. Pérez-Piqueras, P. Bermejo, J.A. Gámez",
-      "conferenceJournalTitle": "XXVII Jornadas de Ingeniería del Software y Bases de Datos (JISBD 2023)",
+      "conferenceJournalTitle": "XXVII Jornadas de Ingeniería del Software y Bases de Datos (JISBD-2023)",
       "year": "2023",
       "url": "https://hdl.handle.net/11705/JISBD/2023/2784",
       "type": "conference",
@@ -779,6 +779,24 @@
       "url": "https://doi.org/10.1093/jigpal/jzae052",
       "type": "journal",
       "published": true
+    },
+    {
+      "title": "Agile Effort Estimation Improved by Feature Selection and Model Explainability",
+      "authors": "V. Pérez-Piqueras, P. Bermejo, J.A. Gámez",
+      "conferenceJournalTitle": "20th International Conference on Evaluation of Novel Approaches to Software Engineering (ENASE 2025)",
+      "year": "2025",
+      "url": "",
+      "type": "conference",
+      "published": false
+    },
+    {
+      "title": "FEDA-NRP: Un algoritmo de estimación de distribuciones multivariado y de estructura fija para resolver el problema de la próxima versión multiobjetivo con interacciones entre requisitos",
+      "authors": "V. Pérez-Piqueras, P. Bermejo, J.A. Gámez",
+      "conferenceJournalTitle": "XVI Congreso Español de Metaheurísticas, Algoritmos Evolutivos y Bioinspirados (MAEB25)",
+      "year": "2025",
+      "url": "https://openreview.net/forum?id=6FQjzfdL8e",
+      "type": "conference",
+      "published": false
     }
   ]
 }
