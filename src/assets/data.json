@@ -785,9 +785,9 @@
       "authors": "V. Pérez-Piqueras, P. Bermejo, J.A. Gámez",
       "conferenceJournalTitle": "20th International Conference on Evaluation of Novel Approaches to Software Engineering (ENASE 2025)",
       "year": "2025",
-      "url": "",
+      "url": "https://doi.org/10.5220/0013229800003928",
       "type": "conference",
-      "published": false
+      "published": true
     },
     {
       "title": "FEDA-NRP: Un algoritmo de estimación de distribuciones multivariado y de estructura fija para resolver el problema de la próxima versión multiobjetivo con interacciones entre requisitos",
