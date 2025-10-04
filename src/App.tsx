@@ -1,11 +1,9 @@
 import "./App.css";
-import portfolio from "./assets/portfolio.png";
+import portfolio from "./assets/portfolio.jpg";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaOrcid } from "react-icons/fa";
 import SocialIcon from "./shared/components/SocialIcon/SocialIcon";
-import psmii_logo from "./assets/stackedBadges/psmi_logo.png";
-import psmii_logo2 from "./assets/stackedBadges/psmii_logo.png";
 
 import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
