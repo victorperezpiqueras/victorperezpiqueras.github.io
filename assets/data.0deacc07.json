@@ -1,7 +1,7 @@
 {
   "header": {
     "name": "Víctor Pérez Piqueras",
-    "title": "Software Engineer - Scrum Master - Researcher",
+    "title": "Software Engineer - PhD - Scrum Master",
     "badgeStacks": [
       {
         "badges": [
@@ -50,9 +50,9 @@
       }
     ],
     "aboutTexts": [
-      "💻 I am a skilled and dedicated Software Engineer with a strong background in web development, backend systems, and software architecture. This versatility enables me to seamlessly adapt to various roles, performing effectively as a full-stack developer.",
-      "👨🏻‍🏫 I thrive in collaborative environments, fostering synergies to enhance both my performance and that of the team. Having worked primarily in English throughout my career, I am equally proficient in communicating with colleagues in both English and Spanish.",
-      "📈 I am committed to clean coding practices, design patterns, refactoring principles, and continuous integration/deployment methodologies. Additionally, I am an advocate of Agile methodologies and hold Scrum certifications."
+      "👨‍💻 Software Engineer with over 5 years of experience designing and delivering scalable backend and full-stack applications using Python, NodeJS, Angular, and AWS.",
+      "⚙️ Proven track record building microservice architectures, REST APIs, and CI/CD pipelines that improve reliability and deployment speed. Passionate about clean architecture, DevOps practices, and continuous delivery.",
+      "🎓 PhD in Advanced Computing Technologies, combining strong technical expertise with agile leadership, mentoring teams, and driving high-quality, value-driven software delivery."
     ],
     "experience": [
       {
@@ -274,7 +274,7 @@
       "url": "https://www.credly.com/badges/7ddc7533-451e-4006-b094-045894b68197/public_url"
     },
     {
-      "title": "Successfully Completed the PhD in Advanced Computing Technologies.",
+      "title": "Successfully completed the PhD in Advanced Computing Technologies.",
       "image": "phd.jpg",
       "url": null
     }
