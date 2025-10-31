@@ -33,7 +33,7 @@ type AboutMeProps = {
 function AboutMe(props: AboutMeProps) {
   const [copiedEmail, setCopiedEmail] = useState(false);
 
-  const [expandedAboutMe, setExpandedAboutMe] = useState(false);
+  const [expandedAboutMe, setExpandedAboutMe] = useState(true);
 
   const experienceSorted = [...props.aboutData.experience].reverse();
   const educationSorted = [...props.aboutData.education].reverse();
@@ -118,36 +118,6 @@ function AboutMe(props: AboutMeProps) {
   return (
     <div className="flex flex-row xs:flex-wrap lg:flex-nowrap space-y-6 lg:space-y-0 lg:space-x-6 items-start">
       <div className="flex flex-col basis-100 lg:basis-1/2 space-y-6">
-        <div className="flex flex-col bg-white rounded text-black p-4">
-          <h4>📍 Contact Info</h4>
-          <span className="flex flex-row">
-            <MdEmail className="mt-1 text-green-500 min-w-max" size={"20px"} />{" "}
-            &nbsp;{" "}
-            <a
-              className="text-green-500"
-              href="mailto:victorperezpiqueras@gmail.com"
-              style={{
-                textDecoration: "none",
-              }}
-            >
-              <span className="text-sm md:text-base">
-                {props.aboutData.contactInfo.email}
-              </span>
-            </a>
-            {copiedEmail ? (
-              <BsCheckSquareFill
-                className="text-green-300 ml-1 mt-1 hover:cursor-pointer"
-                onClick={copyEmail}
-              />
-            ) : (
-              <FaCopy
-                className="text-green-200 ml-1 mt-1 hover:cursor-pointer"
-                onClick={copyEmail}
-              />
-            )}
-          </span>
-        </div>
-
         <div
           className="basis-1/2 bg-white rounded text-black p-4 pb-3 hover:cursor-pointer"
           onClick={() => setExpandedAboutMe(!expandedAboutMe)}
@@ -181,6 +151,36 @@ function AboutMe(props: AboutMeProps) {
           ) : (
             <div className="py-0 text-lg text-gray-300"></div>
           )}
+        </div>
+
+        <div className="flex flex-col bg-white rounded text-black p-4">
+          <h4>📍 Contact Info</h4>
+          <span className="flex flex-row">
+            <MdEmail className="mt-1 text-green-500 min-w-max" size={"20px"} />{" "}
+            &nbsp;{" "}
+            <a
+              className="text-green-500"
+              href="mailto:victorperezpiqueras@gmail.com"
+              style={{
+                textDecoration: "none",
+              }}
+            >
+              <span className="text-sm md:text-base">
+                {props.aboutData.contactInfo.email}
+              </span>
+            </a>
+            {copiedEmail ? (
+              <BsCheckSquareFill
+                className="text-green-300 ml-1 mt-1 hover:cursor-pointer"
+                onClick={copyEmail}
+              />
+            ) : (
+              <FaCopy
+                className="text-green-200 ml-1 mt-1 hover:cursor-pointer"
+                onClick={copyEmail}
+              />
+            )}
+          </span>
         </div>
 
         <div className="bg-white rounded text-black px-10 pt-4">
