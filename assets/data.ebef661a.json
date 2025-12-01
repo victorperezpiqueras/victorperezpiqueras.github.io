@@ -1,8 +1,20 @@
 {
   "header": {
     "name": "Víctor Pérez Piqueras",
-    "title": "Software Engineer - PhD - Scrum Master",
+    "title": "Senior Software Engineer – PhD – Cloud – Agile",
     "badgeStacks": [
+      {
+        "badges": [
+          {
+            "img": "aws_ccp_logo.png",
+            "url": "https://www.credly.com/badges/baf037ec-9e41-4a46-8c23-6c60c64ef0ee/public_url"
+          },
+          {
+            "img": "aws_saa_logo.png",
+            "url": "https://www.credly.com/badges/7ddc7533-451e-4006-b094-045894b68197/public_url"
+          }
+        ]
+      },
       {
         "badges": [
           {
@@ -16,18 +28,6 @@
           {
             "img": "pspoi_logo.png",
             "url": "https://www.credly.com/badges/3fea66e0-7063-4d19-96f7-29a93b8796ec/public_url"
-          }
-        ]
-      },
-      {
-        "badges": [
-          {
-            "img": "aws_ccp_logo.png",
-            "url": "https://www.credly.com/badges/baf037ec-9e41-4a46-8c23-6c60c64ef0ee/public_url"
-          },
-          {
-            "img": "aws_saa_logo.png",
-            "url": "https://www.credly.com/badges/7ddc7533-451e-4006-b094-045894b68197/public_url"
           }
         ]
       }
@@ -50,9 +50,9 @@
       }
     ],
     "aboutTexts": [
-      "👨‍💻 Software Engineer with over 5 years of experience designing and delivering scalable backend and full-stack applications using Python, NodeJS, Angular, and AWS.",
-      "⚙️ Proven track record building microservice architectures, REST APIs, and CI/CD pipelines that improve reliability and deployment speed. Passionate about clean architecture, DevOps practices, and continuous delivery.",
-      "🎓 PhD in Advanced Computing Technologies, combining strong technical expertise with agile leadership, mentoring teams, and driving high-quality, value-driven software delivery."
+      "👨‍💻 Senior Full-Stack / Backend Software Engineer with 5+ years of experience delivering scalable cloud platforms using Python, AWS, Angular, and microservices.",
+      "⚙️ Focused on clean architecture, robust backend design, and end-to-end CI/CD automation. Experienced in leading agile teams as Scrum Master, mentoring developers, and driving engineering excellence.",
+      "🎓 Apply PhD-level rigor to practical delivery, consistently improving velocity, reliability, and architectural quality across products."
     ],
     "experience": [
       {
@@ -61,7 +61,7 @@
           {
             "startDate": "2019-06-01",
             "endDate": "2019-08-31",
-            "position": "Full Stack Developer (Internship)",
+            "position": "Software Engineer (Internship)",
             "shortPosition": "Intern",
             "description": "Full stack development of a web application for real-time home sensor management and monitoring.",
             "labels": ["angular", "flask", "python"],
@@ -72,7 +72,7 @@
           {
             "startDate": "2020-07-01",
             "endDate": "2020-09-30",
-            "position": "Full Stack Developer (Internship)",
+            "position": "Software Engineer (Internship)",
             "shortPosition": "Intern",
             "description": "Full stack development of a web application for the creation and management of dynamic forms to control incidents in companies.",
             "labels": ["angular", "aws", "serverless", "python"],
@@ -88,9 +88,9 @@
           {
             "startDate": "2021-02-01",
             "endDate": "2021-10-31",
-            "position": "Researcher / Research support staff",
+            "position": "Researcher",
             "shortPosition": "R&D",
-            "description": "Research support staff in R&D&i project. Design and evaluation of multi-objective optimization algorithms.",
+            "description": "Designed and evaluated multi-objective optimization algorithms as part of R&D projects, using Python, Pandas, Numpy and Matplotlib.",
             "labels": ["python"],
             "color": "#0DCAF0",
             "type": "rdi",
@@ -104,9 +104,9 @@
           {
             "startDate": "2021-11-01",
             "endDate": "2023-12-31",
-            "position": "Full Stack Developer & Scrum Master",
-            "shortPosition": "Dev + SM",
-            "description": "Hired on behalf of TMConnected to develop its MCO product, a management and monitoring system for maintenance machinery fleets in the railway sector. I supported our international agile team as a developer, creating new product modules and features. Later, I transitioned to the role of Scrum Master, where I facilitated training, improved team communication, and introduced innovations in technical and value delivery practices. With a strong focus on rapid delivery, I implemented pair programming, feature flags, and flow metrics. Additionally, I coached team members on best practices and architectural principles.",
+            "position": "Software Engineer & Scrum Master",
+            "shortPosition": "SE+SM",
+            "description": "At TMConnected, I contributed to the development of the MCO railway maintenance platform, a high-volume cloud SaaS used by 1,500+ users across 160+ companies, monitoring over 1,000 machines and processing millions of annual cloud events across AWS Lambda, multi-terabyte S3 storage, and extensive reporting pipelines. I delivered new product modules using AWS, Python, microservices, ETLs, Angular, and microfrontends, and led key initiatives such as a near real-time notification service handling 800k+ logs per year and a maintenance management module built with microfrontends and hexagonal architecture to improve scalability and maintainability. I introduced feature flags and CI/CD improvements that reduced delivery times from months to weeks, and as Scrum Master, I strengthened engineering practices by facilitating agile ceremonies, coaching developers, establishing flow metrics, promoting pair programming, and adding unit-testing foundations to enhance the reliability of a core revenue-generating product.",
             "labels": ["angular", "aws", "serverless", "python"],
             "color": "#3183FD",
             "type": "dev",
@@ -120,9 +120,9 @@
           {
             "startDate": "2024-01-01",
             "endDate": null,
-            "position": "Full Stack Developer & Product Manager",
-            "shortPosition": "Dev + PM",
-            "description": "As a member of the Innovation and Product department, I contributed to transforming a prototype into a fully functional, CI/CD-supported, production-deployed web and mobile application for technical assistance services. My role encompassed both full-stack development and product management. Subsequently, I played a key role in developing the backend for billing software integrated with public administration systems, utilizing Hexagonal architecture and automated testing.",
+            "position": "Senior Software Engineer",
+            "shortPosition": "Senior SE",
+            "description": "I led the technical development of a serverless web and mobile application for technical assistance services, transforming a prototype into a production-ready product using Python, Angular, and Flutter. I improved reliability by refactoring the subscription and billing workflow, resolving critical bugs, standardizing backend and frontend structures, and implementing CI/CD pipelines for all components, including automated Google Play releases, enabling weekly, minutes-to-production deployments. I also directed the creation of a new billing platform designed from scratch with Python, Angular, and AWS CDK, applying hexagonal architecture, achieving over 80% test coverage, automating its cloud infrastructure, and delivering an integration-ready API for invoice synchronization with public administration systems. Across both products, I took ownership of architecture, backlog refinement, engineering standards, and CI/CD workflows.",
             "labels": ["angular", "flutter", "aws", "serverless", "python"],
             "color": "#0E9F6E",
             "type": "dev",
