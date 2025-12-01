@@ -143,8 +143,8 @@ function AboutMe(props: AboutMeProps) {
             <div className="pb-0">
               {props.aboutData.aboutTexts.map((text) => (
                 <div key={uuid()}>
-                  <p>{text}</p>
                   <br />
+                  <p>{text}</p>
                 </div>
               ))}
             </div>

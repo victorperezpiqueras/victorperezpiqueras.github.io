@@ -101,17 +101,6 @@ function App() {
 
             <div className="container flex justify-center space-x-4">
               <SocialIcon
-                cssClasses={"bg-black"}
-                link={"https://github.com/victorperezpiqueras"}
-                icon={
-                  <AiFillGithub
-                    color="white"
-                    onClick={() => onClickHeaderLinkAuto("open github profile")}
-                  />
-                }
-              />
-
-              <SocialIcon
                 cssClasses={"bg-blue-700"}
                 link={"https://www.linkedin.com/in/victorperezpiqueras/"}
                 icon={
@@ -120,6 +109,17 @@ function App() {
                     onClick={() =>
                       onClickHeaderLinkAuto("open linkedin profile")
                     }
+                  />
+                }
+              />
+
+              <SocialIcon
+                cssClasses={"bg-black"}
+                link={"https://github.com/victorperezpiqueras"}
+                icon={
+                  <AiFillGithub
+                    color="white"
+                    onClick={() => onClickHeaderLinkAuto("open github profile")}
                   />
                 }
               />
