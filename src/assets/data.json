@@ -119,12 +119,28 @@
         "experiences": [
           {
             "startDate": "2024-01-01",
-            "endDate": null,
+            "endDate": "2026-01-01",
             "position": "Senior Software Engineer",
             "shortPosition": "Senior SE",
             "description": "I led the technical development of a serverless web and mobile application for technical assistance services, transforming a prototype into a production-ready product using Python, Angular, and Flutter. I improved reliability by refactoring the subscription and billing workflow, resolving critical bugs, standardizing backend and frontend structures, and implementing CI/CD pipelines for all components, including automated Google Play releases, enabling weekly, minutes-to-production deployments. I also directed the creation of a new billing platform designed from scratch with Python, Angular, and AWS CDK, applying hexagonal architecture, achieving over 80% test coverage, automating its cloud infrastructure, and delivering an integration-ready API for invoice synchronization with public administration systems. Across both products, I took ownership of architecture, backlog refinement, engineering standards, and CI/CD workflows.",
             "labels": ["angular", "flutter", "aws", "serverless", "python"],
             "color": "#0E9F6E",
+            "type": "dev",
+            "category": "dev"
+          }
+        ]
+      },
+      {
+        "company": "TrustWorks",
+        "experiences": [
+          {
+            "startDate": "2026-01-01",
+            "endDate": null,
+            "position": "Software Engineer",
+            "shortPosition": "SE",
+            "description": "",
+            "labels": ["aws", "python"],
+            "color": "#ffd000",
             "type": "dev",
             "category": "dev"
           }
