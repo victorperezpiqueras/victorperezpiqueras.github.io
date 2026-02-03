@@ -703,6 +703,15 @@
       "url": "http://hdl.handle.net/10810/74080",
       "type": "conference",
       "published": true
+    },
+    {
+      "title": "Intelligent support for agile release planning: an empirical evaluation of ProjectION",
+      "authors": "V. Pérez-Piqueras, P. Bermejo, J.A. Gámez",
+      "conferenceJournalTitle": "Automated Software Engineering",
+      "year": "2026",
+      "url": "https://doi.org/10.1007/s10515-026-00591-3",
+      "type": "journal",
+      "published": true
     }
   ]
 }
