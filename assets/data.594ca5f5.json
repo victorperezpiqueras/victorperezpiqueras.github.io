@@ -138,7 +138,7 @@
             "endDate": null,
             "position": "Software Engineer",
             "shortPosition": "SE",
-            "description": "",
+            "description": "In Progress...",
             "labels": ["aws", "python"],
             "color": "#ffd000",
             "type": "dev",
@@ -718,6 +718,15 @@
       "year": "2025",
       "url": "http://hdl.handle.net/10810/74080",
       "type": "conference",
+      "published": true
+    },
+    {
+      "title": "Metaheuristic Algorithms for Decision Support in Software Release Planning",
+      "authors": "V. Pérez-Piqueras. Supervisors: P. Bermejo, J.A. Gámez",
+      "conferenceJournalTitle": "PhD in Advanced Computing Technologies, Universidad de Castilla-La Mancha",
+      "year": "2025",
+      "url": "https://ruidera.uclm.es/items/c9f8902e-443f-4fc6-b68f-c0862ca93317",
+      "type": "thesis",
       "published": true
     },
     {
