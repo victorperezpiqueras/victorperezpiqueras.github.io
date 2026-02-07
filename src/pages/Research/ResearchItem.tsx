@@ -8,6 +8,8 @@ function getArticleType(type: string) {
       return "bg-purple-500 text-white";
     case "conference":
       return "bg-green-400 text-white";
+    case "thesis":
+      return "bg-blue-400 text-white";
     default:
       return "bg-gray-300 text-black";
   }
@@ -43,7 +45,7 @@ function ResearchItem(props: ResearchItemProps) {
         <span className="text-sm font-semibold text-green-500 mt-2">
           <span
             className={`${getArticleType(
-              props.research.type
+              props.research.type,
             )} text-gray-700 text-xs font-medium inline-flex items-center px-2.5 py-1 rounded mr-2 dark:bg-gray-700 dark:text-gray-300`}
           >
             <b>

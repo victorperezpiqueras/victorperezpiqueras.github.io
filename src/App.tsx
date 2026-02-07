@@ -82,7 +82,7 @@ function App() {
     <div className="App" onClick={handleClickOutside}>
       <div className="container flex flex-col justify-center">
         <div className="justify-center py-8 mt-4 xs:h-72 md:h-52 flex xs:flex-col md:flex-row items-center bg-green-500 rounded">
-          <div className="flex w-30 h-30 ml-4 justify-center">
+          <div className="flex w-30 h-30 ml-8 justify-center">
             <img
               className="aspect-square w-28 lg:w-48 rounded-full drop-shadow-md ring-4 ring-gray-300"
               src={portfolio}
