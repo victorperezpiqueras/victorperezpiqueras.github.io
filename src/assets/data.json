@@ -237,6 +237,14 @@
       "link": "https://github.com/victorperezpiqueras/unfollower-finder",
       "demoFile": "unfollower_finder",
       "tags": ["svelte", "tailwind"]
+    },
+    {
+      "title": "Clash Tactics",
+      "description": "Plan. Draw. Execute. Master Clash of Clans attacks with step-by-step strategy design. Create a complete battle plan before you ever attack. Upload your target base layout, study defensive positions, and build your army composition. Select your Town Hall level, choose your heroes, spells, and siege equipment, every decision tracked and optimized.",
+      "link": "https://clashtactics.net",
+      "isNotRepo": true,
+      "demoFile": "clash_tactics",
+      "tags": ["python", "aws", "flutter"]
     }
   ],
   "achievements": [

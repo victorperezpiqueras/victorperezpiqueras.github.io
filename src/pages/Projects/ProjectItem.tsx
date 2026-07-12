@@ -63,10 +63,10 @@ function ProjectItem(props: ProjectProps) {
        transform transition duration-500 ease-in-out hover:scale-105 ${
          project.link ? "cursor-pointer" : "cursor-default"
        } ${
-          props.hoveredProjectTitle === props.project.title
-            ? "project-card-clicked scale-105"
-            : "bg-white"
-        }`}
+         props.hoveredProjectTitle === props.project.title
+           ? "project-card-clicked scale-105"
+           : "bg-white"
+       }`}
         onMouseOver={(e) => {
           handleMouseOver(props.project.title);
         }}
@@ -92,7 +92,7 @@ function ProjectItem(props: ProjectProps) {
               `../../assets/projectsDemos/${project.demoFile}.${
                 project.title === props.hoveredProjectTitle ? "gif" : "png"
               }`,
-              import.meta.url
+              import.meta.url,
             ).href
           }
           alt=""
@@ -102,7 +102,7 @@ function ProjectItem(props: ProjectProps) {
           onError={(event) => {
             (event.target as any).src = new URL(
               `../../assets/projectsDemos/${project.demoFile}.png`,
-              import.meta.url
+              import.meta.url,
             ).href;
             setLoading(false);
           }}
@@ -110,7 +110,7 @@ function ProjectItem(props: ProjectProps) {
 
         <div className="flex flex-col justify-between p-4 leading-normal">
           <div className="flex flex-row justify-start items-center">
-            {project.link ? (
+            {project.link && !project.isNotRepo ? (
               <AiFillGithub className="mb-2 text-black" size={"35px"} />
             ) : (
               ""
