@@ -237,6 +237,14 @@
       "link": "https://github.com/victorperezpiqueras/unfollower-finder",
       "demoFile": "unfollower_finder",
       "tags": ["svelte", "tailwind"]
+    },
+    {
+      "title": "Clash Tactics",
+      "description": "Plan. Draw. Execute. Master Clash of Clans attacks with step-by-step strategy design.",
+      "link": "https://clashtactics.net",
+      "isNotRepo": true,
+      "demoFile": "clash_tactics",
+      "tags": ["python", "aws", "flutter"]
     }
   ],
   "achievements": [
