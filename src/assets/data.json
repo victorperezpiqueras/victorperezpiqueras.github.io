@@ -253,6 +253,14 @@
       "isNotRepo": true,
       "demoFile": "summoners_path",
       "tags": ["nextjs", "typescript", "tailwind", "supabase"]
+    },
+    {
+      "title": "Guerra de Invierno",
+      "description": "Browser version of a printed hex-and-counter wargame set on the Eastern Front in December 1943, where a German garrison holds a railway junction against the Red Army, partisans and the winter. A dependency-free rules engine hides the face-down partisan counters from the renderer, so one referee serves hot-seat and remote play.",
+      "link": "https://board-wargames-web.vercel.app",
+      "isNotRepo": true,
+      "demoFile": "guerra_de_invierno",
+      "tags": ["typescript", "react", "supabase"]
     }
   ],
   "achievements": [

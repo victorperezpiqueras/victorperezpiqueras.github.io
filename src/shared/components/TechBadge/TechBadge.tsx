@@ -155,6 +155,13 @@ const iconsMapping = new Map([
     },
   ],
   [
+    "react",
+    {
+      text: "React",
+      color: "bg-cyan-100",
+    },
+  ],
+  [
     "supabase",
     {
       text: "Supabase",
