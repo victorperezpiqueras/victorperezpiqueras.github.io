@@ -140,6 +140,27 @@ const iconsMapping = new Map([
       color: "bg-blue-100",
     },
   ],
+  [
+    "nextjs",
+    {
+      text: "Next.js",
+      color: "bg-gray-100",
+    },
+  ],
+  [
+    "typescript",
+    {
+      text: "TypeScript",
+      color: "bg-blue-100",
+    },
+  ],
+  [
+    "supabase",
+    {
+      text: "Supabase",
+      color: "bg-green-100",
+    },
+  ],
 ]);
 
 const getIcon = (tech: string) => {
